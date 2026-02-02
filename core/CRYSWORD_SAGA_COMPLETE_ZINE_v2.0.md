@@ -1,0 +1,1 @@
+/home/z/8xM/DiceGodz.Core64/CrySword/CRYSWORD_SAGA_COMPLETE_ZINE_v2.0.md

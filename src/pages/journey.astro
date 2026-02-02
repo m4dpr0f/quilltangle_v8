@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TEK8Quiz from '../islands/TEK8Quiz';
+---
+
+<Layout title="Journey | 8xM Quillverse">
+  <main class="min-h-screen bg-gradient-to-b from-gray-950 to-purple-950/20 py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+          Your Quillverse Journey
+        </h1>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+          Discover your elemental nature, contemplate Garu Eggs, and cultivate wellness through the 8 dimensions
+        </p>
+      </div>
+
+      <!-- Journey Stages -->
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <!-- Stage 1: Discover -->
+        <a href="#quiz" class="group">
+          <div class="bg-gray-900/80 border border-purple-500/30 rounded-xl p-6 hover:border-purple-500 transition h-full">
+            <div class="text-4xl mb-4">🎲</div>
+            <h3 class="text-xl font-bold mb-2 group-hover:text-purple-400 transition">1. Discover</h3>
+            <p class="text-gray-400 text-sm">Take the TEK8 quiz to reveal your elemental distribution across the 8 dimensions.</p>
+            <div class="mt-4 flex flex-wrap gap-1">
+              {['D2', 'D4', 'D6', 'D8', 'D10', 'D12', 'D20', 'D100'].map((die) => (
+                <span class="px-2 py-0.5 bg-gray-800 rounded text-xs">{die}</span>
+              ))}
+            </div>
+          </div>
+        </a>
+
+        <!-- Stage 2: Contemplate -->
+        <a href="/journey/eggs" class="group">
+          <div class="bg-gray-900/80 border border-green-500/30 rounded-xl p-6 hover:border-green-500 transition h-full">
+            <div class="text-4xl mb-4">🥚</div>
+            <h3 class="text-xl font-bold mb-2 group-hover:text-green-400 transition">2. Contemplate</h3>
+            <p class="text-gray-400 text-sm">Begin a 30-day Garu Egg journey of philosophical inquiry and personal growth.</p>
+            <div class="mt-4 text-sm text-green-400">64 eggs to explore →</div>
+          </div>
+        </a>
+
+        <!-- Stage 3: Create -->
+        <a href="/launchpad" class="group">
+          <div class="bg-gray-900/80 border border-amber-500/30 rounded-xl p-6 hover:border-amber-500 transition h-full">
+            <div class="text-4xl mb-4">🏴</div>
+            <h3 class="text-xl font-bold mb-2 group-hover:text-amber-400 transition">3. Create</h3>
+            <p class="text-gray-400 text-sm">Launch your nation's token and claim your Rainbow Road territory.</p>
+            <div class="mt-4 text-sm text-amber-400">40 roads available →</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- TEK8 Quiz Section -->
+      <section id="quiz" class="mb-16">
+        <TEK8Quiz client:load />
+      </section>
+
+      <!-- Info Sections -->
+      <div class="grid md:grid-cols-2 gap-8 mt-16">
+        <!-- What is TEK8 -->
+        <div class="bg-gray-900/50 rounded-xl p-6 border border-gray-800">
+          <h3 class="text-xl font-bold mb-4 text-purple-400">What is TEK8?</h3>
+          <p class="text-gray-400 mb-4">
+            TEK8 is the elemental framework of the Quillverse, built on 8 cosmic dice that represent different aspects of reality:
+          </p>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2">
+              <span class="px-2 py-0.5 bg-yellow-600/30 rounded font-bold">D2</span>
+              <span>Coin — Exchange, Fairness</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="px-2 py-0.5 bg-red-600/30 rounded font-bold">D4</span>
+              <span>Fire — Transformation, Action</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="px-2 py-0.5 bg-green-600/30 rounded font-bold">D6</span>
+              <span>Earth — Stability, Foundation</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="px-2 py-0.5 bg-cyan-600/30 rounded font-bold">D8</span>
+              <span>Air — Communication, Learning</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="px-2 py-0.5 bg-orange-600/30 rounded font-bold">D10</span>
+              <span>Chaos — Adaptation, Change</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="px-2 py-0.5 bg-purple-600/30 rounded font-bold">D12</span>
+              <span>Ether — Identity, Creativity</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="px-2 py-0.5 bg-blue-600/30 rounded font-bold">D20</span>
+              <span>Water — Flow, Emotion</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="px-2 py-0.5 bg-gray-400/30 rounded font-bold">D100</span>
+              <span>Order — Structure, Justice</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Garu Eggs -->
+        <div class="bg-gray-900/50 rounded-xl p-6 border border-gray-800">
+          <h3 class="text-xl font-bold mb-4 text-green-400">What are Garu Eggs?</h3>
+          <p class="text-gray-400 mb-4">
+            64 philosophical questions for personal growth. Each egg is a 30-day contemplation journey that includes:
+          </p>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li class="flex items-center gap-2">
+              <span class="text-green-400">✓</span>
+              A profound question tied to elemental wisdom
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-green-400">✓</span>
+              A hatching method (practice to embody the answer)
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-green-400">✓</span>
+              Daily journaling and reflection
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-green-400">✓</span>
+              Elder verification of your understanding
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-green-400">✓</span>
+              Wellness benefits across 8 dimensions
+            </li>
+          </ul>
+          <a href="/journey/eggs" class="btn bg-green-600 hover:bg-green-500 mt-4 inline-block text-sm">
+            Explore All 64 Eggs →
+          </a>
+        </div>
+      </div>
+
+      <!-- The Loop -->
+      <div class="mt-16 text-center">
+        <h3 class="text-2xl font-bold mb-6">The Complete Loop</h3>
+        <div class="bg-gray-900/50 rounded-xl p-8 max-w-3xl mx-auto">
+          <div class="flex flex-wrap justify-center items-center gap-4 text-lg">
+            <span class="px-4 py-2 bg-purple-900/50 rounded-lg border border-purple-500/30">Discover</span>
+            <span class="text-gray-500">→</span>
+            <span class="px-4 py-2 bg-green-900/50 rounded-lg border border-green-500/30">Contemplate</span>
+            <span class="text-gray-500">→</span>
+            <span class="px-4 py-2 bg-amber-900/50 rounded-lg border border-amber-500/30">Create</span>
+            <span class="text-gray-500">→</span>
+            <span class="px-4 py-2 bg-blue-900/50 rounded-lg border border-blue-500/30">Claim</span>
+            <span class="text-gray-500">→</span>
+            <span class="px-4 py-2 bg-pink-900/50 rounded-lg border border-pink-500/30">Participate</span>
+            <span class="text-gray-500">→</span>
+            <span class="px-4 py-2 bg-cyan-900/50 rounded-lg border border-cyan-500/30">Regenerate</span>
+          </div>
+          <p class="text-gray-500 text-sm mt-6">
+            The journey is circular. Completion leads to deeper exploration.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition;
+  }
+</style>

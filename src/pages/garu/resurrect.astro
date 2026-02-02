@@ -1,0 +1,143 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Resurrection Shrine | Garu">
+  <main class="min-h-screen bg-gradient-to-b from-gray-950 via-purple-950/20 to-gray-950 py-8 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold mb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 bg-clip-text text-transparent">
+          Resurrection Shrine
+        </h1>
+        <p class="text-gray-400">
+          Through music, memory, and ancestral bonds, bring back those who have fallen.
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <a href="/garu" class="btn bg-gray-700 hover:bg-gray-600 text-sm">
+          🐦 Garu Care
+        </a>
+        <a href="/garu/memories" class="btn bg-gradient-to-r from-amber-600 to-purple-600 text-sm">
+          🎵 Create Memories
+        </a>
+        <a href="/garu/eggs" class="btn bg-gray-700 hover:bg-gray-600 text-sm">
+          🥚 Find Eggs
+        </a>
+      </div>
+
+      <div id="resurrection-shrine"></div>
+
+      <!-- How It Works -->
+      <div class="mt-12 bg-gray-900/50 rounded-xl p-8 border border-gray-800">
+        <h3 class="text-xl font-bold mb-6 text-center">The Resurrection Ritual</h3>
+
+        <div class="grid md:grid-cols-4 gap-6">
+          <div class="text-center">
+            <div class="text-4xl mb-3">🎵</div>
+            <h4 class="font-bold mb-1">1. Gather Memories</h4>
+            <p class="text-gray-400 text-sm">
+              Musical tracks and writings created during your Garu's life.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="text-4xl mb-3">🐦</div>
+            <h4 class="font-bold mb-1">2. Find a Descendant</h4>
+            <p class="text-gray-400 text-sm">
+              A living Garu born from the fallen one's legacy eggs.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="text-4xl mb-3">✨</div>
+            <h4 class="font-bold mb-1">3. Perform the Ritual</h4>
+            <p class="text-gray-400 text-sm">
+              The descendant channels ancestral energy through music.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="text-4xl mb-3">💫</div>
+            <h4 class="font-bold mb-1">4. Rebirth</h4>
+            <p class="text-gray-400 text-sm">
+              Your Garu returns, restored to the state of your best memory.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Restoration Quality -->
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="bg-yellow-900/20 rounded-xl p-6 border border-yellow-700/50">
+          <div class="text-2xl mb-2">🌓</div>
+          <h4 class="font-bold text-yellow-400 mb-2">Partial Restoration</h4>
+          <p class="text-gray-400 text-sm">
+            50% of level and stats. Requires at least 1 memory.
+          </p>
+        </div>
+
+        <div class="bg-blue-900/20 rounded-xl p-6 border border-blue-700/50">
+          <div class="text-2xl mb-2">🌔</div>
+          <h4 class="font-bold text-blue-400 mb-2">Substantial Restoration</h4>
+          <p class="text-gray-400 text-sm">
+            75% of level, 70% of stats. Requires 1+ tracks or 2+ writings.
+          </p>
+        </div>
+
+        <div class="bg-green-900/20 rounded-xl p-6 border border-green-700/50">
+          <div class="text-2xl mb-2">🌕</div>
+          <h4 class="font-bold text-green-400 mb-2">Full Restoration</h4>
+          <p class="text-gray-400 text-sm">
+            100% of level, 90% of stats. Requires 3+ musical tracks + 1 writing.
+          </p>
+        </div>
+      </div>
+
+      <!-- Ancestor Bond -->
+      <div class="mt-8 bg-purple-900/20 rounded-xl p-6 border border-purple-700/50">
+        <div class="flex items-start gap-4">
+          <div class="text-4xl">🔗</div>
+          <div>
+            <h4 class="font-bold text-purple-400 mb-2">Ancestor Bond</h4>
+            <p class="text-gray-300 mb-2">
+              The descendant Garu who channels the resurrection gains a permanent <strong>Ancestor Bond</strong>:
+            </p>
+            <ul class="text-gray-400 text-sm space-y-1">
+              <li>• +10% bond strength with their rider</li>
+              <li>• Special connection to their resurrected ancestor</li>
+              <li>• This bond persists across generations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Philosophy -->
+      <div class="mt-8 text-center text-gray-500 text-sm max-w-2xl mx-auto">
+        <p>
+          In the Quillverse, loss is never permanent for those who prepare.
+          Music and writing become more than expression—they become lifelines.
+          Care for your Garu, document your journey, and they will always be able to return.
+        </p>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition;
+  }
+</style>
+
+<script>
+  import { createRoot } from 'react-dom/client';
+  import GaruResurrection from '../../islands/GaruResurrection';
+
+  const container = document.getElementById('resurrection-shrine');
+  if (container) {
+    const root = createRoot(container);
+    root.render(GaruResurrection());
+  }
+</script>

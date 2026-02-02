@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SwapInterface from '../islands/SwapInterface';
+import ReciprocityDeposit from '../islands/ReciprocityDeposit';
+
+const tab = Astro.url.searchParams.get('tab') || 'swap';
+---
+
+<Layout title="LotusXchange - Reciprocity Pool">
+  <div class="text-center mb-8">
+    <h1 class="text-4xl font-bold mb-2 bg-gradient-to-r from-green-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+      LotusXchange
+    </h1>
+    <p class="text-gray-400 max-w-2xl mx-auto">
+      The Quillverse reciprocity pool. Swap QLX and GCN tokens 1:1, or deposit tokens to enable trading.
+    </p>
+  </div>
+
+  <!-- Tab Navigation -->
+  <div class="flex justify-center gap-2 mb-8">
+    <a
+      href="/swap?tab=swap"
+      class={`px-6 py-2 rounded-full font-medium transition ${
+        tab === 'swap'
+          ? 'bg-green-600 text-white'
+          : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
+      }`}
+    >
+      Swap
+    </a>
+    <a
+      href="/swap?tab=deposit"
+      class={`px-6 py-2 rounded-full font-medium transition ${
+        tab === 'deposit'
+          ? 'bg-purple-600 text-white'
+          : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
+      }`}
+    >
+      Deposit
+    </a>
+  </div>
+
+  <!-- Content -->
+  {tab === 'swap' ? (
+    <SwapInterface client:load />
+  ) : (
+    <ReciprocityDeposit client:load />
+  )}
+
+  <!-- Info Section -->
+  <section class="mt-16 border-t border-gray-700 pt-12">
+    <h2 class="text-2xl font-bold text-center mb-8">How It Works</h2>
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div class="card">
+        <h3 class="text-xl font-bold text-green-400 mb-4">Swapping</h3>
+        <ol class="space-y-3 text-sm text-gray-300">
+          <li class="flex gap-3">
+            <span class="text-green-400 font-bold">1.</span>
+            <span>Choose a GCN token from the available pools</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-green-400 font-bold">2.</span>
+            <span>Select direction: QLX → GCN or GCN → QLX</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-green-400 font-bold">3.</span>
+            <span>Enter amount and sign the transaction</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-green-400 font-bold">4.</span>
+            <span>Receive tokens at 1:1 ratio instantly</span>
+          </li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3 class="text-xl font-bold text-purple-400 mb-4">Depositing</h3>
+        <ol class="space-y-3 text-sm text-gray-300">
+          <li class="flex gap-3">
+            <span class="text-purple-400 font-bold">1.</span>
+            <span>Select a token you hold or enter mint address</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-purple-400 font-bold">2.</span>
+            <span>Choose amount to deposit to the pool</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-purple-400 font-bold">3.</span>
+            <span>Sign transaction to send to Treasury</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-purple-400 font-bold">4.</span>
+            <span>Your tokens are now swappable for QLX</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="mt-12 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-bold text-center mb-8">FAQ</h2>
+    <div class="space-y-4">
+      <div class="card">
+        <h4 class="font-bold text-green-400 mb-2">What is the 1:1 ratio?</h4>
+        <p class="text-sm text-gray-400">
+          All swaps in the reciprocity pool are at a fixed 1:1 ratio. 1 QLX = 1 GCN token.
+          This creates a stable, fair exchange system without price speculation.
+        </p>
+      </div>
+      <div class="card">
+        <h4 class="font-bold text-green-400 mb-2">Why deposit tokens?</h4>
+        <p class="text-sm text-gray-400">
+          Depositing tokens to the pool enables trading for your token. Without deposits,
+          there's no liquidity to swap. Deposits also earn you Reciprocity points and
+          recognition in the community.
+        </p>
+      </div>
+      <div class="card">
+        <h4 class="font-bold text-green-400 mb-2">Where do deposited tokens go?</h4>
+        <p class="text-sm text-gray-400">
+          Deposited tokens are held by the Commons Treasury. They remain available for
+          swapping and support the broader Quillverse ecosystem.
+        </p>
+      </div>
+      <div class="card">
+        <h4 class="font-bold text-green-400 mb-2">What is QLX?</h4>
+        <p class="text-sm text-gray-400">
+          QLX is the core token of the Quillverse ecosystem. It serves as the universal
+          exchange medium in the reciprocity pool, connecting all GCN tokens.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

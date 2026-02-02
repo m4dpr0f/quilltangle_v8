@@ -1,0 +1,167 @@
+{
+  "ECHPF1": {
+    "ACNormal": "Rüstungsklasse",
+    "ACFlatFooted": "Auf dem falschen Fuß-Rüstungsklasse",
+    "ACTouch": "Berührungs-Rüstungsklasse",
+    "CMDTotal": "Kampfmanöververteidigung",
+    "CMDFlatFootedTotal": "Auf dem falschen Fuß-Kampfmanöververteidigung",
+    "TemporaryHP": "Temporäre Trefferpunkte",
+    "HP": "Trefferpunkte",
+    "HPShort": "TP",
+    "Nonlethal": "Nichttödlicher Schaden",
+    "TemporaryVigor": "Temporäre Vitalität",
+    "CombatManeuver": "Kampfmanöver",
+    "Settings": {
+      "ShowActionPanelStandard": {
+        "name": "Standardaktionen anzeigen",
+        "desc": "Zeigt die Standardaktionen im Aktionspanel an."
+      },
+      "ShowActionPanelMove": {
+        "name": "Bewegungsaktionen anzeigen",
+        "desc": "Zeigt die Bewegungsaktionen im Aktionspanel an."
+      },
+      "ShowActionPanelSwift": {
+        "name": "Schnelle Aktionen anzeigen",
+        "desc": "Zeigt die schnellen Aktionen im Aktionspanel an."
+      },
+      "ShowActionPanelFull": {
+        "name": "Volle Aktionen anzeigen",
+        "desc": "Zeigt die vollen Aktionen im Aktionspanel an."
+      },
+      "ShowActionPanelFree": {
+        "name": "Freie Aktionen anzeigen",
+        "desc": "Zeigt die freien Aktionen im Aktionspanel an."
+      },
+      "ShowMacroPanel": {
+        "name": "Makro-Panel anzeigen",
+        "desc": "Zeigt das Makro-Panel an."
+      },
+      "ShowWeaponsInFullPanel": {
+        "name": "Waffen im Aktionspanel für Volle Runde anzeigen",
+        "desc": "Wenn diese Option aktiviert ist, werden Waffenangriffe ebenfalls im Aktionspanel für Volle Runden angezeigt."
+      },
+      "UnchainedActions": {
+        "name": "Aktionen im alternativen Aktionssystem",
+        "desc": "Die Anzahl an Aktionen, die einem Charakter im Alternativen Aktionssystem zur Verfügung stehen."
+      },
+      "ShowUnchainedActionPanel": {
+        "name": "Aktionen anzeigen",
+        "desc": "Zeigt das Aktionen im Aktionspanel, wenn das Alternative Aktionssystem aktiviert ist."
+      },
+      "ShowReactionActionPanel": {
+        "name": "Reaktionen anzeigen",
+        "desc": "Zeigt die Reaktionenim Aktionspanel an, wenn das Alternative Aktionssystem aktiviert ist."
+      },
+      "ShowActionReachOnCanvas": {
+        "name": "Reichweite im Aktionspanel anzeigen",
+        "desc": "Zeigt die Reichweite des aktuellen Token auf der Karte, wenn die Maus über einer Aktion liegt."
+      }
+    },
+    "MR": "LR",
+    "Abbr": {
+      "ACFlatFooted": "AdfF RK",
+      "ACTouch": "B-RK",
+      "ACNormal": "RK",
+      "CMDTotal": "KMV",
+      "CMDFlatFootedTotal": "AdfF KMV"
+    },
+    "Actions": {
+      "Maneuver": "Kampfmanöver",
+      "Feint": "Finte",
+      "Grapple": "Ringkampf",
+      "Trip": "Zu Fall bringen",
+      "Disarm": "Entwaffnen",
+      "Sunder": "Gegenstand zerschmettern",
+      "BullRush": "Ansturm",
+      "Overrun": "Überrennen",
+      "DirtyTrick": "Schmutziger Trick",
+      "Steal": "Entreißen",
+      "Drag": "Zerren",
+      "Reposition": "Versetzen",
+      "TotalDefense": "Volle Verteidigung",
+      "Withdraw": "Rückzug",
+      "AidAnother": "Jmd. anderem helfen",
+      "CoupDeGrace": "Coup de Grace",
+      "FightingDefensively": "Defensiv kämpfen",
+      "DropItem": "Gegenstand fallen lassen",
+      "StandUp": "Aufstehen",
+      "DropProne": "Fallen lassen",
+      "DrawSheathe": "Ziehen/Wegstecken",
+      "AidAnotherAttack": "Jmd. anderem helfen (Angriff)",
+      "AidAnotherDefense": "Jmd. anderem helfen (Verteidigung)",
+      "Charge": "Sturmangriff",
+      "None": ""
+    },
+    "ActionDescriptions": {
+      "TotalDefense": "Du kannst dich mit einer Standard-Aktion verteidigen. Dabei erhältst du eine Runde lang einen Ausweichbonus von +4 auf deine RK. Diese verbessert sich sofort bei Beginn dieser Aktion. Du darfst Volle Verteidigung allerdings weder mit defensivem Kämpfen oder dem Talent Defensive Kampfweise kombinieren. Aus einer Vollen Verteidigung heraus kannst du keine Gelegenheitsangriffe ausführen.",
+      "FightingDefensively": "Du kannst dich dazu entscheiden defensiv zu kämpfen. In diesem Fall erhältst du einen Malus von – 4 auf alle Angriffe in deiner Runde und gewinnst bis zum Beginn deines nächsten Zuges einen Ausweichbonus +2 auf deine RK.",
+      "BullRush": "Du kannst einen Ansturm als Standard-Aktion oder als Teil eines Sturmangriffs anstelle des Nahkampfangriffs ausführen. Du kannst einen Ansturm nur auf Gegner ausführen, die maximal eine Größenkategorie größer als du sind. Ein Ansturm hat das Ziel, einen Gegner in gerader Linie rückwärts zu schieben, ohne ihn dabei zu verletzen. Wenn du nicht das Talent Verbesserter Ansturm oder eine ähnliche Fähigkeit besitzt, provoziert dein Ansturm einen Gelegenheitsangriff durch das Ziel deines Manövers.<br/><br/>Ist dein Angriff ein Erfolg, wird das Ziel um 1,50 m rückwärts getrieben. Für je 5 Punkte, um die dein Angriffswurf die KMV deines Gegners übertrifft, kannst du das Ziel um weitere 1,50 m rückwärts drängen. Du kannst, wenn du das möchtest, dich mit dem Ziel mit bewegen, musst allerdings über die dazu notwendige Bewegungsrate verfügen. Misslingt dein Angriff, endet deine Bewegung genau vor dem Gegner.<br/><br/>Ein Feind, der durch einen Ansturm bewegt wird, provoziert mit dieser Bewegung keine Gelegenheitsangriffe, sofern du nicht über das Talent Mächtiger Ansturm verfügst. Du kannst mit einem Ansturm eine Kreatur nicht in ein Feld bewegen, dass von einem festen Objekt oder Hindernis besetzt ist. Wenn eine andere Kreatur sich im Weg deines Ansturms befindet, musst du unverzüglich einen Wurf auf Kampfmanöver ausführen, um einen Ansturm auch gegen diese Kreatur auszuführen. Für jede weitere Kreatur, die du außer der ersten Kreatur bewegst, erhältst du auf diesen Wurf einen Malus von – 4. Bei einem Erfolg kannst du die Kreaturen soweit treiben, wie es dem geringeren der Ergebnisse entspricht. Wenn ein Kämpfer zum Beispiel einen Goblin mit einem Ansturm 4,50 m weit bewegt, 1,50 m hinter dem ersten aber ein weiterer Goblin steht, muss er einen weiteren Wurf auf Kampfmanöver gegen den zweiten Goblin ablegen, nachdem er den ersten Goblin 1,50 m weit bewegt hat. Wenn er aufgrund des Wurfergebnisses den zweiten Goblin 6m weit bewegen könnte, darf er beide Goblins weitere 3m weit bewegen (da er dann den ersten Goblin insgesamt 4,50 m weit bewegt haben wird).",
+      "DirtyTrick": "Du kannst versuchen, mit einer Standard-Aktion einen Gegner im Nahkampf zu behindern. Dieses Manöver umfasst alle möglichen situationsbezogenen Angriffe, welche dem Gegner für kurze Zeit einen Malus aufzwingen, beispielsweise Sand ins Gesicht werfen, um ihn für 1 Runde zu blenden, ihm die Hosen hinunterziehen, um seine Bewegungsrate zu halbieren, oder ihn an einer empfindlichen Stelle zu treffen, so dass ihm für 1 Runde übel ist. Der SL bestimmt, was möglich ist und wie die Folgen aussehen. Permanente Mali sind aber jenseits dessen, was mit einem Schmutzigen Trick erreicht werden kann, vielmehr können die Auswirkungen aufgehoben werden, wenn das Ziel eine Bewegungsaktion aufwendet, etwa um sich die Hose hochzuziehen. Falls du nicht über das Talent Verbesserter Schmutziger Trick oder eine ähnliche Fähigkeit verfügst, provozierst du einen Gelegenheitsangriff durch dein Ziel, wenn du versuchst das Manöver anzuwenden.<br/><br/>Sollte der Angriff erfolgreich sein, erleidet das Ziel einen Malus, der auf einen der folgenden Zustände beschränkt ist: Blind, Erschüttert, Geblendet, Kränkelnd, Taub oder Verstrickt. Dieser Zustand hält 1 Runde an. Für jeweils 5 Punkte, um die der Angriffswurf die KMV des Zieles übertrifft, hält der Zustand 1 weitere Runde an. Der Malus kann meist überwunden werden, wenn das Ziel eine Bewegungsaktion aufwendet.<br/><br/>Falls du das Talent Mächtiger Schmutziger Trick besitzt, hält der Malus für 1W4 Runden an plus 1 Runde für jeweils 5 Punkte, um die dein Angriffswurf die KMV deines Zieles übertrifft. Zudem benötigt das Ziel eine Standard-Aktion, um sich von dem Zustand zu befreien.",
+      "Disarm": "Du kannst anstelle eines Nahkampfangriffs versuchen, deinen Gegner zu entwaffnen. Wenn du nicht über das Talent Verbessertes Entwaffnen oder über eine ähnliche Fähigkeit verfügst, provoziert dein Entwaffnungsversuch einen Gelegenheitsangriff durch das Ziel deines Manövers. Wenn du einen Gegner zu entwaffnen versuchst, während du selbst unbewaffnet bist, erhältst du einen Malus von – 4 auf deinen Angriffswurf.<br/><br/>Wenn dein Angriff erfolgreich ist, lässt dein Ziel einen Gegenstand deiner Wahl fallen, den es gerade trägt (selbst wenn es den Gegenstand mit beiden Händen festhält). Übertrifft dein Angriffswurf die KMV des Ziels um mehr als 10, lässt das Ziel alle Gegenstände fallen, die es in beiden Händen hält (sollte es mehr als zwei Hände haben, werden dennoch maximal nur zwei Gegenstände fallen gelassen). Misslingt dein Angriff um mehr als 10, lässt du die Waffe fallen, mit der du den Entwaffnungsversuch durchgeführt hast. Entwaffnest du den Gegner, ohne selbst eine Waffe zu benutzen, darfst du den fallen gelassenen Gegenstand automatisch aufheben.",
+      "Drag": "Du kannst versuchen, mit einer Standard-Aktion einen Gegner mitzuschleifen, sofern er nicht mehr als eine Größenkategorie größer ist als du. Das Ziel dieses Manövers besteht darin, den Gegner in gerader Linie hinter dir her zu zerren, ohne ihm dabei Schaden zuzufügen. Sofern du nicht über das Talent Verbessertes Zerren oder eine vergleichbare Fähigkeit verfügst, provozierst du einen Gelegenheitsangriff vom Ziel deines Manövers.<br/><br/>Wenn dein Angriff erfolgreich ist, bewegen du und dein Ziel sich um 1,50 m zurück – dein Ziel rutscht dabei auf deine Position und du auf ein Feld in gerader Linie hinter ihm. Für jeweils 5 Punkte, um die dein Angriffswurf die KMV deines Zieles übertrifft, kannst du ihn weitere 1,50 m weit zerren. Du musst imstande sein, dich mit dem Ziel zu bewegen, um dieses Manöver auszuführen. Falls deine vorhandene Bewegungsrate nicht ausreicht, endet das Zerren augenblicklich, nachdem du deine verfügbare Bewegungsrate zurück gelegt hast.<br/><br/>Ein gezerrter Feind provoziert keinen Gelegenheitsangriff aufgrund seiner Bewegung, sofern du nicht über das Talent Mächtiges Zerren verfügst. Du kannst das Ziel nicht auf ein Feld zerren, das von einem festen Objekt oder einem Hindernis belegt ist. Sollte deiner Bewegung eine andere Kreatur im Weg sein, endet das Zerren im benachbarten Feld der Kreatur.<br/><br/>Standfestigkeit: Manche Charaktere und Arten von Kreaturen haben einen ziemlich guten Stand, was es schwerer macht, sie zu überwältigen und über das Schlachtfeld zu bewegen. Jedes Volksmerkmal, das einen Bonus auf die KMV gegen Ansturm verleiht, gewährt denselben Bonus gegen das Kampfmanöver Zerren.",
+      "Grapple": "Du kannst einen Gegner mit einer Standard-Aktion zu umklammern versuchen, um so seine Kampfoptionen einzuschränken. Sofern du nicht über das Talent Verbesserter Ringkampf, über Ergreifen oder ähnliche Fähigkeiten verfügst, provoziert der Versuch, einen Feind zu umklammern einen Gelegenheitsangriff durch das Ziel deines Manövers. Humanoide Kreaturen, die einen Gegner zu umklammern versuchen, ohne dazu beide Hände freizuhaben, erhalten einen Malus von – 4 auf ihren Wurf für das Kampfmanöver. Bei einem Erfolg befinden sich sowohl du als auch dein Ziel im Zustand Ringend (siehe Glossar). Wenn du eine Kreatur, die nicht direkt neben dir steht, erfolgreich umklammerst, bewegst du damit die Kreatur auf ein freies Feld direkt neben dir (wenn kein Feld frei ist, schlägt der Umklammerungsversuch fehl). Zwar gelten beide Wesen als im Ringkampf befindlich, als derjenige, der den Ringkampf begonnen hat, darfst du dich allerdings mit einer freien Aktion aus dem Ringkampf lösen, was sowohl dich als auch dein Ziel von dem Zustand Ringend befreit. Wenn du dich nicht aus dem Ringkampf löst, musst du in jeder folgenden Runde einen weiteren Wurf ausführen, um mit einer Standard-Aktion den Griff aufrechtzuerhalten. Wenn dein Ziel die Umklammerung nicht durchbricht, erhältst du in den folgenden Runden einen Situationsbonus von +5 auf deine Ringkampfwürfe gegen dasselbe Ziel. Sobald du einen Gegner umklammerst, kannst du mit einem erfolgreichen Wurf die Umklammerung aufrechterhalten und zusätzlich (als Teil der Standard-Aktion, die du dazu aufwendest, die Umklammerung aufrechtzuerhalten) eine der folgenden Aktionen ausführen.<br/><h2>Bewegung</h2>Du kannst dich mitsamt deinem Opfer mit halber Bewegungsrate fortbewegen. Am Ende deiner Bewegung platzierst du dein Ziel in einem beliebigen an das von dir besetzte angrenzende Feld. Wenn du deinen Feind an einem gefährlichen Ort zu platzieren versuchst, beispielsweise in einer Feuerwand oder über einer Grube, erhält dieser einen zusätzlichen Versuch mit einem Bonus von +4, um sich aus deiner Umklammerung zu befreien.<h2>Schaden zufügen</h2>Du kannst deinem Ziel Schaden in Höhe deines unbewaffneten Schlags, eines natürlichen Angriffs, eines mit Rüstungsstacheln oder mit einer leichten oder einhändig geführten Waffe ausgeführten Angriffs zufügen. Dieser kann tödlich oder nichttödlich sein.<h2>Haltegriff</h2>Du kannst deinen Gegner in einen Haltegriff nehmen. Du selbst behältst den Zustand Ringend, verlierst aber deinen Geschicklichkeitsbonus auf die RK.<h2>Fesseln</h2>Hältst du dein Opfer in einem Haltegriff oder ist es anderweitig bewegungsunfähig oder bewusstlos, kannst du es mit Seilen fesseln. Die Wirkung ist die gleiche wie bei einem Haltegriff, allerdings erhöht sich der SG, um den Fesseln zu entkommen auf 20 + deinem KMB (anstelle deiner KMV). Der Haltegriff durch die Fesseln wird in den darauffolgenden Runden automatisch aufrechterhalten (kein neuer Wurf erforderlich). Umklammerst du dein Ziel, kannst du versuchen, es mit Seilen zu fesseln, musst dazu aber einen erfolgreichen Wurf auf das Kampfmanöver mit einem Malus von – 10 ablegen. Wenn der SG für den Versuch, aus der Fesselung zu entkommen, höher als 20 + KMB des Ziels ist, kann das Ziel nicht einmal mit einer natürlichen 20 aus der Fesselung entkommen.<h2>Wenn du dich in einer Umklammerung befindest</h2>Wenn du umklammert wirst, kannst du die Umklammerung mit einer Standard-Aktion zu durchbrechen versuchen, indem du einen Wurf auf Kampfmanöver (SG entspricht der KMV deines Gegners; der Wurf provoziert keinen Gelegenheitsangriff) oder auf Entfesselungskunst (SG entspricht der KMV deines Gegners) ablegst. Mit einem erfolgreichen Wurf befreist du dich aus der Umklammerung und kannst wieder normal handeln.<br/><br/>Bei einem Erfolg kannst du alternativ auch selbst eine Umklammerung ansetzen und damit die andere Kreatur festhalten (was bedeutet, dass die Kreatur sich nicht frei aus dem Ringkampf lösen kann, ohne vorher einen Wurf auf Kampfmanöver abzulegen, du es aber darfst). Statt zu versuchen, die Umklammerung zu durchbrechen oder umzukehren, kannst du auch jede Aktion ausführen, für die du keine zwei Hände benötigst, z.B. einen Zauber wirken oder einen Angriff oder einen vollen Angriff mit einer leichten oder einhändig geführten Waffe gegen jede Kreatur in deiner Reichweite ausführen, also auch gegen die Kreatur, die dich umklammert. Weitere Details findest du im Glossar beim Zustand ringend. Wenn du dich in einem Haltegriff befindest, sind deine Aktionen stark limitiert. Siehe dazu die Beschreibung des Zustands Im Haltegriff.<br/><br/>Mehrere Kreaturen: Mehrere Kreaturen können versuchen, dasselbe Ziel zu umklammern. In diesem Fall ist die Kreatur, die den Ringkampf begonnen hat, die einzige, die einen Wurf ausführen muss; für jedes Wesen, dass sie im Ringkampf (mit der Aktion Jemand anderem helfen) unterstützt, erhält sie einen Bonus von +2 auf ihren Wurf. Auf ähnliche Weise können mehrere Kreaturen auch einer anderen Kreatur dabei helfen, sich aus einem Ringkampf zu befreien; auch hier gewährt jede Kreatur, die dabei unterstützend eingreift (mit der Aktion Jemand anderem helfen) einen Bonus von +2 auf den Kampfmanöverwurf der Kreatur, die sich im Ringkampf befindet.",
+      "Overrun": "Du kannst als Standard-Aktion während deiner Bewegung oder als Teil deines Sturmangriffs versuchen, jemanden zu überrennen, indem du dich durch das von ihm besetzte Feld bewegst. Du kannst nur Gegner überrennen, die maximal eine Größenkategorie größer als du sind. Ohne das Talent Verbessertes Überrennen oder eine ähnliche Fähigkeit provoziert Überrennen einen Gelegenheitsangriff durch das Ziel deines Manövers. Wenn dein Versuch, deinen Gegner zu überrennen, misslingt, bleibst du in dem Feld direkt vor ihm oder, falls dieses Feld von anderen Kreaturen besetzt ist, in dem nächsten freien Feld vor der Kreatur stehen.<br/><br/>Wenn du ein Ziel zu überrennen versuchst, hat dieses die Wahl dir auszuweichen, und dir so zu gestatten, dich ohne Angriff durch sein Feld zu bewegen. Weicht das Ziel dir nicht aus, machst du einen Wurf auf Kampfmanöver. Ist dein Manöver erfolgreich, bewegst du dich durch das Feld deines Ziels. Übertrifft dein Wurf die KMV deines Gegners um mindestens 5 Punkte, bewegst du dich durch das Feld deines Ziels; dieses wird automatisch zu Boden geworfen und gilt als liegend. Hat dein Ziel mehr als zwei Beine, erhöht sich der SG für das Manöver für jedes weitere Bein um +2.",
+      "Reposition": "Du kannst versuchen, einen Gegner mit einer Standard-Aktion auf eine Position deiner Wahl zu versetzen, sofern er nicht mehr als eine Größenkategorie größer ist als du. Der Versuch einen Gegner mit diesem Kampfmanöver gegen seinen Willen auf eine andere Position zu versetzen, provoziert einen Gelegenheitsangriff durch das Ziel, sofern du nicht über das Talent Verbessertes Versetzen verfügst. Du kannst dieses Manöver nicht nutzen, um deinen Gegner auf ein Feld zu versetzen, das eine Gefahr birgt, wie beispielsweise eine Grube oder eine Feuerwand.<br/><br/>Wenn dein Angriff erfolgreich ist, bewegst du dein Ziel um 1,50 m in die gewünschte Richtung. Für jeweils 5 Punkte, um die dein Angriffswurf die KMV deines Zieles übertrifft, kannst du es weitere 1,50 m weit versetzen. Das Ziel muss sich dabei stets in deiner Reichweite während der Bewegung aufhalten mit Ausnahme der letzten 1,50 m, wo es sich auf einem Feld neben deiner Reichweite befinden kann.<br/><br/>Ein versetzter Feind provoziert keinen Gelegenheitsangriff aufgrund dieser Bewegung, sofern du nicht über das Talent Mächtiges Versetzen verfügst. Du kannst das Ziel nicht auf ein Feld versetzen, das von einem festen Objekt oder einem Hindernis belegt ist.",
+      "Steal": "Mit diesem Manöver kann man mit einer Standard-Aktion versuchen, einem Gegner einen Gegenstand zu entreißen, den er nicht in der Hand hält und auch nicht in einer Tasche oder einem Rucksack verstaut hat. Du musst mindestens eine Hand frei haben, in der du nichts hältst, um dieses Manöver versuchen zu können. Du musst den Gegenstand, den du an dich nehmen willst, auswählen, bevor du den Angriffswurf ausführst. Gegenstände, die in einem Gürtel stecken oder lose angebracht sind (beispielsweise Broschen oder Halsketten), sind am einfachsten zu entwenden. Gegenstände, welche gewissermaßen am Gegner befestigt sind (beispielsweise Umhänge, weggesteckte Waffen oder Beutel), sind weitaus schwerer zu erbeuten und gewähren dem Gegner einen Bonus von mindestens +5 auf seine KMV. Gegenstände, die dicht am Körper getragen werden (beispielsweise Rüstung, Rücksäcke, Stiefel, Kleidung oder Ringe), können mit diesem Manöver nicht entrissen werden, dies gilt auch für Gegenstände, die der Gegner in der Hand hält (beispielsweise Waffen oder Zauberstäbe) – hier musst du stattdessen auf das Kampfmanöver Entwaffnen zurückgreifen. Der SL fällt die schlussendliche Entscheidung, welche Gegenstände entwendet werden können. Falls du nicht über das Talent Verbessertes Entreißen verfügen solltest, provozierst du mit diesem Kampfmanöver einen Gelegenheitsangriff durch den Gegner.<br/><br/>Das Manöver kann nur angewendet werden, wenn sich der Gegner in deiner Reichweite befindet. Du kannst allerdings eine Peitsche benutzen, um deinem Gegner etwas zu entwenden, der Wurf hat dabei jedoch einen Malus von -4.<br/><br/>Sollte dein Angriff erfolgreich sein, entwendest du deinem Gegner einen Gegenstand. Du musst imstande sein, den Gegenstand auch zu erreichen – die Entscheidung liegt beim SL. Dein Gegner ist sich des Diebstahlversuches augenblicklich bewusst, sofern du nicht über das Talent Mächtiges Entreißen verfügst.",
+      "Sunder": "Anstelle eines Nahkampfangriffs kannst du versuchen, mit deiner Angriffsaktion einen Gegenstand zu beschädigen, der von deinem Gegner gehalten oder getragen wird. Ohne das Talent Verbessertes Gegenstand zerschmettern oder eine ähnliche Fähigkeit provoziert der Versuch, einen Gegenstand zu beschädigen, einen Gelegenheitsangriff durch das Ziel dieses Manövers.<br/><br/>Bei einem erfolgreichen Angriff verursachst du an dem Gegenstand normalen Schaden. Der Schaden, der die Härte des Objekts übersteigt, wird von seinen Trefferpunkten abgezogen. Sobald ein Objekt nur noch maximal die Hälfte seiner Trefferpunkte besitzt, erhält es den Zustand beschädigt. Wenn der verursachte Schaden sowohl die Härte als auch die Trefferpunkte des Gegenstands übertrifft, hast du die Wahl, ob du das Objekt zerstören möchtest. Falls das nicht der Fall sein sollte, verbleibt das Objekt im Zustand beschädigt und hat nur noch einen Trefferpunkt.",
+      "Trip": "Anstelle eines Nahkampfangriffs kannst du auch versuchen, deinen Gegner zu Fall zu bringen. Du kannst aber nur Gegner zu Fall bringen, die maximal eine Größenkategorie größer sind als du. Ohne das Talent Verbessertes zu Fall bringen oder eine ähnliche Fähigkeit provoziert dieses Manöver einen Gelegenheitsangriff von Seiten des Ziels.<br/><br/>Wenn dein Angriff die KMV deines Ziels übertrifft, wird das Ziel zu Boden geworfen und erlangt den Zustand liegend. Misslingt dein Angriff um mindestens 10 Punkte, fällst du stattdessen selbst zu Boden und erlangst den Zustand liegend. Hat dein Ziel mehr als zwei Beine, erhöht sich der SG des für das Manöver notwendigen Angriffswurfs um +2 für jedes zusätzliche Bein. Manche Wesen, z.B. Schlicke, Kreaturen ohne Beine oder auch fliegende Kreaturen, können nicht zu Fall gebracht werden.",
+      "Feint": "Jemanden durch eine Finte zu irritieren, ist eine Standard-Aktion. Um eine Finte auszuführen, musst du einen Wurf auf Bluffen ablegen. Der SG dieses Wurfs beträgt 10 + Grund-Angriffsbonus deines Gegners + Weisheitsmodifikator deines Gegners. Ist dein Gegenüber in Motiv erkennen geübt, beträgt der SG stattdessen 10 + Bonus des Gegners auf Motiv erkennen, falls dieser Wert höher ist. Bei einem Erfolg verliert dein Ziel bei deinem nächsten Angriff seinen Geschicklichkeitsbonus auf seine RK (falls vorhanden). Dieser Angriff muss vor oder während deiner nächsten Runde ausgeführt werden.<br/><br/>Wenn du gegen nichthumanoide Kreaturen eine Finte ausführen möchtest, erhältst du einen Malus von – 4 auf deinen Wurf. Gegen einen Gegner mit tierhafter Intelligenz (1 oder 2), erhältst du einen Malus von – 8. Gegen eine Kreatur ohne Intelligenzwert kannst du keine Finte anwenden. Im Kampf eine Finte auszuführen, provoziert keinen Gelegenheitsangriff.",
+      "DropProne": "Mit einer Freien Aktion kannst du dich in deinem Feld zu Boden fallen lassen.",
+      "Withdraw": "Der Rückzug aus dem Nahkampf dauert eine Volle Runde. Bei einem Rückzug kannst du dich mit doppelter Bewegungsrate fortbewegen. Das Feld, in dem du beginnst, gilt von keinem Gegner, den du sehen kannst, als bedroht. Aus diesem Grund bekommen sichtbare Gegner auch keinen Gelegenheitsangriff gegen dich, wenn du dieses Feld verlässt. Unsichtbare Gegner erhalten allerdings weiterhin einen Gelegenheitsangriff, und wenn du blind bist, kannst du dich nicht aus dem Kampf zurückziehen. In der Runde, in der du dich zurückziehst, darfst du keinen 1,50 m-Schritt machen.<br/><br/>Falls du dich während des Rückzugs aus einem bedrohten Feld bewegst (das Startfeld ausgenommen), erhalten deine Gegner die normalen Gelegenheitsangriffe.<br/><br/>Du kannst dich nur mit Bewegungsarten zurückziehen, für die du eine festgelegte Bewegungsrate besitzt.<br/><br/>Beachte, dass du den Kampf nicht vollständig verlassen musst, auch wenn die Bezeichnung dieser Aktion dies anders zu implizieren scheint.<br/><h2>Eingeschränkter Rückzug</h2>Wenn du in jeder Runde nur eine Standard-Aktion ausführen darfst, kannst du den Rückzug auch als Standard-Aktion ausführen, darfst dich in diesem Fall aber nur mit deiner Bewegungsrate (nicht mit deiner doppelten Bewegungsrate) zurückziehen.",
+      "StandUp": "Aus einer liegenden Position aufzustehen ist eine Bewegungsaktion, die Gelegenheitsangriffe provoziert.",
+      "CoupDeGrace": "Mit einer Vollen Aktion kannst du eine Nahkampfwaffe einsetzen, um einen Coup de Grace gegen einen hilflosen Gegner auszuführen. Stehst du auf einem dem Opfer benachbarten Feld, darfst du auch einen Bogen oder eine Armbrust einsetzen.<br/><br/>Dein Angriff ist automatisch ein kritischer Treffer. Überlebt dein Opfer den Schaden, muss es einen erfolgreichen Zähigkeitswurf (SG 10 + der erlittene Schaden) bestehen oder stirbt augenblicklich. Schurken, die einen Coup de Grace gegen einen hilflosen Gegner ausführen, dürfen außerdem den durch ihren Hinterhältigen Angriff verursachten Zusatzschaden anrechnen.<br/><br/>Die Ausführung eines Coup de Grace provoziert Gelegenheitsangriffe von Gegnern, die den Ausführenden bedrohen.<br/><br/>Du kannst keiner Kreatur einen Coup de Grace versetzen, die immun gegen kritische Treffer ist. Gegen vollständig getarnte Kreaturen kannst du einen Coup de Grace ausführen; allerdings benötigst du dazu zwei aufeinander folgende Volle Aktionen (eine, um die Kreatur zu „finden“, nachdem du festgestellt hast, in welchem Feld sie sich befindet, und eine, um den Coup de Grace auszuführen).",
+      "DropItem": "Mit einer Freien Aktion kannst du einen Gegenstand in das Feld, in dem du stehst, oder in eines der angrenzenden Felder fallen lassen.",
+      "DrawSheathe": "Mit einer Bewegungsaktion kann man eine Waffe ziehen, um sie im Kampf einzusetzen oder sie wieder wegstecken, um die Hände frei zu haben. Diese Aktion gilt auch für waffenähnliche Objekte wie z.B. Zauberstäbe, sofern diese leicht erreichbar sind. Ist die Waffe oder das waffenähnliche Objekt in einem Rucksack verstaut oder auf andere Art schwer zu erreichen, wird diese Aktion wie das Auspacken eines verstauten Gegenstands behandelt.<br/><br/>Hast du einen Grund-Angriffsbonus von +1 oder höher, kannst du während deiner regulären Bewegung deine Waffe als Freie Aktion ziehen. Besitzt du das Talent „Kampf mit zwei Waffen“, kannst du zwei leichte oder Einhandwaffen in derselben Zeit ziehen, die du normalerweise für das Ziehen nur einer Waffe benötigen würdest.<br/><br/>Die Munition für eine Fernkampfwaffe zu ziehen (z.B. Pfeile, Bolzen, Schleuderkugeln oder Shuriken) ist eine Freie Aktion.",
+      "AidAnotherAttack": "Im Nahkampf kannst du den Angriff oder die Verteidigung eines Freundes unterstützen, indem du den Gegner ablenkst oder behinderst. Bist du selbst in einer Position, die dir einen Nahkampfangriff auf einen Gegner erlauben würde, der sich mit einem Verbündeten im Nahkampf befindet, kannst du deinem Verbündeten mit einer Standard-Aktion zu helfen versuchen. Dazu machst du einen Angriffswurf gegen RK 10. Bei einem Erfolg erhält dein Freund einen Bonus von +2 entweder auf seinen nächsten Angriffswurf oder auf seine RK gegen den nächsten Angriff vonseiten des Gegners (nach deiner Wahl), solange dieser Angriff vor dem Beginn deiner nächsten Runde erfolgt. Mehrere Verbündete können demselben Freund beistehen, in welchem Fall gleiche Boni kumulativ sind.<br/><br/>Du kannst diese Standard-Aktion auch dazu verwenden, einem Freund auf andere Weise zu helfen, z.B. wenn er von einem Zauber betroffen ist oder um den Fertigkeitswurf eines anderen Charakters zu unterstützen.",
+      "AidAnotherDefense": "Im Nahkampf kannst du den Angriff oder die Verteidigung eines Freundes unterstützen, indem du den Gegner ablenkst oder behinderst. Bist du selbst in einer Position, die dir einen Nahkampfangriff auf einen Gegner erlauben würde, der sich mit einem Verbündeten im Nahkampf befindet, kannst du deinem Verbündeten mit einer Standard-Aktion zu helfen versuchen. Dazu machst du einen Angriffswurf gegen RK 10. Bei einem Erfolg erhält dein Freund einen Bonus von +2 entweder auf seinen nächsten Angriffswurf oder auf seine RK gegen den nächsten Angriff vonseiten des Gegners (nach deiner Wahl), solange dieser Angriff vor dem Beginn deiner nächsten Runde erfolgt. Mehrere Verbündete können demselben Freund beistehen, in welchem Fall gleiche Boni kumulativ sind.<br/><br/>Du kannst diese Standard-Aktion auch dazu verwenden, einem Freund auf andere Weise zu helfen, z.B. wenn er von einem Zauber betroffen ist oder um den Fertigkeitswurf eines anderen Charakters zu unterstützen.",
+      "AidAnotherOther": "Im Nahkampf kannst du den Angriff oder die Verteidigung eines Freundes unterstützen, indem du den Gegner ablenkst oder behinderst. Bist du selbst in einer Position, die dir einen Nahkampfangriff auf einen Gegner erlauben würde, der sich mit einem Verbündeten im Nahkampf befindet, kannst du deinem Verbündeten mit einer Standard-Aktion zu helfen versuchen. Dazu machst du einen Angriffswurf gegen RK 10. Bei einem Erfolg erhält dein Freund einen Bonus von +2 entweder auf seinen nächsten Angriffswurf oder auf seine RK gegen den nächsten Angriff vonseiten des Gegners (nach deiner Wahl), solange dieser Angriff vor dem Beginn deiner nächsten Runde erfolgt. Mehrere Verbündete können demselben Freund beistehen, in welchem Fall gleiche Boni kumulativ sind.<br/><br/>Du kannst diese Standard-Aktion auch dazu verwenden, einem Freund auf andere Weise zu helfen, z.B. wenn er von einem Zauber betroffen ist oder um den Fertigkeitswurf eines anderen Charakters zu unterstützen.",
+      "None": ""
+    },
+    "ActionTypes": {
+      "Full": "Voll",
+      "Standard": "Standard",
+      "Move": "Bewegung",
+      "Swift": "Schnell",
+      "Immediate": "Augenblicklich",
+      "Free": "Freie",
+      "None": "Keine",
+      "Action": "Aktion",
+      "Reaction": "Reaktion"
+    },
+    "ItemTypes": {
+      "Spell": "Zauber",
+      "Feat": "Fertigkeit",
+      "Consumable": "Verbrauchsggst.",
+      "Equipment": "Ausrüstung"
+    },
+    "SpellLevels": {
+      "0": "Zaubertrick/Gebet",
+      "1": "1. Grad",
+      "2": "2. Grad",
+      "3": "3. Grad",
+      "4": "4. Grad",
+      "5": "5. Grad",
+      "6": "6. Grad",
+      "7": "7. Grad",
+      "8": "8. Grad",
+      "9": "9. Grad"
+    },
+    "Buffs": {
+      "Names": {
+        "FightingDefensively": "Defensive Kampfweise",
+        "TotalDefense": "Volle Verteidigung"
+      },
+      "Descriptions": {
+        "TotalDefense": "<p>Du kannst dich als Standard-Aktion selbst verteidigung. Du erhältst einen Ausweichbonus von +4 auf deine RK für 1 Runde. Dein RK-Bonus beginnt mit dem Start dieser Aktion. Du kannst nicht in Defensive Kampfweise gehen oder die Vorteile des Talentes Defensive Kampfweise genießen, während du in Voller Verteidigung bist. DU kannst keine Gelegenheitsangriffe ausfphren, während du in Voller Verteidigung bist.</p>",
+        "FightingDefensively": "<p>Du kannst dich während eines Angriffs entscheiden, defensiv zu kämpfen. Wenn du das tust, erhältst du einen Malus von -4 auf alle Angriffe in dieser Runde und einen Ausweichbonus von +2 auf deine RK für 1 Runde.</p>"
+      },
+      "ContextNotes": {
+        "TotalDefense1": "Volle Verteidigung kann nicht mit Defensive Kampfweise kombiniert werden.",
+        "TotalDefense2": "Kann keine Gelegenheitsangriffe ausführen, da in Voller Verteidigung."
+      }
+    },
+    "Error": {
+      "CannotAddNonAttackAction": "Nur Angriffe oder Gegenstände mit verbundenen Angriffen können hinzugefügt werden."
+    }
+  }
+}

@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AdminReview from '../../islands/AdminReview';
+---
+
+<Layout title="Admin - Application Review">
+  <main class="container mx-auto px-4 py-8">
+    <AdminReview client:load />
+  </main>
+</Layout>
+
+<style>
+  .container {
+    min-height: calc(100vh - 80px);
+  }
+</style>

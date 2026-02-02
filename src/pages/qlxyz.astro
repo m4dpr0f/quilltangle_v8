@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TokenEcosystem from '../islands/TokenEcosystem.tsx';
+---
+
+<Layout title="QLXYZ - The Three Pillars">
+  <!-- Beta Notice -->
+  <div class="bg-gradient-to-r from-yellow-900/20 via-purple-900/20 to-cyan-900/20 border border-gray-700 rounded-xl p-4 mb-8 text-center text-sm">
+    <span class="text-yellow-400 font-bold">OPEN BETA</span>
+    <span class="text-gray-500 mx-2">|</span>
+    <span class="text-gray-400">CrySword SAGA is a free tabletop RPG. Tokens are optional thematic community features, not required to play.</span>
+  </div>
+
+  <div class="text-center mb-12">
+    <h1 class="text-5xl font-bold mb-4 bg-gradient-to-r from-yellow-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+      QLX • QLY • QLZ
+    </h1>
+    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+      The Three Pillars of the Quillverse Economy
+    </p>
+  </div>
+
+  <TokenEcosystem client:load />
+
+  <section class="mt-16 border-t border-gray-700 pt-12">
+    <h2 class="text-3xl font-bold text-center mb-8">The Sacred Triangle</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gradient-to-br from-yellow-900/30 to-yellow-700/10 border border-yellow-600/30 rounded-xl p-6 text-center">
+        <div class="text-6xl mb-4">🌱</div>
+        <h3 class="text-2xl font-bold text-yellow-400 mb-2">SEED</h3>
+        <p class="text-gray-300">Plant the seeds of creativity through music and sacred instruments. QLX rewards those who cultivate the sonic landscape of the Quillverse.</p>
+      </div>
+      <div class="bg-gradient-to-br from-purple-900/30 to-purple-700/10 border border-purple-600/30 rounded-xl p-6 text-center">
+        <div class="text-6xl mb-4">🥚</div>
+        <h3 class="text-2xl font-bold text-purple-400 mb-2">EGG</h3>
+        <p class="text-gray-300">Nurture your business ventures and crowdfunding campaigns. QLY empowers creators building real products and services.</p>
+      </div>
+      <div class="bg-gradient-to-br from-cyan-900/30 to-cyan-700/10 border border-cyan-600/30 rounded-xl p-6 text-center">
+        <div class="text-6xl mb-4">☄️</div>
+        <h3 class="text-2xl font-bold text-cyan-400 mb-2">METEORITE</h3>
+        <p class="text-gray-300">Forge new magical technologies and innovations. QLZ fuels the builders creating software, hardware, and protocols.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-16 bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8">
+    <h2 class="text-3xl font-bold text-center mb-8">How They Work Together</h2>
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-col gap-6">
+        <div class="flex items-start gap-4">
+          <div class="bg-yellow-500/20 rounded-full p-3 flex-shrink-0">
+            <span class="text-2xl">1</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold text-yellow-400">Earn QLX through Play</h4>
+            <p class="text-gray-300">Complete typing races, music challenges, and story quests at <a href="https://quillverse.org" target="_blank" class="text-yellow-400 hover:underline">quillverse.org</a> to earn QUILUX tokens.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="bg-purple-500/20 rounded-full p-3 flex-shrink-0">
+            <span class="text-2xl">2</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold text-purple-400">Build with QLY</h4>
+            <p class="text-gray-300">Launch your crowdfunding campaign and join the creator economy. QUILY powers the business side of your Galactic Cluster Nation.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="bg-cyan-500/20 rounded-full p-3 flex-shrink-0">
+            <span class="text-2xl">3</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold text-cyan-400">Innovate with QLZ</h4>
+            <p class="text-gray-300">Bring your magical technology to life. QUILZ rewards innovation and fuels the tech pillar of the Quillverse.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="bg-gradient-to-r from-yellow-500/20 via-purple-500/20 to-cyan-500/20 rounded-full p-3 flex-shrink-0">
+            <span class="text-2xl">✨</span>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold bg-gradient-to-r from-yellow-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">Claim Your Rainbow Road</h4>
+            <p class="text-gray-300">With all three pillars activated, claim your place on the Rainbow Roads and establish your Galactic Cluster Nation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <section class="mt-12 bg-gray-800/30 rounded-xl p-6 text-center">
+    <p class="text-gray-500 text-sm">
+      <strong class="text-gray-400">Important:</strong> The tokens (QLX, QLY, QLZ) serve as thematic elements within the Quillverse fiction. CrySword SAGA can be played entirely as an analog tabletop RPG without any cryptocurrency involvement. Any blockchain features are experimental and optional.
+      <a href="https://quilu.xyz#disclaimer" target="_blank" class="text-purple-400 hover:underline ml-1">Learn more</a>
+    </p>
+  </section>
+</Layout>

@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Found Your Nation - 8xM">
+  <div class="py-8 max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 via-orange-400 to-purple-400 bg-clip-text text-transparent">
+        Found Your Nation
+      </h1>
+      <p class="text-gray-400 max-w-2xl mx-auto">
+        Create your Galactic Cluster Nation in 2 steps: Launch your token, then complete your character profile.
+      </p>
+    </div>
+
+    <!-- Two Step Process -->
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <!-- Step 1: Launch Token -->
+      <a href="/launchpad" class="card border-2 border-purple-500 hover:border-purple-400 transition group">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-3xl group-hover:scale-110 transition">
+            🚀
+          </div>
+          <div>
+            <div class="text-xs text-purple-400 uppercase tracking-wide">Step 1</div>
+            <h2 class="text-2xl font-bold">Launch Your Token</h2>
+          </div>
+        </div>
+        <p class="text-gray-400 mb-4">
+          Create your nation's token with instant Meteora DLMM liquidity. This establishes
+          your nation's economic foundation on Rainbow Roads.
+        </p>
+        <ul class="text-sm text-gray-500 space-y-1 mb-4">
+          <li>• Configure token name, symbol, supply</li>
+          <li>• Choose your TEK8 guild (affects pool strategy)</li>
+          <li>• Auto-deposit to Commons Treasury</li>
+          <li>• Instant trading on Meteora</li>
+        </ul>
+        <div class="btn bg-purple-600 hover:bg-purple-500 w-full text-center">
+          Go to Launchpad →
+        </div>
+      </a>
+
+      <!-- Step 2: Character Creation -->
+      <div class="card border-2 border-gray-600 relative">
+        <div class="absolute top-4 right-4 bg-yellow-600 text-xs px-2 py-1 rounded font-bold">
+          AFTER TOKEN
+        </div>
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center text-3xl">
+            🎭
+          </div>
+          <div>
+            <div class="text-xs text-gray-500 uppercase tracking-wide">Step 2</div>
+            <h2 class="text-2xl font-bold text-gray-400">Create Your Character</h2>
+          </div>
+        </div>
+        <p class="text-gray-500 mb-4">
+          After launching your token, complete your nation profile by engaging
+          all three realms of the Quillverse.
+        </p>
+        <ul class="text-sm text-gray-600 space-y-1 mb-4">
+          <li>• QLX (Plant): Choose your Sacred Instrument</li>
+          <li>• QLY (Animal): Link your Crowdfunding Campaign</li>
+          <li>• QLZ (Mineral): Describe your Technology Innovation</li>
+          <li>• Select your Rainbow Road</li>
+        </ul>
+        <div class="text-center text-gray-500 text-sm py-3 bg-gray-800 rounded">
+          Complete Step 1 first
+        </div>
+      </div>
+    </div>
+
+    <!-- Three Realms Info -->
+    <div class="mb-12">
+      <h3 class="text-xl font-bold text-center mb-6">The Three Realms</h3>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="card text-center bg-gradient-to-b from-green-900/30 to-transparent border-green-500/30">
+          <div class="text-4xl mb-3">🌱</div>
+          <h4 class="font-bold text-green-400 mb-1">QLX</h4>
+          <p class="text-xs text-gray-500">Realm: Plant</p>
+          <p class="text-sm text-gray-400">Essence: SEED</p>
+          <p class="text-xs text-purple-400">Pillar: Culture & Music</p>
+          <p class="text-xs text-gray-500 mt-2">Choose your Sacred Instrument - the voice of your nation</p>
+        </div>
+        <div class="card text-center bg-gradient-to-b from-orange-900/30 to-transparent border-orange-500/30">
+          <div class="text-4xl mb-3">🥚</div>
+          <h4 class="font-bold text-orange-400 mb-1">QLY</h4>
+          <p class="text-xs text-gray-500">Realm: Animal</p>
+          <p class="text-sm text-gray-400">Essence: EGG</p>
+          <p class="text-xs text-purple-400">Pillar: Business & Sports</p>
+          <p class="text-xs text-gray-500 mt-2">Link your crowdfunding campaign to show your commitment</p>
+        </div>
+        <div class="card text-center bg-gradient-to-b from-purple-900/30 to-transparent border-purple-500/30">
+          <div class="text-4xl mb-3">☄️</div>
+          <h4 class="font-bold text-purple-400 mb-1">QLZ</h4>
+          <p class="text-xs text-gray-500">Realm: Mineral</p>
+          <p class="text-sm text-gray-400">Essence: METEORITE</p>
+          <p class="text-xs text-purple-400">Pillar: Character & Technology</p>
+          <p class="text-xs text-gray-500 mt-2">Describe the magical technology your nation brings</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Already have a token? -->
+    <div class="bg-gray-900 rounded-lg p-6 text-center">
+      <h3 class="font-bold mb-2">Already launched a token?</h3>
+      <p class="text-gray-400 text-sm mb-4">
+        If you've already created your GCN token on Solana, you can skip to character creation.
+      </p>
+      <a href="/apply/character" class="btn bg-gray-700 hover:bg-gray-600">
+        Continue to Character Creation →
+      </a>
+    </div>
+
+    <div class="mt-8 text-center text-sm text-gray-500">
+      <p>
+        Questions? Read the <a href="https://quillverse.org/crysword-saga" target="_blank" rel="noopener" class="text-purple-400 hover:underline">CrySword SAGA RPG Zine</a>
+        for more about the Quillverse lore and Dice Godz system.
+      </p>
+    </div>
+  </div>
+</Layout>

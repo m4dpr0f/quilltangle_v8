@@ -1,0 +1,94 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Garu Memories | 8xM">
+  <main class="min-h-screen bg-gradient-to-b from-gray-950 via-purple-950/10 to-gray-950 py-8 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold mb-2 bg-gradient-to-r from-amber-400 to-purple-400 bg-clip-text text-transparent">
+          Memory Archive
+        </h1>
+        <p class="text-gray-400">
+          Record musical tracks and journal entries to preserve your Garu's legacy.
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <a href="/garu" class="btn bg-gray-700 hover:bg-gray-600 text-sm">
+          🐦 Garu Care
+        </a>
+        <a href="/garu/resurrect" class="btn bg-gradient-to-r from-purple-600 to-pink-600 text-sm">
+          ✨ Resurrection Shrine
+        </a>
+        <a href="/garu/legacy" class="btn bg-gray-700 hover:bg-gray-600 text-sm">
+          📜 Legacy Hall
+        </a>
+      </div>
+
+      <div id="memories-app"></div>
+
+      <!-- Info Section -->
+      <div class="grid md:grid-cols-2 gap-6 mt-12">
+        <div class="bg-gray-900/50 rounded-xl p-6 border border-gray-800">
+          <div class="text-3xl mb-3">🎵</div>
+          <h3 class="font-bold text-lg mb-2">Musical Tracks</h3>
+          <p class="text-gray-400 text-sm mb-3">
+            Record songs, melodies, or sounds that capture moments with your Garu.
+            These musical memories are the most powerful for resurrection.
+          </p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• 1 track = 75% level restoration</li>
+            <li>• 3+ tracks = 100% level restoration</li>
+            <li>• Upload to IPFS or a music platform</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-900/50 rounded-xl p-6 border border-gray-800">
+          <div class="text-3xl mb-3">📜</div>
+          <h3 class="font-bold text-lg mb-2">Journal Entries</h3>
+          <p class="text-gray-400 text-sm mb-3">
+            Write about your journey, your thoughts, and your bond with your Garu.
+            Writings help restore the emotional bond during resurrection.
+          </p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li>• 1 writing = 75% bond restoration</li>
+            <li>• 2+ writings = 100% bond restoration</li>
+            <li>• Chronicle your adventures together</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Why Memories Matter -->
+      <div class="mt-8 bg-amber-900/20 rounded-xl p-6 border border-amber-700/50">
+        <h3 class="font-bold text-lg mb-3 text-amber-400">Why Memories Matter</h3>
+        <p class="text-gray-300 mb-4">
+          In the Quillverse, memories are more than nostalgia—they're save points.
+          When a Garu falls, these preserved moments become the keys to bringing them back.
+        </p>
+        <p class="text-gray-400 text-sm">
+          <strong>Create memories regularly!</strong> Each track and journal entry captures your Garu's
+          current level and stats. The more memories you have, the stronger the resurrection.
+        </p>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition;
+  }
+</style>
+
+<script>
+  import { createRoot } from 'react-dom/client';
+  import GaruMemories from '../../islands/GaruMemories';
+
+  const container = document.getElementById('memories-app');
+  if (container) {
+    const root = createRoot(container);
+    root.render(GaruMemories());
+  }
+</script>

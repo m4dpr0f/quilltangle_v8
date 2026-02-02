@@ -1,0 +1,167 @@
+{
+  "ECHPF1": {
+    "ACNormal": "Armor Class",
+    "ACFlatFooted": "Flat-Footed Armor Class",
+    "ACTouch": "Touch Armor Class",
+    "CMDTotal": "Combat Maneuver Defense",
+    "CMDFlatFootedTotal": "Flat-Footed Combat Maneuver Defense",
+    "CombatManeuver": "Combat Maneuver",
+    "TemporaryHP": "Temporary Hit Points",
+    "HP": "Hit Points",
+    "HPShort": "HP",
+    "Nonlethal": "Nonlethal Damage",
+    "TemporaryVigor": "Temporary Vigor",
+    "Settings": {
+      "ShowActionPanelStandard": {
+        "name": "Show Standard Action Panel",
+        "desc": "Show the Standard Action panel in the Actions tab."
+      },
+      "ShowActionPanelMove": {
+        "name": "Show Move Action Panel",
+        "desc": "Show the Move Action panel in the Actions tab."
+      },
+      "ShowActionPanelSwift": {
+        "name": "Show Swift Action Panel",
+        "desc": "Show the Swift Action panel in the Actions tab."
+      },
+      "ShowActionPanelFull": {
+        "name": "Show Full Round Action Panel",
+        "desc": "Show the Full Round Action panel in the Actions tab."
+      },
+      "ShowActionPanelFree": {
+        "name": "Show Free Action Panel",
+        "desc": "Show the Free Action panel in the Actions tab."
+      },
+      "ShowMacroPanel": {
+        "name": "Show Macro Panel",
+        "desc": "Show the Macro panel in the Actions tab."
+      },
+      "ShowWeaponsInFullPanel": {
+        "name": "Show Weapons in Full Panel",
+        "desc": "When active, weapon attacks are also listed in the full action panel."
+      },
+      "UnchainedActions": {
+        "name": "Unchained Action Count",
+        "desc": "The number of actions available to the character has available using the Unchained Action Economy rules."
+      },
+      "ShowUnchainedActionPanel": {
+        "name": "Show Unchained Action Panel",
+        "desc": "Show the Unchained Action panel in the Actions tab, if unchained action economy is enabled."
+      },
+      "ShowReactionActionPanel": {
+        "name": "Show Reaction Action Panel",
+        "desc": "Show the Reaction Action panel in the Actions tab, if unchained action economy is enabled."
+      },
+      "ShowActionReachOnCanvas": {
+        "name": "Show Action Reach on Canvas",
+        "desc": "Show the reach of the active token on the canvas when an action is hovered."
+      }
+    },
+    "MR": "MR",
+    "Abbr": {
+      "ACFlatFooted": "FF AC",
+      "ACTouch": "T AC",
+      "ACNormal": "AC",
+      "CMDTotal": "CMD",
+      "CMDFlatFootedTotal": "FF CMD"
+    },
+    "Actions": {
+      "Maneuver": "Combat Maneuever",
+      "Feint": "Feint",
+      "Grapple": "Grapple",
+      "Trip": "Trip",
+      "Disarm": "Disarm",
+      "Sunder": "Sunder",
+      "BullRush": "Bull Rush",
+      "Overrun": "Overrun",
+      "DirtyTrick": "Dirty Trick",
+      "Steal": "Steal",
+      "Drag": "Drag",
+      "Reposition": "Reposition",
+      "TotalDefense": "Total Defense",
+      "Withdraw": "Withdraw",
+      "AidAnother": "Aid Another",
+      "CoupDeGrace": "Coup de Grace",
+      "FightingDefensively": "Fight Defensively",
+      "DropItem": "Drop Item",
+      "StandUp": "Stand Up",
+      "DropProne": "Drop Prone",
+      "DrawSheathe": "Draw/Sheathe Weapon",
+      "AidAnotherAttack": "Aid Another (Attack)",
+      "AidAnotherDefense": "Aid Another (Defense)",
+      "Charge": "Charge",
+      "None": ""
+    },
+    "ActionDescriptions": {
+      "TotalDefense": "You can defend yourself as a standard action. You get a +4 dodge bonus to your AC for 1 round. Your AC improves at the start of this action. You can’t combine total defense with fighting defensively or with the benefit of the Combat Expertise feat. You can’t make attacks of opportunity while using total defense.",
+      "FightingDefensively": "You can choose to fight defensively when attacking. If you do so, you take a –4 penalty on all attacks in a round to gain a +2 dodge bonus to AC until the start of your next turn.",
+      "BullRush": "You can make a bull rush as a standard action or as part of a charge, in place of the melee attack. You can only bull rush an opponent who is no more than one size category larger than you. A bull rush attempts to push an opponent straight back without doing any harm. If you do not have the Improved Bull Rush feat, or a similar ability, initiating a bull rush provokes an attack of opportunity from the target of your maneuver.<br/><br/>If your attack is successful, your target is pushed back 5 feet. For every 5 by which your attack exceeds your opponent’s CMD you can push the target back an additional 5 feet. You can move with the target if you wish but you must have the available movement to do so. If your attack fails, your movement ends in front of the target.<br/><br/>An enemy being moved by a bull rush does not provoke an attack of opportunity because of the movement unless you possess the Greater Bull Rush feat. You cannot bull rush a creature into a square that is occupied by a solid object or obstacle. If there is another creature in the way of your bull rush, you must immediately make a combat maneuver check to bull rush that creature. You take a –4 penalty on this check for each creature being pushed beyond the first. If you are successful, you can continue to push the creatures a distance equal to the lesser result. For example, if a fighter bull rushes a goblin for a total of 15 feet, but there is another goblin 5 feet behind the first, he must make another combat maneuver check against the second goblin after having pushed the first 5 feet. If his check reveals that he can push the second goblin a total of 20 feet, he can continue to push both goblins another 10 feet (since the first goblin will have moved a total of 15 feet).",
+      "DirtyTrick": "You can attempt to hinder a foe in melee as a standard action. This maneuver covers any sort of situational attack that imposes a penalty on a foe for a short period of time. Examples include kicking sand into an opponent’s face to blind him for 1 round, pulling down an enemy’s pants to halve his speed, or hitting a foe in a sensitive spot to make him sickened for a round. The GM is the arbiter of what can be accomplished with this maneuver, but it cannot be used to impose a permanent penalty, and the results can be undone if the target spends a move action. If you do not have the Improved Dirty Trick feat or a similar ability, attempting a dirty trick provokes an attack of opportunity from the target of your maneuver.<br/><br/>If your attack is successful, the target takes a penalty. The penalty is limited to one of the following conditions:<br/><br/>blinded, dazzled, deafened, entangled, shaken, or sickened.<br/><br/>This condition lasts for 1 round. For every 5 by which your attack exceeds your opponent’s CMD, the penalty lasts 1 additional round. This penalty can usually be removed if the target spends a move action. If you possess the Greater Dirty Trick feat, the penalty lasts for 1d4 rounds, plus 1 round for every 5 by which your attack exceeds your opponent’s CMD. In addition, removing the condition requires the target to spend a standard action.",
+      "Disarm": "You can attempt to disarm your opponent in place of a melee attack. If you do not have the Improved Disarm feat, or a similar ability, attempting to disarm a foe provokes an attack of opportunity from the target of your maneuver. Attempting to disarm a foe while unarmed imposes a –4 penalty on the attack.<br/><br/>If your attack is successful, your target drops one item it is carrying of your choice (even if the item is wielded with two hands). If your attack exceeds the CMD of the target by 10 or more, the target drops the items it is carrying in both hands (maximum two items if the target has more than two hands). If your attack fails by 10 or more, you drop the weapon that you were using to attempt the disarm. If you successfully disarm your opponent without using a weapon, you may automatically pick up the item dropped.",
+      "Drag": "You can attempt to drag a foe as a standard action. You can only drag an opponent who is no more than one size category larger than you. The aim of this maneuver is to drag a foe in a straight line behind you without doing any harm. If you do not have the Improved Drag feat or a similar ability, initiating a drag provokes an attack of opportunity from the target of your maneuver.<br/><br/>If your attack is successful, both you and your target are moved 5 feet back, with your opponent occupying your original space and you in the space behind that in a straight line. For every 5 by which your attack exceeds your opponent’s CMD, you can drag the target back an additional 5 feet. You must be able to move with the target to perform this maneuver. If you do not have enough movement, the drag goes to the maximum amount of movement available to you and ends.<br/><br/>An enemy being moved by a drag does not provoke an attack of opportunity because of the movement unless you possess the Greater Drag feat. You cannot move a creature into a square that is occupied by a solid object or obstacle. If there is another creature in the way of your movement, the drag ends adjacent to that creature.<br/><br/>Stability Racial Trait: Some characters or types of creatures prove particularly sure-footed, making them more difficult to overthrow and move around the battlefield. Any racial ability that grants a bonus to CMD versus bull rush attempts grants the same bonus against drag combat maneuvers.",
+      "Grapple": "As a standard action, you can attempt to grapple a foe, hindering his combat options. If you do not have Improved Grapple, grab, or a similar ability, attempting to grapple a foe provokes an attack of opportunity from the target of your maneuver. Humanoid creatures without two free hands attempting to grapple a foe take a –4 penalty on the combat maneuver roll. If successful, both you and the target gain the grappled condition. If you successfully grapple a creature that is not adjacent to you, move that creature to an adjacent open space (if no space is available, your grapple fails). Although both creatures have the grappled condition, you can, as the creature that initiated the grapple, release the grapple as a free action, removing the condition from both you and the target. If you do not release the grapple, you must continue to make a check each round, as a standard action, to maintain the hold. If your target does not break the grapple, you get a +5 circumstance bonus on grapple checks made against the same target in subsequent rounds. Once you are grappling an opponent, a successful check allows you to continue grappling the foe, and also allows you to perform one of the following actions (as part of the standard action spent to maintain the grapple).<br/><br/><h2>Move</h2>You can move both yourself and your target up to half your speed. At the end of your movement, you can place your target in any square adjacent to you. If you attempt to place your foe in a hazardous location, such as in a wall of fire or over a pit, the target receives a free attempt to break your grapple with a +4 bonus.<br/><br/><h2>Damage</h2>You can inflict damage to your target equal to your unarmed strike, a natural attack, or an attack made with armor spikes or a light or one-handed weapon. This damage can be either lethal or nonlethal.<br/><br/><h2>Pin</h2>You can give your opponent the pinned condition (see Conditions). Despite pinning your opponent, you still only have the grappled condition, but you lose your Dexterity bonus to AC.<br/><br/><h2>Tie Up</h2>If you have your target pinned, otherwise restrained, or unconscious, you can use rope to tie him up. This works like a pin effect, but the DC to escape the bonds is equal to 20 + your Combat Maneuver Bonus (instead of your CMD). The ropes do not need to make a check every round to maintain the pin. If you are grappling the target, you can attempt to tie him up in ropes, but doing so requires a combat maneuver check at a –10 penalty. If the DC to escape from these bindings is higher than 20 + the target’s CMB, the target cannot escape from the bonds, even with a natural 20 on the check.<br/><br/><h2>If You Are Grappled</h2>If you are grappled, you can attempt to break the grapple as a standard action by making a combat maneuver check (DC equal to your opponent’s CMD; this does not provoke an attack of opportunity) or Escape Artist check (with a DC equal to your opponent’s CMD). If you succeed, you break the grapple and can act normally. Alternatively, if you succeed, you can become the grappler, grappling the other creature (meaning that the other creature cannot freely release the grapple without making a combat maneuver check, while you can). Instead of attempting to break or reverse the grapple, you can take any action that doesn’t require two hands to perform, such as cast a spell or make an attack or full attack with a light or one-handed weapon against any creature within your reach, including the creature that is grappling you. See the grappled condition for additional details. If you are pinned, your actions are very limited. See the pinned condition in Conditions for additional details.<br/><br/><h2>Multiple Creatures</h2>Multiple creatures can attempt to grapple one target. The creature that first initiates the grapple is the only one that makes a check, with a +2 bonus for each creature that assists in the grapple (using the Aid Another action). Multiple creatures can also assist another creature in breaking free from a grapple, with each creature that assists (using the Aid Another action) granting a +2 bonus on the grappled creature’s combat maneuver check.",
+      "Overrun": "As a standard action, taken during your move or as part of a charge, you can attempt to overrun your target, moving through its square. You can only overrun an opponent who is no more than one size category larger than you. If you do not have the Improved Overrun feat, or a similar ability, initiating an overrun provokes an attack of opportunity from the target of your maneuver. If your overrun attempt fails, you stop in the space directly in front of the opponent, or the nearest open space in front of the creature if there are other creatures occupying that space.<br/><br/>When you attempt to overrun a target, it can choose to avoid you, allowing you to pass through its square without requiring an attack. If your target does not avoid you, make a combat maneuver check as normal. If your maneuver is successful, you move through the target’s space. If your attack exceeds your opponent’s CMD by 5 or more, you move through the target’s space and the target is knocked prone. If the target has more than two legs, add +2 to the DC of the combat maneuver attack roll for each additional leg it has.",
+      "Reposition": "You can attempt to reposition a foe to a different location as a standard action. You can only reposition an opponent that is no more than one size category larger than you. A reposition attempts to force a foe to move to a different position in relation to your location without doing any harm. If you do not have the Improved Reposition feat or a similar ability, attempting to reposition a foe provokes an attack of opportunity from the target of your maneuver. You cannot use this maneuver to move a foe into a space that is intrinsically dangerous, such as a pit or wall of fire. If your attack is successful, you may move your target 5 feet to a new location. For every 5 by which your attack exceeds your opponent’s CMD, you can move the target an additional 5 feet. The target must remain within your reach at all times during this movement, except for the final 5 feet of movement, which can be to a space adjacent to your reach.<br/><br/>An enemy being moved by a reposition does not provoke an attack of opportunity because of the movement unless you possess the Greater Reposition feat. You cannot move a creature into a square that is occupied by a solid object or obstacle.",
+      "Steal": "You can attempt to take an item from a foe as a standard action. This maneuver can be used in melee to take any item that is neither held nor hidden in a bag or pack. You must have at least one hand free (holding nothing) to attempt this maneuver. You must select the item to be taken before the check is made. Items that are simply tucked into a belt or loosely attached (such as brooches or necklaces) are the easiest to take. Items fastened to a foe (such as cloaks, sheathed weapons, or pouches) are more difficult to take, and give the opponent a +5 bonus (or greater) to his CMD. Items that are closely worn (such as armor, backpacks, boots, clothing, or rings) cannot be taken with this maneuver. Items held in the hands (such as wielded weapons or wands) also cannot be taken with the steal maneuver—you must use the disarm combat maneuver instead. The GM is the final arbiter of what items can be taken. If you do not have the Improved Steal feat or a similar ability, attempting to steal an object provokes an attack of opportunity from the target of your maneuver.<br/><br/>Although this maneuver can only be performed if the target is within your reach, you can use a whip to steal an object from a target within range with a –4 penalty on the attack roll.<br/><br/>If your attack is successful, you may take one item from your opponent. You must be able to reach the item to be taken (subject to GM discretion). Your enemy is immediately aware of this theft unless you possess the Greater Steal feat.",
+      "Sunder": "You can attempt to sunder an item held or worn by your opponent as part of an attack action in place of a melee attack in place of a melee attack* (see Editors Note: Multiple Sunder Attempts). If you do not have the Improved Sunder feat, or a similar ability, attempting to sunder an item provokes an attack of opportunity from the target of your maneuver.<br/><br/>If your attack is successful, you deal damage to the item normally. Damage that exceeds the object’s Hardness is subtracted from its hit points. If an object has equal to or less than half its total hit points remaining, it gains the broken condition. If the damage you deal would reduce the object to less than 0 hit points, you can choose to destroy it. If you do not choose to destroy it, the object is left with only 1 hit point and the broken condition.",
+      "Trip": "You can attempt to trip your opponent in place of a melee attack. You can only trip an opponent who is no more than one size category larger than you. If you do not have the Improved Trip feat, or a similar ability, initiating a trip provokes an attack of opportunity from the target of your maneuver.<br/><br/>If your attack exceeds the target’s CMD, the target is knocked prone. If your attack fails by 10 or more, you are knocked prone instead. If the target has more than two legs, add +2 to the DC of the combat maneuver attack roll for each additional leg it has. Some creatures—such as oozes, creatures without legs, and flying creatures—cannot be tripped.",
+      "Feint": "Feinting is a standard action. To feint, make a Bluff skill check. The DC of this check is equal to 10 + your opponent’s base attack bonus + your opponent’s Wisdom modifier. If your opponent is trained in Sense Motive, the DC is instead equal to 10 + your opponent’s Sense Motive bonus, if higher. If successful, the next melee attack you make against the target does not allow him to use his Dexterity bonus to AC (if any). This attack must be made on or before your next turn.<br/><br/>When feinting against a non-humanoid you take a –4 penalty. Against a creature of animal Intelligence (1 or 2), you take a –8 penalty. Against a creature lacking an Intelligence score, it’s impossible. Feinting in combat does not provoke attacks of opportunity.",
+      "DropProne": "Dropping to a prone position in your space is a free action.",
+      "Withdraw": "Withdrawing from melee combat is a full-round action. When you withdraw, you can move up to double your speed. The square you start out in is not considered threatened by any opponent you can see, and therefore visible enemies do not get attacks of opportunity against you when you move from that square. Invisible enemies still get attacks of opportunity against you, and you can’t withdraw from combat if you’re blinded. You can’t take a 5-foot step during the same round in which you withdraw.<br/><br/>If, during the process of withdrawing, you move out of a threatened square (other than the one you started in), enemies get attacks of opportunity as normal.<br/><br/>You may not withdraw using a form of movement for which you don’t have a listed speed.<br/><br/>Note that despite the name of this action, you don’t actually have to leave combat entirely.<br/><br/><h2>Restricted Withdraw</h2>If you are limited to taking only a standard action each round you can withdraw as a standard action. In this case, you may move up to your speed.",
+      "StandUp": "Standing up from a prone position requires a move action and provokes attacks of opportunity.",
+      "CoupDeGrace": "As a full-round action, you can use a melee weapon to deliver a coup de grace (pronounced “coo day grahs”) to a helpless opponent. You can also use a bow or crossbow, provided you are adjacent to the target.<br/><br/>You automatically hit and score a critical hit. If the defender survives the damage, he must make a Fortitude save DC 10 + damage dealt) or die. A rogue also gets her extra sneak attack damage against a helpless opponent when delivering a coup de grace.<br/><br/>Delivering a coup de grace provokes attacks of opportunity from threatening opponents.<br/><br/>You can’t deliver a coup de grace against a creature that is immune to critical hits. You can deliver a coup de grace against a creature with total concealment, but doing this requires two consecutive full-round actions (one to “find” the creature once you’ve determined what square it’s in, and one to deliver the coup de grace).",
+      "DropItem": "Dropping an item in your space or into an adjacent square is a free action.",
+      "DrawSheathe": "Drawing a weapon so that you can use it in combat, or putting it away so that you have a free hand, requires a move action. This action also applies to weapon-like objects carried in easy reach, such as wands. If your weapon or weapon-like object is stored in a pack or otherwise out of easy reach, treat this action as retrieving a stored item.<br/><br/>If you have a base attack bonus of +1 or higher, you may draw a weapon as a free action combined with a regular move. If you have the Two-Weapon Fighting feat, you can draw two light or one-handed weapons in the time it would normally take you to draw one.<br/><br/>Drawing ammunition for use with a ranged weapon (such as arrows, bolts, sling bullets, or shuriken) is a free action.",
+      "AidAnotherAttack": "In melee combat, you can help a friend attack or defend by distracting or interfering with an opponent. If you’re in position to make a melee attack on an opponent that is engaging a friend in melee combat, you can attempt to aid your friend as a standard action. You make an attack roll against AC 10. If you succeed, your friend gains either a +2 bonus on his next attack roll against that opponent or a +2 bonus to AC against that opponent’s next attack (your choice), as long as that attack comes before the beginning of your next turn. Multiple characters can aid the same friend, and similar bonuses stack.<br/><br/>You can also use this standard action to help a friend in other ways, such as when he is affected by a spell, or to assist another character’s skill check.",
+      "AidAnotherDefense": "In melee combat, you can help a friend attack or defend by distracting or interfering with an opponent. If you’re in position to make a melee attack on an opponent that is engaging a friend in melee combat, you can attempt to aid your friend as a standard action. You make an attack roll against AC 10. If you succeed, your friend gains either a +2 bonus on his next attack roll against that opponent or a +2 bonus to AC against that opponent’s next attack (your choice), as long as that attack comes before the beginning of your next turn. Multiple characters can aid the same friend, and similar bonuses stack.<br/><br/>You can also use this standard action to help a friend in other ways, such as when he is affected by a spell, or to assist another character’s skill check.",
+      "AidAnotherOther": "In melee combat, you can help a friend attack or defend by distracting or interfering with an opponent. If you’re in position to make a melee attack on an opponent that is engaging a friend in melee combat, you can attempt to aid your friend as a standard action. You make an attack roll against AC 10. If you succeed, your friend gains either a +2 bonus on his next attack roll against that opponent or a +2 bonus to AC against that opponent’s next attack (your choice), as long as that attack comes before the beginning of your next turn. Multiple characters can aid the same friend, and similar bonuses stack.<br/><br/>You can also use this standard action to help a friend in other ways, such as when he is affected by a spell, or to assist another character’s skill check.",
+      "None": ""
+    },
+    "ActionTypes": {
+      "Full": "Full",
+      "Standard": "Standard",
+      "Move": "Move",
+      "Swift": "Swift",
+      "Immediate": "Immediate",
+      "Free": "Free",
+      "None": "None",
+      "Action": "Action",
+      "Reaction": "Reaction"
+    },
+    "ItemTypes": {
+      "Spell": "Spell",
+      "Feat": "Feature",
+      "Consumable": "Consumable",
+      "Equipment": "Equipment"
+    },
+    "SpellLevels": {
+      "0": "Cantrip/Orison",
+      "1": "1st Level",
+      "2": "2nd Level",
+      "3": "3rd Level",
+      "4": "4th Level",
+      "5": "5th Level",
+      "6": "6th Level",
+      "7": "7th Level",
+      "8": "8th Level",
+      "9": "9th Level"
+    },
+    "Buffs": {
+      "Names": {
+        "FightingDefensively": "Fighting Defensively",
+        "TotalDefense": "Total Defense"
+      },
+      "Descriptions": {
+        "TotalDefense": "<p>You can defend yourself as a standard action. You get a +4 dodge bonus to your AC for 1 round. Your AC improves at the start of this action. You can&rsquo;t combine total defense with fighting defensively or with the benefit of the Combat Expertise feat. You can&rsquo;t make attacks of opportunity while using total defense.</p>",
+        "FightingDefensively": "<p>You can choose to fight defensively when attacking. If you do so, you take a &ndash;4 penalty on all attacks in a round to gain a +2 dodge bonus to AC for 1 round.</p>"
+      },
+      "ContextNotes": {
+        "TotalDefense1": "Total Defense cannot be combined with Combat Expertise.",
+        "TotalDefense2": "Cannot make AoO due to Total Defense."
+      }
+    },
+    "Error": {
+      "CannotAddNonAttackAction": "Only attacks or items with linked attacks can be added."
+    }
+  }
+}

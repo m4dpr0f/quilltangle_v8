@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TerritoryMap from '../islands/TerritoryMap';
+---
+
+<Layout title="Territory Map - MMORPG">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-8">
+      <h1 class="text-4xl font-bold mb-4">MMORPG Territory Map</h1>
+      <p class="text-gray-400 max-w-2xl mx-auto">
+        Claim territories, defend your nation, and expand your empire across the Quillverse.
+        40 territories span three realms: QLX (Music), QLY (Business), and QLZ (Tech).
+      </p>
+      <div class="mt-4">
+        <a href="/diplomacy" class="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-500 rounded-lg text-sm font-medium transition">
+          <span>🤝</span> Diplomacy & Alliances
+        </a>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-4 mb-8">
+      <div class="card border-l-4 border-green-500">
+        <h3 class="font-bold text-green-400 mb-2">QLX Realm</h3>
+        <p class="text-sm text-gray-400">Music/Seed - 8 territories</p>
+        <p class="text-xs text-gray-500 mt-1">Min stake: 100,000 tokens</p>
+      </div>
+      <div class="card border-l-4 border-orange-500">
+        <h3 class="font-bold text-orange-400 mb-2">QLY Realm</h3>
+        <p class="text-sm text-gray-400">Business/Egg - 16 territories</p>
+        <p class="text-xs text-gray-500 mt-1">Min stake: 250,000 tokens</p>
+      </div>
+      <div class="card border-l-4 border-purple-500">
+        <h3 class="font-bold text-purple-400 mb-2">QLZ Realm</h3>
+        <p class="text-sm text-gray-400">Tech/Meteorite - 16 territories</p>
+        <p class="text-xs text-gray-500 mt-1">Min stake: 500,000 tokens</p>
+      </div>
+    </div>
+
+    <TerritoryMap client:load />
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="card">
+        <h3 class="text-xl font-bold mb-4">How to Play</h3>
+        <ol class="space-y-3 text-sm text-gray-300">
+          <li class="flex gap-3">
+            <span class="flex-shrink-0 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center text-xs font-bold">1</span>
+            <span><strong>Launch Token:</strong> Create your GCN token and deposit to the reciprocity pool</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="flex-shrink-0 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center text-xs font-bold">2</span>
+            <span><strong>Found Nation:</strong> Apply for GCN status and choose your nation emoji</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="flex-shrink-0 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center text-xs font-bold">3</span>
+            <span><strong>Claim Territory:</strong> Stake tokens to claim your first territory on the map</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="flex-shrink-0 w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center text-xs font-bold">4</span>
+            <span><strong>Expand:</strong> Stake more to increase defense, or burn tokens to attack enemies</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <h3 class="text-xl font-bold mb-4">Token Mechanics</h3>
+        <div class="space-y-3 text-sm">
+          <div class="flex items-start gap-3">
+            <span class="text-green-400 text-xl">+</span>
+            <div>
+              <strong class="text-green-400">STAKE</strong>
+              <p class="text-gray-400">Lock tokens to increase territory defense</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-red-400 text-xl">*</span>
+            <div>
+              <strong class="text-red-400">BURN</strong>
+              <p class="text-gray-400">Destroy tokens for attack power or free Cryptofae</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-blue-400 text-xl">~</span>
+            <div>
+              <strong class="text-blue-400">TRADE</strong>
+              <p class="text-gray-400">Swap via LotusXchange to build life force</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-yellow-400 text-xl">&gt;</span>
+            <div>
+              <strong class="text-yellow-400">SEND</strong>
+              <p class="text-gray-400">Transfer to allies for diplomacy bonuses</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

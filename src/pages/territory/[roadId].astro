@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TerritoryDetail from '../../islands/TerritoryDetail';
+
+const { roadId } = Astro.params;
+
+// Validate road ID format
+const roadRegex = /^D(2|4|6|8|10|12|20|100)(OUT|UP|DWN|U45|D45)$/;
+if (!roadId || !roadRegex.test(roadId)) {
+  return Astro.redirect('/territory');
+}
+---
+
+<Layout title={`Territory ${roadId}`}>
+  <TerritoryDetail roadId={roadId} client:load />
+</Layout>

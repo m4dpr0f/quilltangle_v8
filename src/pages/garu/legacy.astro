@@ -1,0 +1,66 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Garu Legacy | 8xM">
+  <main class="min-h-screen bg-gradient-to-b from-gray-950 via-purple-950/10 to-gray-950 py-8 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+          Hall of Legacy
+        </h1>
+        <p class="text-gray-400">
+          Honoring fallen Garu whose energy now nourishes the Quillverse.
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div class="flex justify-center gap-4 mb-8">
+        <a href="/garu" class="btn bg-gray-700 hover:bg-gray-600 text-sm">
+          🐦 Garu Care
+        </a>
+        <a href="/garu/eggs" class="btn bg-gray-700 hover:bg-gray-600 text-sm">
+          🥚 Wild Eggs
+        </a>
+        <a href="/garu/fusion" class="btn bg-gray-700 hover:bg-gray-600 text-sm">
+          🔮 Fusion
+        </a>
+      </div>
+
+      <div id="legacy-hall"></div>
+
+      <!-- Legacy Philosophy -->
+      <div class="mt-12 bg-gray-900/50 rounded-xl p-8 border border-gray-800 text-center">
+        <div class="text-4xl mb-4">🕊️</div>
+        <h3 class="text-xl font-bold mb-4">The Cycle of Legacy</h3>
+        <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          In the Quillverse, death is not an ending but a transformation. When a Garu falls,
+          their energy disperses across every territory they touched in life, becoming eggs
+          that carry their legacy forward. The more a Garu experienced—the more territories
+          explored, races won, bonds formed—the more abundant their legacy becomes.
+        </p>
+        <p class="text-gray-500 text-sm mt-4">
+          Through this cycle, experienced players create abundance for newcomers,
+          and the Quillverse grows ever richer with each generation.
+        </p>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition;
+  }
+</style>
+
+<script>
+  import { createRoot } from 'react-dom/client';
+  import GaruLegacy from '../../islands/GaruLegacy';
+
+  const container = document.getElementById('legacy-hall');
+  if (container) {
+    const root = createRoot(container);
+    root.render(GaruLegacy());
+  }
+</script>

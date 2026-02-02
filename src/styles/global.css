@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --color-qlx: #10b981;
+  --color-qly: #f59e0b;
+  --color-qlz: #8b5cf6;
+}
+
+body {
+  background-color: var(--color-gray-900);
+  color: white;
+  min-height: 100vh;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, var(--color-purple-600), var(--color-blue-600));
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, var(--color-purple-700), var(--color-blue-700));
+}
+
+.btn-secondary {
+  background-color: var(--color-gray-700);
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-gray-600);
+}
+
+.card {
+  background-color: var(--color-gray-800);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid var(--color-gray-700);
+}
+
+.input {
+  background-color: var(--color-gray-700);
+  border: 1px solid var(--color-gray-600);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+}
+
+.input:focus {
+  border-color: var(--color-purple-500);
+  outline: none;
+}
+
+/* Rainbow Roads colors */
+.road-qlx {
+  border-color: var(--color-green-500);
+  background-color: color-mix(in srgb, var(--color-green-500) 10%, transparent);
+}
+.road-qly {
+  border-color: var(--color-orange-500);
+  background-color: color-mix(in srgb, var(--color-orange-500) 10%, transparent);
+}
+.road-qlz {
+  border-color: var(--color-purple-500);
+  background-color: color-mix(in srgb, var(--color-purple-500) 10%, transparent);
+}
+
+/* Global button classes - use these instead of @apply in page styles */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-purple {
+  background-color: var(--color-purple-600);
+  color: white;
+}
+.btn-purple:hover {
+  background-color: var(--color-purple-500);
+}
+
+.btn-gray {
+  background-color: var(--color-gray-700);
+  color: white;
+}
+.btn-gray:hover {
+  background-color: var(--color-gray-600);
+}
+
+.btn-amber {
+  background: linear-gradient(to right, var(--color-amber-600), var(--color-pink-600));
+  color: white;
+}
+.btn-amber:hover {
+  background: linear-gradient(to right, var(--color-amber-500), var(--color-pink-500));
+}

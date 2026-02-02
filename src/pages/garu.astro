@@ -1,0 +1,144 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GaruCare from '../islands/GaruCare';
+---
+
+<Layout title="Garu Care | 8xM">
+  <main class="min-h-screen bg-gradient-to-b from-gray-950 via-purple-950/10 to-gray-950 py-8 px-4">
+    <div class="max-w-6xl mx-auto">
+      <!-- Intro for new players -->
+      <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold mb-2 bg-gradient-to-r from-amber-400 to-pink-400 bg-clip-text text-transparent">
+          Garu Care
+        </h1>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+          Care for your Garu across 8 wellness dimensions. Your care = their growth.
+          When they one day fall, their energy becomes eggs scattered across every territory they touched.
+        </p>
+      </div>
+
+      <!-- Quick Nav -->
+      <div class="flex flex-wrap justify-center gap-3 mb-8">
+        <a href="/garu/eggs" class="btn bg-purple-600 hover:bg-purple-500 text-sm">
+          🥚 Find Wild Eggs
+        </a>
+        <a href="/garu/memories" class="btn bg-gradient-to-r from-amber-600 to-purple-600 hover:from-amber-500 hover:to-purple-500 text-sm">
+          🎵 Create Memories
+        </a>
+        <a href="/garu/resurrect" class="btn bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-sm">
+          ✨ Resurrection Shrine
+        </a>
+        <a href="/garu/fusion" class="btn bg-gray-700 hover:bg-gray-600 text-sm">
+          🔮 Fusion
+        </a>
+        <a href="/garu/legacy" class="btn bg-gray-700 hover:bg-gray-600 text-sm">
+          📜 Legacy
+        </a>
+      </div>
+
+      <!-- Main Care Interface -->
+      <GaruCare client:load />
+
+      <!-- Info Cards -->
+      <div class="grid md:grid-cols-4 gap-6 mt-12">
+        <div class="bg-gray-900/50 rounded-xl p-6 border border-gray-800">
+          <div class="text-3xl mb-3">🌸</div>
+          <h3 class="font-bold text-lg mb-2">8 Wellness Petals</h3>
+          <p class="text-gray-400 text-sm">
+            Physical, Emotional, Intellectual, Social, Occupational, Spiritual, Environmental, Financial.
+          </p>
+        </div>
+
+        <div class="bg-gray-900/50 rounded-xl p-6 border border-gray-800">
+          <div class="text-3xl mb-3">🔥</div>
+          <h3 class="font-bold text-lg mb-2">Streaks & Bonds</h3>
+          <p class="text-gray-400 text-sm">
+            Consecutive days of care strengthen the Rider-Garu bond = faster leveling.
+          </p>
+        </div>
+
+        <div class="bg-gray-900/50 rounded-xl p-6 border border-gray-800">
+          <div class="text-3xl mb-3">🥚</div>
+          <h3 class="font-bold text-lg mb-2">Death Creates Life</h3>
+          <p class="text-gray-400 text-sm">
+            When a Garu falls, eggs spawn across every territory they visited.
+          </p>
+        </div>
+
+        <div class="bg-gray-900/50 rounded-xl p-6 border border-gray-800">
+          <div class="text-3xl mb-3">✨</div>
+          <h3 class="font-bold text-lg mb-2">Resurrection</h3>
+          <p class="text-gray-400 text-sm">
+            Music and writings = save points. Descendants can bring back fallen Garu.
+          </p>
+        </div>
+      </div>
+
+      <!-- The Lifecycle -->
+      <div class="mt-12 bg-gray-900/50 rounded-xl p-8 border border-gray-800">
+        <h3 class="text-xl font-bold mb-6 text-center">The Garu Lifecycle</h3>
+        <div class="flex flex-wrap justify-center items-center gap-4 text-sm">
+          <div class="flex flex-col items-center">
+            <div class="text-3xl mb-1">🔮</div>
+            <span class="text-purple-400">Chaos Shard</span>
+            <span class="text-xs text-gray-500">Begin here</span>
+          </div>
+          <span class="text-gray-600">→</span>
+          <div class="flex flex-col items-center">
+            <div class="text-3xl mb-1">🥚</div>
+            <span class="text-amber-400">Egg</span>
+            <span class="text-xs text-gray-500">25+ days care</span>
+          </div>
+          <span class="text-gray-600">→</span>
+          <div class="flex flex-col items-center">
+            <div class="text-3xl mb-1">🐣</div>
+            <span class="text-green-400">Hatching</span>
+            <span class="text-xs text-gray-500">D8 Wilderness</span>
+          </div>
+          <span class="text-gray-600">→</span>
+          <div class="flex flex-col items-center">
+            <div class="text-3xl mb-1">🐦</div>
+            <span class="text-blue-400">Garu + Rider</span>
+            <span class="text-xs text-gray-500">Journey together</span>
+          </div>
+          <span class="text-gray-600">→</span>
+          <div class="flex flex-col items-center">
+            <div class="text-3xl mb-1">💫</div>
+            <span class="text-pink-400">Legacy</span>
+            <span class="text-xs text-gray-500">Eggs spawn</span>
+          </div>
+          <span class="text-gray-600">→</span>
+          <div class="flex flex-col items-center">
+            <div class="text-3xl mb-1">✨</div>
+            <span class="text-cyan-400">Resurrection</span>
+            <span class="text-xs text-gray-500">Music + Descendant</span>
+          </div>
+        </div>
+        <p class="text-center text-gray-500 text-sm mt-6">
+          The cycle continues. Create memories during life to resurrect after death.
+        </p>
+      </div>
+
+      <!-- Resurrection Hint -->
+      <div class="mt-6 bg-amber-900/20 rounded-xl p-6 border border-amber-700/50">
+        <div class="flex items-start gap-4">
+          <div class="text-3xl">🎵</div>
+          <div>
+            <h4 class="font-bold text-amber-400 mb-1">Protect Your Garu Forever</h4>
+            <p class="text-gray-400 text-sm">
+              Record <strong>musical tracks</strong> and <strong>journal entries</strong> during your Garu's life.
+              These memories become save points—if your Garu ever falls, a descendant can use them
+              to bring your companion back through the <a href="/garu/resurrect" class="text-amber-400 hover:underline">Resurrection Shrine</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition;
+  }
+</style>

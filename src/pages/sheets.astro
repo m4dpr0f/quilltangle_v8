@@ -1,0 +1,170 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CharacterSheetGenerator from '../islands/CharacterSheetGenerator';
+---
+
+<Layout title="Character Sheets | CrySword Saga">
+  <main class="min-h-screen bg-gradient-to-b from-gray-950 via-purple-950/10 to-gray-950 py-8 px-4">
+    <div class="max-w-4xl mx-auto">
+      <!-- Header -->
+      <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold mb-2 bg-gradient-to-r from-amber-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          CrySword Saga Character Sheets
+        </h1>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+          Create and manage your TTRPG characters using the TEK8 system.
+          Export to printable HTML or save as JSON for later.
+        </p>
+      </div>
+
+      <!-- Quick Nav -->
+      <div class="flex flex-wrap justify-center gap-3 mb-8">
+        <a href="/roads" class="btn bg-purple-600 hover:bg-purple-500 text-sm">
+          40 Roads
+        </a>
+        <a href="/campaign" class="btn bg-gray-700 hover:bg-gray-600 text-sm">
+          Campaigns
+        </a>
+        <a href="/create" class="btn bg-gray-700 hover:bg-gray-600 text-sm">
+          Create GCN
+        </a>
+      </div>
+
+      <!-- Info Cards -->
+      <div class="grid md:grid-cols-3 gap-4 mb-8">
+        <div class="bg-gray-900/50 rounded-xl p-4 border border-gray-800">
+          <div class="text-2xl mb-2">🎲</div>
+          <h3 class="font-bold mb-1">8 Elemental Stats</h3>
+          <p class="text-gray-400 text-xs">
+            Each stat maps to a TEK8 petal: Ether, Air, Fire, Water, Earth, Chaos, Order, Coin
+          </p>
+        </div>
+        <div class="bg-gray-900/50 rounded-xl p-4 border border-gray-800">
+          <div class="text-2xl mb-2">⚔️</div>
+          <h3 class="font-bold mb-1">Crystal Sword Schools</h3>
+          <p class="text-gray-400 text-xs">
+            Choose your school: Dream Weavers, Sky Dancers, Forge Masters, and more
+          </p>
+        </div>
+        <div class="bg-gray-900/50 rounded-xl p-4 border border-gray-800">
+          <div class="text-2xl mb-2">📜</div>
+          <h3 class="font-bold mb-1">Codex Progression</h3>
+          <p class="text-gray-400 text-xs">
+            Track words written per school. 500 = Initiate, 5000 = Master
+          </p>
+        </div>
+      </div>
+
+      <!-- Main Generator -->
+      <CharacterSheetGenerator client:load />
+
+      <!-- Word-Count Mechanics Explainer -->
+      <div class="mt-12 bg-gray-900/50 rounded-xl p-6 border border-gray-800">
+        <h3 class="font-bold text-lg mb-4">CrySword Saga Word-Weaving Mechanics</h3>
+        <p class="text-gray-400 text-sm mb-4">
+          In the CrySword Saga system, actions require declarations of specific word counts
+          matching your Crystal Sword school's die:
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="text-center p-3 bg-gray-800 rounded-lg">
+            <div class="text-2xl mb-1">🪙</div>
+            <p class="font-bold">D2 - Luck Riders</p>
+            <p class="text-amber-400">2 words</p>
+            <p class="text-xs text-gray-500">Quick decisions</p>
+          </div>
+          <div class="text-center p-3 bg-gray-800 rounded-lg">
+            <div class="text-2xl mb-1">🔥</div>
+            <p class="font-bold">D4 - Forge Masters</p>
+            <p class="text-red-400">4 words</p>
+            <p class="text-xs text-gray-500">Direct action</p>
+          </div>
+          <div class="text-center p-3 bg-gray-800 rounded-lg">
+            <div class="text-2xl mb-1">🌍</div>
+            <p class="font-bold">D6 - Ground Builders</p>
+            <p class="text-green-400">6 words</p>
+            <p class="text-xs text-gray-500">Solid foundation</p>
+          </div>
+          <div class="text-center p-3 bg-gray-800 rounded-lg">
+            <div class="text-2xl mb-1">💨</div>
+            <p class="font-bold">D8 - Sky Dancers</p>
+            <p class="text-cyan-400">8 words</p>
+            <p class="text-xs text-gray-500">Flowing movement</p>
+          </div>
+          <div class="text-center p-3 bg-gray-800 rounded-lg">
+            <div class="text-2xl mb-1">🌀</div>
+            <p class="font-bold">D10 - Wild Shapers</p>
+            <p class="text-orange-400">10 words</p>
+            <p class="text-xs text-gray-500">Chaotic change</p>
+          </div>
+          <div class="text-center p-3 bg-gray-800 rounded-lg">
+            <div class="text-2xl mb-1">🌌</div>
+            <p class="font-bold">D12 - Dream Weavers</p>
+            <p class="text-purple-400">12 words</p>
+            <p class="text-xs text-gray-500">Creative vision</p>
+          </div>
+          <div class="text-center p-3 bg-gray-800 rounded-lg">
+            <div class="text-2xl mb-1">💧</div>
+            <p class="font-bold">D20 - Flow Keepers</p>
+            <p class="text-blue-400">20 words</p>
+            <p class="text-xs text-gray-500">Emotional depth</p>
+          </div>
+          <div class="text-center p-3 bg-gray-800 rounded-lg">
+            <div class="text-2xl mb-1">⚖️</div>
+            <p class="font-bold">D100 - Archive Seekers</p>
+            <p class="text-gray-300">100 words</p>
+            <p class="text-xs text-gray-500">Deep analysis</p>
+          </div>
+        </div>
+
+        <div class="mt-6 text-center">
+          <p class="text-gray-500 text-sm">
+            Cross-school collaboration allows combining word counts for complex challenges.
+            Example: A Forge Master (4) + Dream Weaver (12) = 16-word combined action.
+          </p>
+        </div>
+      </div>
+
+      <!-- Codex Ranks -->
+      <div class="mt-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-xl p-6 border border-purple-500/30">
+        <h3 class="font-bold text-lg mb-4">Codex Mastery Ranks</h3>
+        <div class="grid grid-cols-5 gap-4 text-center text-sm">
+          <div>
+            <p class="text-2xl mb-1">📖</p>
+            <p class="font-bold">Novice</p>
+            <p class="text-gray-500">0+ words</p>
+          </div>
+          <div>
+            <p class="text-2xl mb-1">📗</p>
+            <p class="font-bold">Initiate</p>
+            <p class="text-gray-500">500+ words</p>
+          </div>
+          <div>
+            <p class="text-2xl mb-1">📘</p>
+            <p class="font-bold">Adept</p>
+            <p class="text-gray-500">1,500+ words</p>
+          </div>
+          <div>
+            <p class="text-2xl mb-1">📙</p>
+            <p class="font-bold">Insider</p>
+            <p class="text-gray-500">3,000+ words</p>
+          </div>
+          <div>
+            <p class="text-2xl mb-1">📕</p>
+            <p class="font-bold">Master</p>
+            <p class="text-gray-500">5,000+ words</p>
+          </div>
+        </div>
+        <p class="text-center text-gray-500 text-xs mt-4">
+          Write words aligned with each school to gain access to their abilities.
+        </p>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition;
+  }
+</style>

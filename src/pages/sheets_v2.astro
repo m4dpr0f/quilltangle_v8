@@ -1,0 +1,178 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MultiSystemCharacterSheet from '../islands/MultiSystemCharacterSheet';
+---
+
+<Layout title="Character Sheets | Quillverse TTRPG">
+  <main class="min-h-screen bg-gradient-to-b from-gray-950 via-purple-950/10 to-gray-950 py-8 px-4">
+    <div class="max-w-5xl mx-auto">
+      <!-- Header -->
+      <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold mb-2 bg-gradient-to-r from-purple-400 via-red-400 to-blue-400 bg-clip-text text-transparent">
+          Quillverse Character Sheets
+        </h1>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+          Create characters for your tabletop adventures in the Quillverse.
+          Choose from Dice Godz, Pathfinder 1e, or Mutants & Masterminds 3e.
+        </p>
+      </div>
+
+      <!-- Quick Nav -->
+      <div class="flex flex-wrap justify-center gap-3 mb-8">
+        <a href="/roads" class="btn bg-purple-600 hover:bg-purple-500 text-sm">
+          40 Roads
+        </a>
+        <a href="/campaign" class="btn bg-gray-700 hover:bg-gray-600 text-sm">
+          Campaigns
+        </a>
+        <a href="/create" class="btn bg-gray-700 hover:bg-gray-600 text-sm">
+          Create GCN
+        </a>
+      </div>
+
+      <!-- System Overview Cards -->
+      <div class="grid md:grid-cols-3 gap-4 mb-8">
+        <div class="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-xl p-4 border border-purple-500/30">
+          <div class="text-2xl mb-2">🎲</div>
+          <h3 class="font-bold text-purple-400">Dice Godz</h3>
+          <p class="text-gray-400 text-xs mt-1">
+            TEK8's native system with 8 elemental stats and word-weaving mechanics
+          </p>
+        </div>
+        <div class="bg-gradient-to-br from-red-900/30 to-orange-900/30 rounded-xl p-4 border border-red-500/30">
+          <div class="text-2xl mb-2">⚔️</div>
+          <h3 class="font-bold text-red-400">Pathfinder 1e</h3>
+          <p class="text-gray-400 text-xs mt-1">
+            Classic d20 fantasy with deep character customization
+          </p>
+        </div>
+        <div class="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 rounded-xl p-4 border border-blue-500/30">
+          <div class="text-2xl mb-2">💥</div>
+          <h3 class="font-bold text-blue-400">M&M 3e</h3>
+          <p class="text-gray-400 text-xs mt-1">
+            Superhero RPG with flexible power building
+          </p>
+        </div>
+      </div>
+
+      <!-- Main Multi-System Generator -->
+      <MultiSystemCharacterSheet client:load />
+
+      <!-- Google Sheets Links -->
+      <div class="mt-12 bg-gray-900/50 rounded-xl p-6 border border-gray-800">
+        <h3 class="font-bold text-lg mb-4 text-center">Automated Character Generators</h3>
+        <p class="text-gray-400 text-sm text-center mb-4">
+          For more comprehensive character building with automatic calculations, use these Google Sheets:
+        </p>
+        <div class="grid md:grid-cols-2 gap-4">
+          <a
+            href="https://docs.google.com/spreadsheets/d/1uKXKrwlragJ5LzcEk7_S9ipdNfeN1V94a777I1AsC9Q/edit"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-red-900/30 rounded-lg p-4 border border-red-500/30 hover:border-red-400 transition block"
+          >
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">📊</span>
+              <div>
+                <h4 class="font-bold text-red-400">Pathfinder 1e Automated Sheet</h4>
+                <p class="text-xs text-gray-400">Full character builder with formulas</p>
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://docs.google.com/spreadsheets/d/1akyYute0dwFtBcNeA94io38t2NxLlj0QYPEPL66Fcic/edit"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-blue-900/30 rounded-lg p-4 border border-blue-500/30 hover:border-blue-400 transition block"
+          >
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">📊</span>
+              <div>
+                <h4 class="font-bold text-blue-400">M&M 3e Character Sheet</h4>
+                <p class="text-xs text-gray-400">Power point calculator and builder</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- TEK8 Integration Explainer -->
+      <div class="mt-8 bg-amber-900/20 rounded-xl p-6 border border-amber-500/30">
+        <h3 class="font-bold text-lg mb-4">Quillverse Integration</h3>
+        <p class="text-gray-400 text-sm mb-4">
+          All characters created here can be aligned to one of TEK8's 8 elements,
+          connecting them to the 40 Roads of the Quillverse. This allows:
+        </p>
+        <div class="grid md:grid-cols-2 gap-4 text-sm">
+          <div>
+            <h4 class="font-bold text-amber-400 mb-2">For TTRPG Campaigns</h4>
+            <ul class="text-gray-400 space-y-1">
+              <li>• Use roads as quest locations</li>
+              <li>• Align NPCs to elements</li>
+              <li>• Track campaign progress through territories</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-amber-400 mb-2">For GCN Tokens</h4>
+            <ul class="text-gray-400 space-y-1">
+              <li>• Create tokens for your characters</li>
+              <li>• Build universes around your campaigns</li>
+              <li>• Share characters with other players</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- System Comparison -->
+      <div class="mt-8 bg-gray-900/50 rounded-xl p-6 border border-gray-800">
+        <h3 class="font-bold text-lg mb-4 text-center">System Comparison</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-gray-400 border-b border-gray-700">
+                <th class="text-left p-2">Feature</th>
+                <th class="text-center p-2 text-purple-400">Dice Godz</th>
+                <th class="text-center p-2 text-red-400">Pathfinder 1e</th>
+                <th class="text-center p-2 text-blue-400">M&M 3e</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-300">
+              <tr class="border-b border-gray-800">
+                <td class="p-2">Core Stats</td>
+                <td class="text-center p-2">8 Elements</td>
+                <td class="text-center p-2">6 Abilities</td>
+                <td class="text-center p-2">8 Abilities</td>
+              </tr>
+              <tr class="border-b border-gray-800">
+                <td class="p-2">Dice Used</td>
+                <td class="text-center p-2">All dice types</td>
+                <td class="text-center p-2">d20 + others</td>
+                <td class="text-center p-2">d20</td>
+              </tr>
+              <tr class="border-b border-gray-800">
+                <td class="p-2">Genre</td>
+                <td class="text-center p-2">Multi-genre</td>
+                <td class="text-center p-2">Fantasy</td>
+                <td class="text-center p-2">Superhero</td>
+              </tr>
+              <tr class="border-b border-gray-800">
+                <td class="p-2">Unique Mechanic</td>
+                <td class="text-center p-2">Word-weaving</td>
+                <td class="text-center p-2">Feats/Classes</td>
+                <td class="text-center p-2">Power Points</td>
+              </tr>
+              <tr>
+                <td class="p-2">Best For</td>
+                <td class="text-center p-2">Creative/Educational</td>
+                <td class="text-center p-2">Tactical Combat</td>
+                <td class="text-center p-2">Powers/Flexibility</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<!-- Using global .btn class from global.css -->

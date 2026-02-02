@@ -1,0 +1,167 @@
+{
+  "ECHPF1": {
+    "ACNormal": "Classe d'Armure",
+    "ACFlatFooted": "Classe d'Armure Pris au Dépourvu",
+    "ACTouch": "Classe d'Armure Contact",
+    "CMDTotal": "Degré de Manœuvre Défensive",
+    "CMDFlatFootedTotal": "Degré de Manœuvre Défensive Pris au Dépourvu",
+    "CombatManeuver": "Manœuvres Offensives",
+    "TemporaryHP": "Points de Vie Temporaires",
+    "HP": "Points de Vie",
+    "HPShort": "PV",
+    "Nonlethal": "Dégâts Non Létaux",
+    "TemporaryVigor": "Vigueur Temporaire",
+    "Settings": {
+      "ShowActionPanelStandard": {
+        "name": "Afficher le menu Actions Simples",
+        "desc": "Affiche le menu d'Actions Simples dans l'onglet Actions."
+      },
+      "ShowActionPanelMove": {
+        "name": "Afficher le menu Actions de Mouvement",
+        "desc": "Affiche le menu d'Actions de Mouvement dans l'onglet Actions."
+      },
+      "ShowActionPanelSwift": {
+        "name": "Afficher le menu Actions Rapides",
+        "desc": "Affiche le menu d'Actions Rapides dans l'onglet Actions."
+      },
+      "ShowActionPanelFull": {
+        "name": "Afficher le Menu Actions Complexes",
+        "desc": "Affiche le menu d'Actions Complexes dans l'onglet Actions."
+      },
+      "ShowActionPanelFree": {
+        "name": "Afficher le menu Actions Libres",
+        "desc": "Affiche le menu d'Actions Libres dans l'onglet Actions."
+      },
+      "ShowMacroPanel": {
+        "name": "Afficher le menu Macros",
+        "desc": "Affiche le menu des Macros dans l'onglet Actions."
+      },
+      "ShowWeaponsInFullPanel": {
+        "name": "Afficher les Armes dans le menu Actions Complexes",
+        "desc": "Lorsque cette option est activée, les attaques avec des armes figurent également dans le menu d'action d'Actions Complexes."
+      },
+      "UnchainedActions": {
+        "name": "Nombre d'Actions (Unchained)",
+        "desc": "Le nombre d'actions dont dispose le personnage avec les règles gestion d'actions révisée (unchained)."
+      },
+      "ShowUnchainedActionPanel": {
+        "name": "Afficher le menu d'Actions Unchained",
+        "desc": "Affiche le menu d'Actions Unchained dans l'onglet Actions, si la gestion d'actions révisée est activée."
+      },
+      "ShowReactionActionPanel": {
+        "name": "Afficher le menu d'Actions de Réaction",
+        "desc": "Affiche le menu d'Actions de Réaction dans l'onglet Actions, si l'économie d'actions Unchained est activée."
+      },
+      "ShowActionReachOnCanvas": {
+        "name": "Afficher la portée des actions sur la scène",
+        "desc": "Montre la portée du token actif sur la scène lorsqu'une action est survolée."
+      }
+    },
+    "MR": "RM",
+    "Abbr": {
+      "ACFlatFooted": "CA Dépourvu",
+      "ACTouch": "CA C",
+      "ACNormal": "CA",
+      "CMDTotal": "DMD",
+      "CMDFlatFootedTotal": "DMD Dépourvu"
+    },
+    "Actions": {
+      "Maneuver": "Manœuvres Offensives",
+      "Feint": "Feinte",
+      "Grapple": "Lutte",
+      "Trip": "Croc en Jambe",
+      "Disarm": "Désarmement",
+      "Sunder": "Destruction",
+      "BullRush": "Bousculade",
+      "Overrun": "Renversement",
+      "DirtyTrick": "Sale coup",
+      "Steal": "Subtilisation",
+      "Drag": "Entraînement",
+      "Reposition": "Repositionnement",
+      "TotalDefense": "Défense Totale",
+      "Withdraw": "Retraite",
+      "AidAnother": "Aider quelqu'un",
+      "CoupDeGrace": "Coup de Grâce",
+      "FightingDefensively": "Combattre sur la Défensive",
+      "DropItem": "Lâcher un Objet",
+      "StandUp": "Se Relever",
+      "DropProne": "Se Jeter à Terre",
+      "DrawSheathe": "Dégainer/Rengainer une Arme",
+      "AidAnotherAttack": "Aider quelqu'un (Attaque)",
+      "AidAnotherDefense": "Aider quelqu'un (Défense)",
+      "Charge": "Charge",
+      "None": ""
+    },
+    "ActionDescriptions": {
+      "TotalDefense": "Vous pouvez vous défendre avec une action simple. Vous gagnez un bonus d'esquive de +4 à votre CA pendant 1 round. Votre CA est augmentée dès le début de cette action. Vous ne pouvez pas cumuler la défense totale avec le combat sur la défensive ou avec le bénéfice du don Expertise du combat. Vous ne pouvez pas effectuer d'attaques d'opportunité tant que vous êtes en défense totale.",
+      "FightingDefensively": "Vous pouvez choisir de combattre sur la défensive lorsque vous attaquez. Dans ce cas, vous subissez un malus de –4 sur toutes vos attaques pendant le round afin de bénéficier d'un bonus d'esquive de +2 à la CA jusqu'au début de votre prochain tour.",
+      "BullRush": "Vous pouvez tenter une bousculade en tant qu'action simple ou dans le cadre d'une charge, à la place de l'attaque de corps à corps. Vous ne pouvez bousculer qu'un adversaire dont la taille ne dépasse pas une catégorie de plus que la vôtre. Cette action consiste à repousser l'ennemi sans lui infliger de dégâts. Si vous ne possédez pas le don Science de la bousculade ou une capacité similaire, initier une bousculade provoque une attaque d'opportunité de la part de la cible.<br/><br/>En cas de réussite, la cible est repoussée de 1.50 mètre. Pour chaque tranche de 5 points par laquelle votre résultat dépasse la DMD de l'adversaire, vous le repoussez de 1.50 mètre supplémentaire. Vous pouvez vous déplacer avec la cible si vous le souhaitez, à condition de disposer du déplacement suffisant. Si votre tentative échoue, votre mouvement prend fin au contact de la cible.<br/><br/>Un ennemi déplacé par une bousculade ne provoque pas d'attaque d'opportunité due au mouvement, sauf si vous possédez le don Bousculade supérieure. Vous ne pouvez pas pousser un adversaire dans une case occupée par un obstacle solide. S'il y a une autre créature sur le chemin, vous devez immédiatement effectuer un test de manœuvre offensive pour la bousculer aussi, avec un malus de –4 pour chaque créature au-delà de la première. Si vous réussissez, vous continuez de pousser les créatures sur une distance égale au plus faible résultat. Par exemple, si un guerrier bouscule un gobelin sur 4.50 m (15 ft), mais qu'il y a un autre gobelin 1.50 m (5 ft) derrière le premier, il doit faire un test de bousculade supplémentaire contre le second gobelin après avoir repoussé le premier de 1.50 m. S'il peut repousser le second de 6 m, il continue de repousser les deux gobelins sur 3 m de plus (le premier aura alors été poussé au total sur 4.50 m).",
+      "DirtyTrick": "Vous pouvez tenter un sale coup à un ennemi au corps à corps avec une action simple. Cette manœuvre couvre toute attaque situationnelle visant à infliger un léger malus temporaire à l'ennemi. Par exemple, jeter du sable dans les yeux d'un adversaire pour l'aveugler pendant 1 round ou baisser son pantalon pour réduire de moitié sa vitesse. Le MJ détermine ce qui est possible avec cette manœuvre, mais elle ne peut infliger de pénalité permanente et la cible peut annuler l'effet avec une action de mouvement. Si vous ne possédez pas le don Science du sale coup ou une aptitude similaire, cette attaque provoque une attaque d'opportunité de la part de la cible.<br/><br/>En cas de réussite, la cible peut subir l'une des états préjudiciables suivants : assourdi, aveuglé, ébloui, enchevêtré, fiévreux ou secoué.<br/><br/>L'effet dure de base 1 round, mais pour chaque tranche de 5 points par laquelle votre résultat dépasse la DMD de l'ennemi, l'effet dure 1 round supplémentaire. Normalement, la cible peut faire une action de mouvement pour supprimer le malus. Si vous possédez le don Coup bas supérieur, le malus dure 1d4 rounds, plus 1 round supplémentaire pour chaque tranche de 5 points par laquelle votre résultat dépasse le DMD de votre adversaire. De plus, annuler l'état préjudiciable nécessite alors une action simple de la part de la cible.",
+      "Disarm": "Vous pouvez tenter de désarmer un adversaire au lieu d'une attaque de corps à corps avec une action simple. Si vous ne possédez pas le don Science du désarmement ou une capacité similaire, tenter de désarmer un ennemi provoque une attaque d'opportunité de sa part. Tenter de désarmer un adversaire à mains nues impose un malus de –4 sur votre test.<br/><br/>En cas de réussite, la cible laisse tomber un objet qu'elle tient (celui de votre choix, même s'il est tenu à deux mains). Si votre test dépasse la DMD de la cible de 10 ou plus, elle laisse tomber les objets portés dans ses deux mains (maximum deux objets, si elle a plus de deux mains). Si vous échouez de 10 ou plus, vous lâchez l'arme que vous utilisiez pour désarmer. Si vous désarmez avec succès sans utiliser d'armes, vous pouvez ramasser automatiquement l'objet tombé.",
+      "Drag": "Vous pouvez tenter d'entraîner un adversaire avec une action simple. Votre cible ne peut pas dépasser une catégorie de taille de plus que la vôtre. Cette action entraîne l'adversaire en ligne droite sans lui infliger de dégâts. Si vous ne possédez pas le don Science de l'entraînement ou une capacité similaire, initier un entraînement provoque une attaque d'opportunité de la part de la cible.<br/><br/>En cas de réussite, vous et votre adversaire sont déplacés de 1.50 m, votre adversaire se retrouve à l'endroit que vous occupiez et vous êtes dans l'espace situé juste derrière, en ligne droite. Pour chaque tranche de 5 points par laquelle votre test dépasse la DMD de votre cible, vous pouvez l'entraîner de 1.50 m supplémentaire. Vous devez être en mesure de vous déplacer pour effectuer cette manœuvre. Si votre déplacement est insuffisant, le mouvement s'arrête lorsque vous ne pouvez plus vous déplacer.<br/><br/>Un adversaire déplacé par cette manœuvre ne provoque pas d'attaque d'opportunité due au mouvement, sauf si vous possédez le don Entraînement supérieur. Vous ne pouvez pas déplacer une créature dans une case occupée par un objet ou un obstacle solide. Si une autre créature se trouve sur la trajectoire, la traction s'arrête à côté de cette créature.<br/><br/>Stabilité : certains personnages ou types de créatures sont particulièrement stables, ce qui rend plus difficile de les faire tomber ou de les déplacer. Toute aptitude raciale conférant un bonus à la DMD contre les tentatives de bousculade confère le même bonus contre les tentatives d'entraînement.",
+      "Grapple": "Vous pouvez tenter de saisir un adversaire afin de limiter ses options de combat avec une action simple. Si vous ne possédez pas le don Science de la lutte, d'étreinte ou une capacité similaire, initier une lutte provoque une attaque d'opportunité de la part de la cible. Les créatures humanoïdes n'ayant pas deux mains libres subissent un malus de –4 à leur test de manœuvre offensive pour saisir. En cas de réussite, vous et la cible êtes en situation de lutte. Si la cible n'est pas adjacente, placez-la dans un espace adjacent libre (si aucun espace n'est disponible, la tentative échoue). Bien que les deux créatures soient agrippées, vous pouvez, en tant qu'initiateur, lâcher prise avec une action libre, mettant fin à la situation de lutte pour vous deux. Si vous maintenez la lutte, vous devez chaque round continuer d'effectuer un test (action simple) pour la conserver. Si votre cible ne se libère pas, vous bénéficiez d'un bonus de circonstance de +5 aux tests de lutte suivants contre cette même cible lors des rounds suivants. Une fois la lutte engagée, une réussite lors du maintien vous permet de conserver l'agrippement et de réaliser une des actions suivantes (dans le cadre de l'action simple utilisée pour maintenir la lutte) :<br/><br/><h2>Déplacement</h2>Vous pouvez vous déplacer, vous et votre cible, jusqu'à la moitié de votre vitesse. À la fin de votre déplacement, vous pouvez placer votre cible dans une case adjacente à vous. Si vous tentez de placer la cible dans un lieu dangereux (par exemple, un mur de feu ou au-dessus d'un précipice), elle effectue un jet gratuit pour se libérer, avec un bonus de +4.<br/><br/><h2>Infliger des dégâts</h2>Vous pouvez infliger à la cible des dégâts égaux à ceux de votre attaque à mains nues, d'une attaque naturelle ou d'une arme légère ou à une main (y compris les armure à pointes). Ces dégâts peuvent être létaux ou non.<br/><br/><h2>Immobiliser</h2>Vous pouvez infliger à votre adversaire l'état Immobilisé. Vous restez en état en lutte et vous perdez votre bonus de Dextérité à la CA.<br/><br/><h2>Attacher</h2>Si vous avez immobilisé, restreint (cible incapable de bouger) ou rendu inconscient votre adversaire, vous pouvez utiliser une corde pour l'attacher. Cela fonctionne comme l'effet d'immobilisation, mais le DD pour se libérer des liens est égal à 20 + votre BMO (au lieu de votre DMD). La corde n'a pas besoin de refaire un test chaque round pour maintenir l'immobilisation. Si vous êtes en lutte avec la cible, vous pouvez tenter de l'attacher, mais cela nécessite un test de manœuvre offensive avec un malus de –10. Si le DD pour se libérer des liens dépasse 20 + le BMO de la cible, celle-ci ne peut pas se libérer, même avec un 20 naturel sur son jet.<br/><br/><h2>Si vous êtes saisi</h2>Si vous êtes saisi, vous pouvez tenter de stopper la lutte en action simple en faisant un test de manœuvre offensive (DD égal à la DMD de l'adversaire) sans provoquer d'attaque d'opportunité, ou avec un test d'évasion (DD égal à la DMD de l'ennemi). En cas de réussite, vous stopper la lutte et vous pouvez ensuite agir normalement. Vous pouvez aussi inverser la lutte : vous devenez alors celui qui agrippe (ce qui empêche votre adversaire de se libérer librement par la suite, contrairement à vous). Au lieu de tenter de vous libérer, vous pouvez entreprendre toute action ne nécessitant pas deux mains (comme lancer un sort ou effectuer une attaque ou attaque à outrance avec une arme légère ou à une main) contre n'importe quelle cible à votre portée, y compris la créature vous agrippant. Consultez l'état de lutte pour plus de détails. Si vous êtes immobilisé, vos options sont bien plus limitées. Consultez la condition Immobilisé dans la section États Préjudiciables pour plus de détails.<br/><br/><h2>Créatures multiples</h2>Plusieurs créatures peuvent tenter de saisir la même cible. La créature qui initie la lutte est la seule à faire un test, bénéficiant d'un bonus de +2 pour chaque créature l'aidant (via l'action Aider quelqu'un). Plusieurs créatures peuvent aussi aider une création à se libérer d'une lutte, chacune fournissant un bonus de +2 au test de manœuvre offensive ou d'évasion de la cible saisie (via l'action Aider quelqu'un).",
+      "Overrun": "En tant qu'action simple effectuée pendant un déplacement ou lors d'une charge, vous pouvez tenter de renverser votre cible en passant à travers sa case. Vous ne pouvez renverser qu'un adversaire dont la taille ne dépasse pas une catégorie de plus que la vôtre. Si vous ne possédez pas le don Science du renversement ou une capacité équivalente, initier ce renversement provoque une attaque d'opportunité de la part de la cible. Si votre tentative échoue, vous vous arrêtez devant votre adversaire (ou dans la case libre la plus proche en avant).<br/><br/>Lorsque vous tentez de renverser une cible, elle peut choisir de vous éviter, vous laissant passer sans avoir besoin de faire un test. Si elle refuse, effectuez un test de manœuvre offensive comme d'habitude. En cas de réussite, vous traversez sa case. Si votre résultat dépasse la DMD de votre adversaire de 5 ou plus, vous le faites tomber à terre. S'il possède plus de deux jambes, ajoutez +2 au DD pour chaque jambe supplémentaire.",
+      "Reposition": "Vous pouvez tenter de repositionner un adversaire ailleurs sur le champ de bataille avec une action simple. Vous ne pouvez repositionner qu'un adversaire dont la taille ne dépasse pas une catégorie de plus que la vôtre. Cette action force l'ennemi à changer de position sans lui infliger de dégâts. Si vous ne possédez pas le don Science du repositionnement ou une aptitude similaire, cette tentative provoque une attaque d'opportunité de la part de la cible. Vous ne pouvez pas utiliser cette manœuvre pour déplacer un adversaire dans un endroit dangereux (par exemple un gouffre ou un mur de feu). En cas de réussite, vous déplacez la cible de 1.50 m. Pour chaque tranche de 5 points par laquelle votre résultat dépasse la DMD de l'adversaire, vous pouvez la déplacer de 1.50 m supplémentaire. La cible doit rester dans votre portée durant tout le déplacement, sauf lors des 1.50 m finaux, où vous pouvez la placer dans une case adjacente à votre portée.<br/><br/>Un adversaire déplacé ainsi ne provoque pas d'attaque d'opportunité due au mouvement, sauf si vous possédez le don Repositionnement supérieur. Vous ne pouvez pas repositionner une créature dans une case occupée par un objet ou un obstacle solide.",
+      "Steal": "Vous pouvez tenter de subtiliser un objet à un adversaire avec une action simple. Cette manœuvre peut servir en mêlée pour saisir un objet ni tenu en main, ni dissimulé dans un sac ou sacoche. Vous devez avoir au moins une main libre (sans rien tenir) pour tenter cette manœuvre et vous devez choisir l'objet ciblé avant de faire le test. Les objets juste glissés dans une ceinture ou attachés légèrement (comme des broches ou colliers) sont les plus faciles à prendre. Les objets solidement fixés (comme les capes, armes dans un fourreau ou sacoches fermées) donnent un bonus d'au moins +5 à la DMD de la cible. Les objets portés au plus près (comme l'armure, le sac à dos, les bottes, les vêtements ou les bagues) ne peuvent pas être volés par cette manœuvre. Les objets tenus en main (armes, baguettes, etc.) ne peuvent pas être subtilisés ainsi : il faut utiliser la manœuvre Désarmement. Le MJ est seul juge de la faisabilité. Si vous ne possédez pas le don Science de la subtilisation ou une capacité similaire, tenter de voler un objet provoque une attaque d'opportunité de la part de la cible.<br/><br/>Bien que cette manœuvre ne puisse être réalisée que si la cible est à portée de mêlée, vous pouvez utiliser un fouet pour subtiliser un objet à distance, mais vous subissez un malus de –4 au jet d'attaque.<br/><br/>En cas de réussite, vous prenez l'objet à votre adversaire, pourvu qu'il soit à portée (cela reste à l'appréciation du MJ). Votre ennemi remarque immédiatement le larcin, à moins que vous ne possédiez le don Subtilisation supérieure.",
+      "Sunder": "Vous pouvez tenter de détruire un objet que porte un adversaire en effectuant une action d'attaque à la place d'une attaque de corps à corps. Si vous ne possédez pas le don Science de la destruction ou une capacité similaire, tenter de briser un objet provoque une attaque d'opportunité de la part de la cible.<br/><br/>Si votre attaque réussit, vous infligez des dégâts à l'objet normalement. Les dégâts qui dépassent la solidité de l'objet sont déduits de ses points de vie. S'il tombe à la moitié ou moins de ses points de vie totaux, il est brisé. Si vous réduisez les points de vie de l'objet en dessous de 0, vous pouvez choisir de le détruire. Si vous choisissez de ne pas le détruire, il lui reste 1 point de vie et il est brisé.",
+      "Trip": "Vous pouvez tenter de faire un croc en jambe à votre adversaire à la place d'une attaque de corps à corps. Vous ne pouvez faire un croc en jambe à une cible qui ne dépasse pas une catégorie de taille de plus que la vôtre. Si vous ne possédez pas le don Science du croc-en-jambe (Improved Trip) ou une capacité similaire, initier cette manœuvre provoque une attaque d'opportunité de la part de la cible.<br/><br/>Si votre attaque dépasse la DMD de la cible, celle-ci tombe à terre. Si vous échouez de 10 ou plus, vous tombez vous-même à terre. Si la cible a plus de deux jambes, ajoutez +2 au DD du test de manœuvre offensive pour chaque jambe additionnelle. Certains types de créatures (comme les vases), celles sans jambes ou celles qui volent ne peuvent pas être mises à terre.",
+      "Feint": "La feinte est une action simple. Pour feinter, effectuez un test de Bluff. Le DD est égal à 10 + le bonus de base à l'attaque de l'adversaire + son modificateur de Sagesse. Si la cible est formée à la compétence Psychologique, le DD est à la place égal à 10 + son bonus de Perception Psychologique, si celui-ci est plus élevé. En cas de réussite, la prochaine attaque de mêlée que vous effectuez contre lui ne lui permet pas d'ajouter son bonus de Dextérité à la CA (s'il en a un). Cette attaque doit se produire avant la fin de votre prochain tour.<br/><br/>Lorsque vous feintez contre une créature non-humanoïde, vous subissez un malus de –4. Contre une créature d'intelligence animale (int 1 ou 2), le malus est de –8. Contre une créature dépourvue de score d'Intelligence, c'est impossible. Feinter ne provoque pas d'attaque d'opportunité.",
+      "DropProne": "Se jeter à terre dans son espace est une action libre.",
+      "Withdraw": "Effectuer une retraite est une action complexe. Lorsque vous vous retirez, vous pouvez vous déplacer jusqu'à deux fois votre vitesse. La case de départ n'est pas considérée comme menacée par un adversaire visible, de sorte que ces adversaires n'obtiennent pas d'attaque d'opportunité lorsque vous quittez cette case. Les adversaires invisibles, eux, conservent ce privilège et vous ne pouvez pas vous replier si vous êtes aveuglé. Vous ne pouvez pas effectuer un pas de placement de 1.50 m pendant le même round où vous effectuez un retraite.<br/><br/>Si, pendant votre retraite, vous sortez d'une case menacée (autre que celle de départ), les adversaires obteniennent des attaques d'opportunité comme d'habitude.<br/><br/>Vous ne pouvez pas vous retirer si vous ne disposez pas d'une vitesse indiquée pour le mode de déplacement choisi.<br/><br/>Notez qu'il n'est pas nécessaire d'abandonner du combat malgré le nom de l'action.<br/><br/><h2>Retraite restreinte</h2>Si vous êtes limité à une seule action simple par round, vous pouvez vous retirer avec en action simple. Dans ce cas, vous ne pouvez vous déplacer que jusqu'à votre vitesse.",
+      "StandUp": "Se relever d'une position à terre est une action de mouvement qui provoque des attaques d'opportunité.",
+      "CoupDeGrace": "En tant qu'action complexe, vous pouvez, avec une arme au corps à corps, porter un coup-de-grâce à un adversaire sans défense. Vous pouvez également utiliser un arc ou une arbalète si vous êtes adjacent à la cible.<br/><br/>Vous touchez automatiquement et réalisez un coup critique. Si la cible survit aux dégâts, elle doit réussir un jet de Vigueur (DD = 10 + dégâts infligés) ou mourir. Une roublarde inflige également ses dégâts d'attaque sournoise contre un adversaire sans défense lorsqu'elle effectue un coup de grâce.<br/><br/>Porter un coup de grâce provoque des attaques d'opportunité de la part des adversaires menaçants.<br/><br/>Vous ne pouvez pas porter de coup de grâce à une créature immunisée aux coups critiques. Vous pouvez porter un coup de grâce à une créature bénéficiant d'une dissimulation totale, mais cela nécessite deux rounds complets consécutifs (l'un pour «localiser» la créature une fois que vous avez déterminé sa case, l'autre pour porter le coup-de-grâce).",
+      "DropItem": "Lâcher un objet dans sa case ou dans une case adjacente est une action libre.",
+      "DrawSheathe": "Dégainer une arme pour l'utiliser au combat, ou la rengainer pour libérer une main, requiert une action de mouvement. Cette action s'applique aussi à des objets de type «arme» rapidement accessibles, comme des baguettes. Si votre arme ou l'objet est rangé dans un sac ou hors de portée immédiate, traitez cette action comme une récupération d'objet rangé.<br/><br/>Si votre bonus de base à l'attaque est d'au moins +1, vous pouvez dégainer une arme comme action libre combinée à un déplacement normal. Si vous possédez le don Combat à deux armes, vous pouvez dégainer deux armes légères ou à une main dans le temps normalement nécessaire pour en dégainer une seule.<br/><br/>Sortir des munitions (flèches, carreaux, projectiles de fronde ou shuriken) pour les utiliser avec une arme à distance est une action libre.",
+      "AidAnotherAttack": "Au corps à corps, vous pouvez aider un allié à attaquer ou à se défendre en distrayant ou en gênant un adversaire. Si vous pouvez porter une attaque de mêlée contre un adversaire qui est engagé au corps à corps avec un allié, vous pouvez tenter de l'aider avec un action simple. Vous effectuez un jet d'attaque contre CA 10. Si vous réussissez, votre allié bénéficie d'un bonus de +2 sur son prochain jet d'attaque contre cet adversaire ou d'un bonus de +2 à la CA contre sa prochaine attaque (au choix), tant qu'elle survient avant le début de votre prochain tour. Plusieurs personnages peuvent aider le même allié, et ces bonus sont cumulatifs.<br/><br/>Vous pouvez également utiliser cette action simple pour aider un allié d'autres façons (s'il est sous l'effet d'un sort, par exemple) ou pour aider le test de compétence d'un autre personnage.",
+      "AidAnotherDefense": "Au corps à corps, vous pouvez aider un allié à attaquer ou à se défendre en distrayant ou en gênant un adversaire. Si vous pouvez porter une attaque de mêlée contre un adversaire qui est engagé au corps à corps avec un allié, vous pouvez tenter de l'aider en action simple. Vous effectuez un jet d'attaque contre CA 10. Si vous réussissez, votre allié bénéficie d'un bonus de +2 sur son prochain jet d'attaque contre cet adversaire ou d'un bonus de +2 à la CA contre sa prochaine attaque (au choix), tant qu'elle survient avant le début de votre prochain tour. Plusieurs personnages peuvent aider le même allié, et ces bonus sont cumulatifs.<br/><br/>Vous pouvez également utiliser cette action simple pour aider un allié d'autres façons (s'il est sous l'effet d'un sort, par exemple) ou pour aider le test de compétence d'un autre personnage.",
+      "AidAnotherOther": "Au corps à corps, vous pouvez aider un allié à attaquer ou à se défendre en distrayant ou en gênant un adversaire. Si vous pouvez porter une attaque de mêlée contre un adversaire qui est engagé au corps à corps avec un allié, vous pouvez tenter de l'aider en action simple. Vous effectuez un jet d'attaque contre CA 10. Si vous réussissez, votre allié bénéficie d'un bonus de +2 sur son prochain jet d'attaque contre cet adversaire ou d'un bonus de +2 à la CA contre sa prochaine attaque (au choix), tant qu'elle survient avant le début de votre prochain tour. Plusieurs personnages peuvent aider le même allié, et ces bonus sont cumulatifs.<br/><br/>Vous pouvez également utiliser cette action simple pour aider un allié d'autres façons (s'il est sous l'effet d'un sort, par exemple) ou pour aider le test de compétence d'un autre personnage.",
+      "None": ""
+    },
+    "ActionTypes": {
+      "Full": "Action complexe",
+      "Standard": "Action simple",
+      "Move": "Action de mouvement",
+      "Swift": "Action rapide",
+      "Immediate": "Action immédiate",
+      "Free": "Action libre",
+      "None": "Aucune",
+      "Action": "Action",
+      "Reaction": "Réaction"
+    },
+    "ItemTypes": {
+      "Spell": "Sort",
+      "Feat": "Don",
+      "Consumable": "Consommable",
+      "Equipment": "Équipement"
+    },
+    "SpellLevels": {
+      "0": "Niveau 0 (Tour/Orison)",
+      "1": "Niveau 1",
+      "2": "Niveau 2",
+      "3": "Niveau 3",
+      "4": "Niveau 4",
+      "5": "Niveau 5",
+      "6": "Niveau 6",
+      "7": "Niveau 7",
+      "8": "Niveau 8",
+      "9": "Niveau 9"
+    },
+    "Buffs": {
+      "Names": {
+        "FightingDefensively": "Combattre sur la Défensive",
+        "TotalDefense": "Défense Totale"
+      },
+      "Descriptions": {
+        "TotalDefense": "<p>Vous pouvez vous défendre avec un action simple. Vous bénéficiez d'un bonus d'esquive de +4 à votre CA pendant 1 round. Votre CA est augmentée dès le début de cette action. Vous ne pouvez pas cumuler la défense totale avec le combat sur la défensive ou avec don Expertise du combat. Vous ne pouvez pas effectuer d'attaques d'opportunité tant que vous êtes en défense totale.</p>",
+        "FightingDefensively": "<p>Vous pouvez choisir de combattre sur la défensive lorsque vous attaquez. Dans ce cas, vous subissez un malus de –4 sur toutes vos attaques pendant le round pour bénéficier d'un bonus d'esquive de +2 à la CA pendant 1 round.</p>"
+      },
+      "ContextNotes": {
+        "TotalDefense1": "La Défense Totale ne peut pas être combinée avec Expertise du combat.",
+        "TotalDefense2": "Impossible d'effectuer des Attaques d'Opportunité en Défense Totale."
+      }
+    },
+    "Error": {
+      "CannotAddNonAttackAction": "Seules les attaques ou les objets associés à une attaque peuvent être ajoutés."
+    }
+  }
+}

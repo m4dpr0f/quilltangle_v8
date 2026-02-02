@@ -1,0 +1,8 @@
+{
+  "PF1WT.WoundThresholdsGrazed": "Grazed",
+  "PF1WT.WoundThresholdsWounded": "Wounded",
+  "PF1WT.WoundThresholdsCritical": "Critical",
+  "LittleHelper.Conditions.wtGrazed": "-2 penalty to attacks, saves, skill checks and ability checks.\n-2 penalty to AC.",
+  "LittleHelper.Conditions.wtWounded": "-4 penalty to attacks, saves, skill checks and ability checks.\n-4 penalty to AC.\n-2 penalty to caster level.",
+  "LittleHelper.Conditions.wtCritical": "-6 penalty to attacks, saves, skill checks and ability checks.\n-6 penalty to AC.\n-4 penalty to caster level.\n\nTaking a standard or move action causes 1 wound point of damage and requires a DC 10 constitution check to not fall unconscious.\n\nA critical character is staggered."
+}

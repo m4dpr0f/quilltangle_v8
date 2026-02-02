@@ -1,0 +1,15 @@
+## v1.1.0
+- Pathfinder1e v11/FoundryVTT v12 compatibility
+- Improve token box rendering
+- Replace condition icons to better signal increasing status
+
+## v1.0.1
+- Change icons from PNG to SVG to allow transparency
+- Fix icons not showing on token menu
+- Prevent attribute input labels from showing when attribute is not set
+- Remove change listeners from sheet attribute inputs (foundry handles this already)
+- Update condition registration to different hook and simplify code
+- Simplify condition update
+
+## v1.0.0
+- Initial release

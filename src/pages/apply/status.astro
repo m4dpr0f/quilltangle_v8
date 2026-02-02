@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ApplicationStatus from '../../islands/ApplicationStatus';
+---
+
+<Layout title="Application Status - 8xM">
+  <main class="container mx-auto px-4 py-8">
+    <ApplicationStatus client:load />
+  </main>
+</Layout>
+
+<style>
+  .container {
+    min-height: calc(100vh - 80px);
+  }
+</style>

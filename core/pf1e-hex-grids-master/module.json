@@ -1,0 +1,54 @@
+{
+  "id": "pf1e-hex-grids",
+  "title": "Pathfinder 1e - Hex Grid Support",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf1",
+        "type": "system",
+        "manifest": "https://gitlab.com/foundryvtt_pathfinder1e/foundryvtt-pathfinder1/-/releases/permalink/latest/downloads/system.json",
+        "compatibility": {
+          "minimum": "9.6",
+          "verified": "9.6"
+        }
+      }
+    ]
+  },
+  "description": "Improve Hex Grid support for the Pathfinder 1e Game System.",
+  "authors": [
+    {
+      "name": "KitCat",
+      "email": "katsulynx@gmail.com",
+      "discord": "kitcat"
+    }
+  ],
+  "esmodules": [
+    "modules/pf1e-hexGrids-main.mjs"
+  ],
+  "styles": [
+    "styles/pf1e-hexGrids.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch (German)",
+      "path": "lang/de.json"
+    }
+  ],
+  "readme": "README.md",
+  "license": "LICENSE",
+  "bugs": "https://github.com/KitCat420/pf1e-hex-grids/issues",
+  "url": "#{URL}#",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "enhancedcombathud-pf1",
+  "title": "Argon - Combat HUD (PF1)",
+  "version": "0.12.1",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "relationships": {
+    "requires": [
+      {
+        "id": "enhancedcombathud",
+        "type": "module",
+        "compatibility": {}
+      }
+    ],
+    "systems": [
+      {
+        "id": "pf1",
+        "type": "system",
+        "compatibility": {
+          "minimum": "11.0",
+          "verified": "11.0"
+        }
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "KitCat",
+      "email": "katsulynx@gmail.com",
+      "discord": "kitcat"
+    }
+  ],
+  "esmodules": [
+    "modules/ech-pf1.mjs"
+  ],
+  "styles": [
+    "styles/ech-pf1.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "fr",
+      "name": "French",
+      "path": "lang/fr.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch (German)",
+      "path": "lang/de.json"
+    },
+    {
+      "lang": "cn",
+      "name": "Chinese",
+      "path": "lang/cn.json"
+    }
+  ],
+  "readme": "README.md",
+  "license": "LICENSE",
+  "bugs": "https://github.com/KitCat420/enhancedcombathud-pf1/issues",
+  "url": "#{URL}#",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#"
+}

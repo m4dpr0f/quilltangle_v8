@@ -1,0 +1,116 @@
+<form class="{{cssClass}} flexcol" autocomplete="off" data-tooltip-class="pf1">
+
+    {{!-- Item Sheet Header --}}
+    <header class="sheet-header flexrow">
+        <img class="profile" src="{{item.img}}" data-tooltip="{{item.name}}"
+             {{#if (not isActor)}}data-edit="img"{{/if}}>
+
+        <div class="flexrow header-details">
+            <h1 class="item-name">
+                {{#if isActor}}
+                    <span class="input-proxy">{{item.name}}</span>
+                {{else}}
+                    <input name="name" type="text" value="{{item.name}}" placeholder="{{localize "PF1.ItemName"}}">
+                {{/if}}
+            </h1>
+
+            {{! Content Source }}
+            {{~> "systems/pf1/templates/internal/content-source-view.hbs"}}
+
+            {{#if isActor}}
+                <ul class="summary">
+                    <li>
+                        <label>
+                            {{localize "PF1ECaravans.ActorId"}}: {{system.actorId}}
+                        </label>
+                    </li>
+                </ul>
+            {{/if}}
+        </div>
+    </header>
+
+    {{!-- Sidebar --}}
+    <section class="sidebar">
+        <header>
+            <h3 class="item-type">{{itemType}}</h3>
+
+            {{#if isActor}}
+                <h4 class="item-subtype">
+                    {{localize "PF1ECaravans.Hero"}}
+                </h4>
+            {{else}}
+                {{#if system.isNPC}}
+                    <h4 class="item-subtype">
+                        {{localize "PF1ECaravans.NPC"}}
+                    </h4>
+                {{/if}}
+            {{/if}}
+            <h4 class="item-subtype">
+                {{labels.travelerRole}}
+                {{#if hasTasks}}
+                    ({{labels.task}})
+                {{/if}}
+            </h4>
+        </header>
+
+        {{#if hasWage}}
+            <label class="descriptor">
+                <span>{{localize "PF1ECaravans.Wage"}}</span>
+
+                <input data-action="input-text" class="select-on-click" name="system.monthlyWage"
+                       type="number" data-dtype="Number" value="{{system.monthlyWage}}" {{disabled (not customizable)}}
+                       readonly>
+            </label>
+        {{/if}}
+
+        {{#if (not isActor)}}
+            <label class="descriptor checkbox">
+                <input type="checkbox" name="system.isNPC" {{checked system.isNPC}} {{disabled system.onlyParty}}>
+                <span>{{localize "PF1ECaravans.NPC"}}</span>
+            </label>
+        {{/if}}
+    </section>
+
+    {{!-- Item Sheet Navigation --}}
+    <nav class="sheet-navigation tabs" data-group="primary">
+        <a class="item" data-tab="description">{{ localize "PF1.Description" }}</a>
+        <a class="item" data-tab="details">{{ localize "PF1.Details" }}</a>
+        <a class="item" data-tab="changes">{{ localize "PF1.Changes" }}</a>
+    </nav>
+
+    {{!-- Item Sheet Body --}}
+    <section class="primary-body">
+        {{!-- Description Tab --}}
+        {{> "systems/pf1/templates/items/parts/item-description.hbs"}}
+
+        {{!-- Details Tab --}}
+        <div class="tab details" data-group="primary" data-tab="details">
+            {{!-- Traveler Type --}}
+            <div class="form-group select">
+                <label>{{localize "PF1.Type"}}</label>
+                <div class="form-fields">
+                    <select name="system.subType">
+                        {{selectOptions travelerRoles selected=system.subType nameAttr="id" labelAttr="name"}}
+                    </select>
+                </div>
+            </div>
+
+            {{!-- Traveler Task --}}
+            {{#if hasTasks}}
+                <div class="form-group select">
+                    <label>{{localize "PF1ECaravans.Task"}}</label>
+                    <div class="form-fields">
+                        <select name="system.task">
+                            {{selectOptions tasks selected=system.task nameAttr="id" labelAttr="name"}}
+                        </select>
+                    </div>
+                </div>
+            {{/if}}
+        </div>
+
+        {{!-- Changes Tab --}}
+        <div class="tab changes" data-group="primary" data-tab="changes">
+            {{~> "modules/pf1e-caravans/templates/item/parts/changes.hbs"}}
+        </div>
+    </section>
+</form>

@@ -1,0 +1,51 @@
+.spell-uses .spell-cost-increased {
+    color: #400000;
+}
+
+#token-hud {
+    .attribute {
+        &:is(.bar1, .bar2) {
+            position: relative;
+
+            .bar-label {
+                position: absolute;
+                top: 1px;
+                color: white;
+                opacity: 0.5;
+                font-size: 8px;
+                width: 100%;
+                text-align: center;
+                pointer-events: none;
+            }
+
+            &.vigor input {
+                border: 1px solid #40C4FF;
+            }
+
+            &.hp input {
+                border: 1px solid #8BC34A;
+            }
+            &.wounds input {
+                border: 1px solid #ff5f5f;
+            }
+        }
+    }
+}
+
+.info-box {
+    &.wt-grazed {
+        background: radial-gradient(rgba(255, 171, 62, 25%) 40%, rgba(255, 171, 62, 50%) 90%)
+    }
+
+    &.wt-wounded {
+        background: radial-gradient(rgba(255, 135, 85, 0.25) 40%, rgba(255, 135, 85, 0.5) 90%);
+    }
+
+    &.wt-critical {
+        background: radial-gradient(rgba(255, 15, 15, 0.25) 40%, rgba(255, 15, 15, 0.5) 90%);
+    }
+
+    &.wt-dead {
+        background: radial-gradient(rgba(46, 46, 46, 0.25) 40%, rgba(46, 46, 46, 0.5) 90%);
+    }
+}

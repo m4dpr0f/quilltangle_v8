@@ -1,0 +1,1586 @@
+html,body{
+
+    font-size: 100%;
+    overflow-y: auto;
+
+}
+textarea{
+
+    font-family: 'Luxi Mono', Courier, monospace;
+
+}
+.mainContent{
+
+    background-color: white;
+    width:60%;
+    position: absolute;
+    top: 0;
+    left:20%;
+    overflow-y:hidden;
+    color:black;
+    font-family: "Nimbus Sans", Arial, sans-serif;
+
+}
+.sheet{
+
+    position:absolute;
+    width:100%;
+    top:0%;
+    display:none;
+    z-index: -1;
+    
+}
+.modal{
+
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+}
+.modalContent{
+
+    width: 40rem;
+    height: 10rem;
+    text-align: center;
+    background-color: black;
+
+}
+.modalContentCont{
+
+    position: relative;
+    top: 20%;
+
+}
+.modalText{
+    font-size: 1.3rem;
+    color: white;
+    position: relative;
+    height: 20%;
+    
+}
+.modalBtnCont{
+
+    width: 100%;
+
+}
+.modalBtn{
+
+    width: 40%;
+    font-size: .9rem;
+    position: relative;
+    top: 70%;
+    left: 0%;
+    margin-left: 2%;
+
+}
+#pg2{
+
+    width:100%;
+    display: none;
+
+}
+.logo{
+
+    padding-top: 1%;
+    width:40%;
+    height: auto;
+     
+}
+.manInput{
+
+    background-color: black;
+    color:white;
+
+    width: 15%;
+    font-size: .8rem;
+
+}
+.pgInput{
+
+    width: 5%;
+    background-color: lightgrey;
+    display: inline-block;
+    margin-right: 0;
+    margin-left:auto;
+
+}
+h4{
+
+    font-size: .75rem;
+    text-align: center;
+    margin:0;
+
+}
+h5{
+
+    margin: 0px;
+    font-size:1rem;
+    margin-top:3px;
+    display:inline-block;
+    text-align: center;
+
+}
+h6{
+
+    font-size: .9rem;
+    display:inline-block;
+    text-align:center;
+    margin-top:5px;
+    margin-left:.325em;
+    color:black;
+
+    width:auto;
+    margin-bottom: 10px;
+    
+}
+h7{
+
+    font-size:.75rem;
+    text-align: center;
+
+}
+hr{
+
+    margin:0px;
+}
+div{
+
+    display:inline-block;
+
+}
+.personalInfo{
+
+    position: relative;
+    padding-top:1%;
+    width: 50%;
+    display:inline-block;
+
+}
+.personalInfoInput{
+
+    border-top: none;
+    border-right:none;
+    border-left:none;
+
+}
+input{
+
+    box-sizing:border-box;
+    font-size: 1.05rem;
+    width:100%;
+    margin:0px;
+    border-color: black;
+    border-width: 2px;
+
+}
+.nameOfPCC{
+
+    width:40%;
+
+}
+.alignC{
+
+    width:15%;
+
+}
+
+.playerC{
+
+    width:40%;
+    
+}
+.characterLevelC{
+
+    width:50%;
+    
+}
+.deityC{
+
+    width:20%;
+    
+}
+.homeC{
+
+    width:25%;
+    
+}
+.raceC{
+
+    width: 24%;
+
+}
+.genderC{
+
+    width:15%;
+
+}
+.sizeC{
+
+    width:15%;
+
+}
+.weightC{
+
+    width: 20%;
+
+}
+.heightC{
+
+    width: 20%;
+
+}
+.leftColumn{
+
+    width: 50%;
+    margin-top: 1vw;
+
+}
+.attributes{
+
+    width:  45%;
+    display:inline-block;
+
+}
+.attributeTC{
+
+    width:100%;
+    
+    
+}
+.attributeHead{
+
+    width: 13%;
+    font-size: .9rem;
+    margin-left: 3%;
+}
+.attributeC{
+
+    width:100%;
+    
+}
+.boxAttributeT{
+
+    color:black;
+    text-align: center;
+    font-size: .9rem;
+    padding-top: 10px;
+    font-weight: bold;
+    width:4.5rem;
+    height:1.5vw;
+    margin-right:2px;
+    display:inline-block;
+
+}
+.boxT{
+
+    background-color: black;
+    color:white;
+    text-align: center;
+    font-size: .8rem;
+    padding-top: 10px;
+    font-weight: bold;
+    width:4.5rem;
+    height:2rem;
+    vertical-align: middle;
+    margin-right:2px;
+    display:inline-block;
+
+}
+.attributeInputFields{
+
+    width:13%;
+    margin-left: 3%;
+    
+
+}
+.attributeCont{
+
+    width: 17%;
+    height:100%;
+    vertical-align: top;
+
+}
+.hpInit{
+  
+    width:45%;
+    display:inline-block;
+    height: 60%;
+    vertical-align: top;
+    
+}
+.hpInitCont{
+
+    width: 30%;
+    display: inline-block;
+    margin-left: 4%;
+
+}
+.hpInitContHP{
+
+    vertical-align: top;
+
+}
+.hpInitInitCont{
+
+    width: 100%;
+    margin:0;
+
+}
+.hpInitContWide{
+
+    width: 100%;
+    display:inline-block;
+    margin:0;
+
+}
+.hpInitContSmall{
+
+    width: 17%;
+    margin-top:5%;
+    vertical-align: top;
+    display: inline-block;
+
+}
+.operands{
+
+    margin: 1% 1%;
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align:middle;
+    
+}
+.initOperands{
+
+    margin: 7% 1%;
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: baseline;
+
+}
+.savesOperands{
+
+    padding: 10% 0;
+    vertical-align: middle;
+
+}
+.hpInitInputFields{
+
+    width: 100%;
+    height: 12%;
+    
+    
+}
+.initBoxT{
+
+    background-color: black;
+    color: white;
+    margin-top: 5%;
+    font-size: .6vw;
+    width: 20%;
+    height: 10%;
+    vertical-align: top;
+
+}
+.hpInitInputFieldsLarge{
+
+    width:100%;
+    display: inline-block;
+    font-size: 1rem;
+    height: auto;
+    max-width: 300px;
+    min-width: 100%;
+    max-height: 4rem;
+    overflow-y:none;
+    overflow-x:none;
+    resize: none;
+    
+}
+.boxTWide{
+
+    background-color: black;
+    color:white;
+    text-align: center;
+    margin-top: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: .8rem;
+    vertical-align: center;
+    font-weight: bold;
+    width:10%;
+    margin-right:2px;
+    display:inline;
+    
+}
+.hpInitInputFieldsSmall{
+
+    width: 100%;
+
+}
+#nonLethal{
+
+    padding-bottom: 20px;
+    
+}
+#hpCurrent{
+
+    padding-bottom: 10%;
+    
+}
+.speedSkills{
+
+    width:45%;
+    vertical-align: top;
+    display:inline-block;
+    margin-top: 1vw;
+
+}
+.speedCont{
+
+    width: 100%;
+
+}
+.speedBoxT{
+
+    width: 20%;
+    background-color: black;
+    color:white;
+    text-align: center;
+    font-size: .9rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: auto;
+    font-weight: bold;
+    vertical-align: top;
+    margin-right:2px;
+    display:inline-block;
+
+}
+.baseSpeedCont{
+
+    display: inline-block;
+    width: 35%
+
+}
+.armorSpeedCont{
+
+    display:inline-block;
+    width: 35%;
+    margin-left: 1%;
+
+
+}
+.flySpeedCont{
+
+    display:inline-block;
+    width: 35%;
+    margin-top: 3%;
+    margin-left: 1%;
+
+
+}
+.swimSpeedCont{
+
+    display:inline-block;
+    width: 15%;
+    margin-left: 3%;
+
+
+}
+.climbSpeedCont{
+
+    display: inline-block;
+    width: 15%;
+    margin-left: 3%;
+
+
+}
+.burrowSpeedCont{
+
+    display:inline-block;
+    width: 15%;
+    margin-left: 3%;
+
+}
+.speedInputFields{
+
+    width: 100%;
+    
+    margin-bottom: 0px;
+    vertical-align:top;
+    display:inline-block;
+}
+.speedHeading{
+
+    text-align: center;
+    margin:0;
+
+}
+.speedInputFieldsTall{
+
+    vertical-align: top;
+    width:4vw;
+    
+    height:4vw;
+    display:inline-block;
+
+}
+.boxTLong{
+
+    background-color: black;
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 20px;
+    font-weight: bold;
+    width:95%;
+    height:3rem;
+    margin-right:2px;
+    display:inline-block;
+
+}
+.skills{
+
+    width: 100%;
+
+}
+.skillsRow{
+
+    width: 100%;
+
+}
+.skillsT{
+
+    font-size:1rem;
+    margin-top:3px;
+    display:inline-block;
+    text-align: center;
+    width: 11%;
+    display:inline-block;
+
+}
+.skillsTTot{
+
+    width: 30%;
+
+}
+.skillsTLong{
+
+    width: 28%;
+    text-align: left;
+    padding-bottom: 10px;
+
+}
+.skillsRadio{
+
+    display:inline-block;
+    width: 3%;
+
+}
+.skillsDetailedT{
+
+    display:inline-block;
+    width:35%;
+    text-align:left;
+
+}
+.skillsInputFields{
+
+    width: 9%;
+    height:auto;
+    
+    display:inline;
+
+}
+.skillsInputFieldsMisc{
+
+    width: 9%;
+    
+
+}
+.skillsEqualsT{
+
+    width:11%;
+    text-align:left;
+    font-size:1.2rem;
+
+}
+.skillsBtn{
+
+    font-size: .8rem;
+    width: 1.5rem;
+    height: auto;
+
+}
+.skillsCustomFields{
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 35%;
+
+}
+.armorClass{
+
+    vertical-align:bottom;
+    width: 25%;
+
+}
+.armorClass{
+
+    padding-top: 10px;
+    width: 100%;
+
+}
+.armorClassCont{
+
+    width: 5%;
+    display: inline-block;
+    vertical-align: top;
+
+}
+.armorClassMod{
+
+    font-size: 1rem;
+
+}
+.armorClassContLong{
+
+    width: 55%;
+    vertical-align: top;
+
+}
+.armorClassBoxT{
+
+    background-color: black;
+    color:white;
+    text-align: center;
+    font-size: .85rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    width:10%;
+    margin-right:2px;
+    display:inline-block;
+
+}
+.armorClassInputFields{
+
+    width: 100%;
+    display: inline-block;
+        vertical-align: bottom;
+
+    
+
+}
+.armorClassInputFieldsLong{
+
+    flex-grow: 1;
+    
+
+}
+.savesHead{
+
+    text-align: center;
+    display: inline-block;
+    width:6%;
+    font-size: .9rem;
+
+}
+.savesTLong{
+
+    width: 100%;
+
+}
+.savesInputFieldsHead{
+
+    width:100%;
+    display:inline-block;
+    
+
+}
+.savesBoxTWide{
+
+    width: 30%;
+    background-color: black;
+    text-align: center;
+    color:white;
+    padding-top: 1%;
+    padding-bottom:1%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    height:2em;
+    margin-right:3px;
+    display:inline-block;
+
+    
+}
+.savesInputFields{
+
+    width: 6%;
+    display:inline-block;
+    
+    
+}
+.combat{
+
+    margin-top: .3rem;
+
+}
+.combatBaseBox{
+
+    width: 50%;
+    background-color: black;
+    color:white;
+    padding-top: 15px;
+    font-size: 1rem;
+    padding-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+    display:inline-block;
+
+}
+.cmBox{
+
+    vertical-align: top;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+
+}
+.cmOperators{
+
+    margin: .5rem .5rem;
+    padding-top: .5rem;
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align:top;
+
+}
+.combatCont{
+
+    width: 8%;
+    vertical-align: top;
+
+}
+.combatModifierCont{
+
+    width: 34%;
+    display: inline-block;
+
+}
+.combatInputFieldsWide{
+
+    width: 14%;
+    display:inline-block;
+    
+
+}
+.combatInputFields{
+
+    width: 100%;
+    display:inline-block;
+    margin-top:10px;
+    
+
+}
+.combatInputFieldsLong{
+
+    width: 100%;
+    display:inline-block;
+    margin-top: 10px;
+    
+
+}
+.manuevers{
+
+    width: 100%;
+
+}
+.weapons{
+
+    width: 100%;
+    height: auto;
+    display: inline-block;
+
+}
+.weaponsScroll{
+
+    height: 30rem;
+    width:100%;
+    overflow-y: auto;
+
+}
+.weaponsTitle{
+
+    width: 50%;
+    border-color: black;
+
+}
+.weaponsCheckbox{
+
+    display: inline-block;
+    width: 4%;
+}
+.weaponsAtkBon{
+
+    width: 29%;
+
+
+}
+.weaponsCrit{
+
+    width: 17%;
+
+}
+.weaponsType{
+
+    width: 10%;
+
+}
+.weaponsRange{
+
+    width: 15%;
+
+}
+.weaponsAmmo{
+
+    width: 40%;
+
+}
+.weaponsDamage{
+
+    width: 31%;
+
+}
+.weaponsBox{
+
+    width: 100%;
+    height: 20%;
+    background-color: black;
+    color: white;
+    text-align:center;
+    font-size: 1.2rem;
+    display:inline-block;
+    vertical-align: top;
+
+}
+.weaponsBoxTitle{
+
+    width: 100%;
+    height: 20%;
+    background-color: black;
+    color: white;
+    text-align:left;
+    font-size: 1.2rem;
+    display:inline-block;
+    vertical-align: top;
+
+}
+.weaponsInputFields{
+
+    width: 98%;
+    font-size: 1.5rem;
+    height: auto;
+    display: block;
+
+}
+.weaponsBtnCont{
+
+    width: 10%;
+
+}
+.weaponsBtn{
+
+    display:inline-block;
+    width: 40%;
+    background-color: lightgrey;
+    padding:0;
+
+}
+.weaponsDelBtn{
+
+    display:inline-block;
+    width: 40%;
+    height: auto;
+    border-color: red;
+    background-color: red;
+    padding:0;
+
+}
+.mainPg2{
+
+    width: 70%;
+    display: inline-block;
+    margin-top: 1vw;
+
+}
+.acItems{
+
+    width: 100%;
+
+}
+.acItemsBtn{
+
+    background-color: lightgrey;
+    width: 2%;
+    height: 2%;
+    padding:0;
+
+}
+.acItemsBtnDelete{
+
+    background-color: red;
+    width: 3%;
+    height: 2%;
+    align-content: left;
+    padding:0;
+
+}
+.acItemsCheck{
+
+    display: inline-block;
+    width: 10%;
+
+}
+.acItemsScroll{
+
+    margin:0;
+    height:20rem;
+    width:100%;
+    overflow-y: auto;
+    border: 2px solid black;
+
+}
+.acItemsForm{
+
+    font-size: 0;
+    display: flex;
+
+}
+.acItemsInput{
+
+    border-width: 3px;
+
+}
+.acItemsTotalInput{
+
+    border-width: 3px;
+    font-size: 1.3rem;
+
+}
+.acItemsTitleCont{
+
+    width: 40%;
+    flex-direction: column;
+
+}
+.acItemsTitle{
+
+    margin:0;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    font-size: 1rem;
+    text-align: left;
+}
+.acItemsBonusCont{
+
+    width: 20%;
+    margin: 0;
+    font-size: 0%;
+    flex-direction: column;
+
+}
+.acItemsBonus{
+
+    margin:0;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    font-size: 1rem;
+    width:100%;
+    text-align: center;
+}
+.acItemsTypeCont{
+
+    width: 20%;
+    margin: 0;
+    flex-direction: column;
+
+}
+.acItemsType{
+
+    margin:0;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+}
+.acItemsCheckPenCont{
+
+    width: 20%;
+    flex-direction: column;
+
+}
+.acItemsCheckPen{
+
+    margin:0;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    font-size: 1rem;
+    width:100%;
+    text-align: center;
+}
+.acItemsSpellFailCont{
+
+    width: 20%;
+    flex-direction: column;
+
+}
+.acItemsSpellFail{
+
+    margin:0;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+}
+.acItemsWeightCont{
+
+    width: 20%;
+    flex-direction: column;
+
+}
+.acItemsWeight{
+
+    margin:0;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+}
+.acItemsPropCont{
+
+    width: 20%;
+    flex-direction: column;
+
+}
+.acItemsProp{
+
+    margin:0;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+}
+.acItemsTotalCont{
+
+    width: 100%;
+    flex-direction: column;
+
+}
+.acItemsTotalTitle{
+
+    margin:0;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    font-size: 1.2rem;
+    height:100%;
+    text-align: left;
+
+}
+.leftColumnPg2{
+
+    vertical-align: top;
+    width: 30%;
+
+}
+.gear{
+
+    width: 100%;
+    height: 40rem;
+    border: 2px solid black;
+    overflow-y: auto;
+
+
+}
+.gearTitle{
+
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+
+
+}
+.gearTitles{
+
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: .8vw;
+    width: 100%;
+
+}
+.gearSubHeadItem{
+
+    display: inline-block;
+    width: 80%;
+    font-size: 1.3rem;
+    height: 1em;
+
+}
+.gearSubHeadWeight{
+
+    display: inline-block;
+    width: 10%;
+    font-size: 1.3rem;
+    height: 1em;
+
+}
+.gearBtn{
+
+    background-color: grey;
+    width: 90%;
+    display: inline-block;
+    font-size: 1rem;
+    height: 1.5em;
+
+}
+.gearBtnDelete{
+
+    background-color: red;
+    width: 10%;
+    display: inline-block;
+    font-size: 1rem;
+    height: 1.5em;
+
+}
+.gearContent{
+
+    width:100%;
+    border-color: black;
+    border-width: 3px;
+    display: inline-block;
+
+}
+.gearCheckbox{
+
+    align-self: center;
+    width: 15%;
+
+}
+.gearEntry{
+
+    width:100%;
+    display: flex;
+
+}
+.gearInputFields{
+
+    
+    width: 60%;
+    border-width: 3px;
+    flex-grow: 5;
+
+}
+.gearInputFieldsWeight{
+
+    
+    width: 20%;
+    border-width: 3px;
+
+}
+.gearInputFieldsWeightTotal{
+
+    
+    width: 24%;
+    border-width: 3px;
+
+}
+.gearInputFieldsWeightTotal{
+
+    
+    border-width: 3px;
+    background-color: white;
+
+}
+.gearTotal{
+
+    display: flex;
+    position: sticky;
+    bottom: 0;
+
+}
+.gearTotalTitle{
+
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+.rightColumn{
+
+    display: inline-block;
+    width:25%;
+    vertical-align: top;
+    margin-top: 2.2vw;
+    margin-left: .4vw;
+
+}
+.spells{
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+}
+.spellsTitle{
+
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+.spellsRowContainer{
+
+    width:100%;
+    display: inline-block;
+
+}
+
+.spellsColumnTitle{
+
+    color: black;
+    width: 18%;
+    text-align: center;
+    font-size: 1.05rem;
+
+}
+.spellsInput{
+  
+    font-size: 1.2rem;
+    margin-bottom: .3vw;
+    width: 18%;
+    height: 2em;
+
+}
+.spellLevelTitle{
+
+    width: 19%;
+    text-align: center;
+    height: 2em;
+    margin-top: .4em;
+    font-size: 1.2rem;
+
+}
+.featsAbilCont{
+
+    width: 68%;
+    margin-left: 1%;
+
+}
+.feats{
+
+    width: 100%;
+    height: 25rem;
+    overflow-y: auto;
+    vertical-align: top;
+
+}
+.featsHeader{
+
+    width: 100%;
+    position:sticky;
+    top:0;
+
+}
+.featsTitle{
+
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+.featsInputFields{
+
+    min-width: 95%;
+    max-width: 95%;
+    font-size: 1em;
+
+}
+.featsCont{
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.featsCheckbox{
+
+    width: 1rem;
+    margin-right: .2rem;
+
+}
+.featsBtn{
+
+    width: 90%;
+    background-color: grey;
+    font-size: 1rem;
+    height: 1.5em;
+}
+.featsBtnDelete{
+
+    width: 10%;
+    background-color: red;
+    font-size: 1rem;
+    height: 1.5em;
+
+}
+.load{
+
+    width: 100%;
+
+}
+.loadCont{
+
+    width: 100%;
+
+}
+.loadCol{
+
+    width: 49%;
+
+}
+.loadWrapper{
+
+    width: 100%;
+    height: 3rem;
+
+}
+.loadTitle{
+
+    text-align: center;
+    font-size: .9rem;
+    vertical-align:middle;
+    width: 40%;
+
+}
+.loadInput{
+
+    width: 40%;
+    vertical-align: middle;
+    font-size: 1rem;
+
+}
+.specialAbil{
+
+    width: 100%;
+    height: 25rem;
+    overflow-y: auto;
+
+
+}
+.specialAbilContent{
+
+    overflow-y: auto;
+    width: 100%;
+
+}
+.specialAbilHeader{
+
+    width: 100%;
+    position:sticky;
+    top:0%;
+    z-index: 10;
+
+}
+.specialAbilTitle{
+
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+
+}
+.specialAbilInputFields{
+
+    min-width: 95%;
+    max-width: 95%;
+    font-size: 1em;
+
+}
+.specialAbilCont{
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.specialAbilCheckbox{
+
+    width: 1rem;
+    margin-right: .2rem;
+
+}
+.specialAbilBtn{
+
+    width: 90%;
+    background-color: grey;
+    font-size: 1rem;
+    height: 1.5em;
+
+}
+.specialAbilBtnDelete{
+
+    width: 10%;
+    background-color: red;
+    font-size: 1rem;
+    height: 1.5em;
+
+}
+.money{
+
+    width: 100%;
+    vertical-align: top;
+    display: inline-block;
+    line-height: 40px;
+
+}
+.moneyCont{
+
+    display: flex;
+    flex-direction: column;
+
+}
+.moneyTitle{
+
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.moneyDen{
+
+    width: 10%;
+    flex-grow: 1;
+    font-size: 1.05rem;
+
+}
+.moneyInput{
+
+    width: 90%;
+    height: 1.3rem;
+    flex-grow: 9;
+    
+
+}
+.domain{
+
+    width: 100%;
+    margin: auto;
+
+}
+.domainsTitle{
+
+    font-size: 1.5rem;
+    text-align: center;
+    display: block;
+
+}
+.domainsInputDom{
+
+    width: 100%;
+    font-size: 1rem;
+    height: 2em;
+    
+
+}
+.thSpellCont{
+
+    width: 100%;
+
+}
+.domainLevTitle{
+
+    font-size: 1.05rem;
+
+}
+.domainChecks{
+
+    display: inline-block;
+    width: 4%;
+
+}
+.domainSpellText{
+
+    min-width: 100%;
+    max-width: 375px;
+    resize:vertical;
+
+}
+.domainInputSpell{
+
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    
+    font-size: .9rem;
+    outline: none;
+    height: 2em;
+
+}
+.footCont{
+
+    width: 100%;
+    height: 5rem;
+
+}
+.footText{
+
+    text-align: center;
+
+}
+@media screen and (max-width: 1888px){
+    .mainContent{
+
+        background-color: white;
+        width:1152px;
+        height: 1493px;
+        position: absolute;
+        left:0;
+        overflow-x: auto;
+    
+    }
+}

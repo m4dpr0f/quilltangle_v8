@@ -1,0 +1,139 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Launchpad from '../islands/Launchpad';
+---
+
+<Layout title="Launchpad - 8xM">
+  <main class="container mx-auto px-4 py-8">
+    <Launchpad client:load />
+
+    <!-- Info Section -->
+    <div class="mt-16 max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold mb-6 text-center">How It Works</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="card text-center">
+          <div class="text-4xl mb-4">🎯</div>
+          <h3 class="font-bold mb-2">1. Configure</h3>
+          <p class="text-sm text-gray-400">
+            Set your token name, symbol, supply, and liquidity parameters.
+            Choose a TEK8 guild for MMORPG integration.
+          </p>
+        </div>
+
+        <div class="card text-center">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="font-bold mb-2">2. Launch</h3>
+          <p class="text-sm text-gray-400">
+            Create your SPL token and set metadata. Your token is instantly
+            tradeable on Meteora DLMM.
+          </p>
+        </div>
+
+        <div class="card text-center">
+          <div class="text-4xl mb-4">🦍</div>
+          <h3 class="font-bold mb-2">3. Ape In</h3>
+          <p class="text-sm text-gray-400">
+            Add liquidity with one click. Compete in the Aping Challenge
+            for the best position PnL!
+          </p>
+        </div>
+      </div>
+
+      <!-- Meteora Integration -->
+      <div class="mt-12 bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-lg p-6 border border-purple-500/50">
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://app.meteora.ag/meteora-logo.svg" alt="Meteora" class="h-8" onerror="this.style.display='none'" />
+          <h3 class="text-xl font-bold">Powered by Meteora DLMM</h3>
+        </div>
+        <p class="text-gray-300 mb-4">
+          Dynamic Liquidity Market Maker provides concentrated liquidity,
+          zero slippage bins, and dynamic fees that adapt to market volatility.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="https://docs.meteora.ag/" target="_blank" rel="noopener" class="text-purple-400 hover:underline text-sm">
+            📚 Meteora Docs
+          </a>
+          <a href="https://app.meteora.ag/" target="_blank" rel="noopener" class="text-purple-400 hover:underline text-sm">
+            🌐 Meteora App
+          </a>
+          <a href="https://x.com/MeteoraAG" target="_blank" rel="noopener" class="text-purple-400 hover:underline text-sm">
+            𝕏 @MeteoraAG
+          </a>
+        </div>
+      </div>
+
+      <!-- TEK8 Guild Integration -->
+      <div class="mt-8 bg-gray-900 rounded-lg p-6">
+        <h3 class="text-xl font-bold mb-4">TEK8 Guild Strategies</h3>
+        <p class="text-gray-400 mb-4">
+          Each TEK8 guild maps to an optimal Meteora pool configuration:
+        </p>
+        <div class="grid grid-cols-4 md:grid-cols-8 gap-2 text-center text-sm">
+          <div class="p-2 bg-yellow-900/30 rounded">
+            <div class="font-bold">D2</div>
+            <div class="text-xs text-gray-400">Coin</div>
+            <div class="text-yellow-400">25bps</div>
+          </div>
+          <div class="p-2 bg-red-900/30 rounded">
+            <div class="font-bold">D4</div>
+            <div class="text-xs text-gray-400">Fire</div>
+            <div class="text-red-400">50bps</div>
+          </div>
+          <div class="p-2 bg-green-900/30 rounded">
+            <div class="font-bold">D6</div>
+            <div class="text-xs text-gray-400">Earth</div>
+            <div class="text-green-400">15bps</div>
+          </div>
+          <div class="p-2 bg-cyan-900/30 rounded">
+            <div class="font-bold">D8</div>
+            <div class="text-xs text-gray-400">Air</div>
+            <div class="text-cyan-400">30bps</div>
+          </div>
+          <div class="p-2 bg-orange-900/30 rounded">
+            <div class="font-bold">D10</div>
+            <div class="text-xs text-gray-400">Chaos</div>
+            <div class="text-orange-400">100bps</div>
+          </div>
+          <div class="p-2 bg-purple-900/30 rounded">
+            <div class="font-bold">D12</div>
+            <div class="text-xs text-gray-400">Ether</div>
+            <div class="text-purple-400">20bps</div>
+          </div>
+          <div class="p-2 bg-blue-900/30 rounded">
+            <div class="font-bold">D20</div>
+            <div class="text-xs text-gray-400">Water</div>
+            <div class="text-blue-400">25bps</div>
+          </div>
+          <div class="p-2 bg-gray-800 rounded">
+            <div class="font-bold">D100</div>
+            <div class="text-xs text-gray-400">Order</div>
+            <div class="text-white">10bps</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aping Challenge -->
+      <div class="mt-8 bg-gradient-to-r from-yellow-900/30 to-orange-900/30 rounded-lg p-6 border border-yellow-500/50">
+        <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
+          🦍 The Aping Challenge
+        </h3>
+        <p class="text-gray-300 mb-4">
+          Inspired by <a href="https://x.com/MeteoraAG/status/2013218505609392348" target="_blank" class="text-yellow-400 hover:underline">Meteora's DLMM Ape In Challenge</a>:
+        </p>
+        <ul class="list-disc list-inside text-gray-400 space-y-1">
+          <li>One-click "Ape In" to add liquidity instantly</li>
+          <li>Compete based on position % PnL</li>
+          <li>Leaderboard tracks top performers</li>
+          <li>Earn fees while you compete</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .container {
+    min-height: calc(100vh - 80px);
+  }
+</style>

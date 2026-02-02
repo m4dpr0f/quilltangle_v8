@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Wild Eggs | Garu">
+  <main class="min-h-screen bg-gradient-to-b from-gray-950 via-purple-950/10 to-gray-950 py-8 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold mb-2 bg-gradient-to-r from-amber-400 to-pink-400 bg-clip-text text-transparent">
+          Wild Eggs
+        </h1>
+        <p class="text-gray-400">
+          Discover eggs scattered across the Quillverse—legacies of fallen Garu and primordial mysteries.
+        </p>
+      </div>
+
+      <div id="egg-explorer"></div>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  import { createRoot } from 'react-dom/client';
+  import WildEggExplorer from '../../islands/WildEggExplorer';
+
+  const container = document.getElementById('egg-explorer');
+  if (container) {
+    const root = createRoot(container);
+    root.render(WildEggExplorer());
+  }
+</script>

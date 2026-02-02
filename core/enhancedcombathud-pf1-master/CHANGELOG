@@ -1,0 +1,60 @@
+## 0.12.1
+- Fix spellbook button for actors with multiple spellbooks not opening spellbook selection
+
+## 0.12.0
+- Add Chinese Translation (Huge Thanks to [@NaricaNardica](https://github.com/NaricaNardica))
+- Add French Translation (Huge Thanks to [@guillaume-gc](https://github.com/guillaume-gc))
+- Fix unchained action economy crashing combat hud
+- Fix equipment tooltips showing broken data
+- No longer exclude actions with an activation cost larger than 1 action (mostly relevant for UC action economy)
+- Fix unchained action economy cost not being properly deducted
+
+## 0.11.2
+- Fix item tooltips breaking when no material data is available
+- Fix additional deprecation warnings
+- Fix rest button not working
+- Fix movement calculation
+
+## 0.11.1
+- Additional compatibility fixes for PathfinderV1 v11
+
+## 0.11.0
+- PathfinderV1 v11 compatibility
+
+## 0.10.1
+- Update for Pathfinder v10
+- Expand item tooltips to include more useful information
+- Prevent weapons from becoming unequipped when switching weapon sets
+- Only allow weapons with attack actions and attacks for weapon sets
+- Remove background skills from drawer when not active
+- Fix movement calculation for diagonals
+- Make avatar defense values uniform width to avoid visual jump on hover
+
+## 0.9.4
+- Top-align portrait tooltips to avoid overlapping actual text
+- Disable tooltips for empty action buttons
+- Fix console error when rendering HUD without actor selected
+- Add a new option to highlight range when hovering item actions
+- Use fly speed for movement when active token is elevated
+- Add default weapon sets for actors
+- Shorten "Full Round" action bar label to "Full"
+- Fix combat hud crashing when creature has no type or class
+
+## v0.9.3
+- Exclude 0 level classes from token description
+- Add support for unchained action economy
+- Remove disabled spellbooks that contain spells from action bar
+- Remove spells button from showing up in action section, if no spells are available for that section
+- Fix subskills not being rollable from drawer panel
+- Sync spontaneous spell slot usage between actions
+
+## v0.9.2
+- Simplify spell selection if only one spellbook is active
+- Fix spell points support
+- Fix total spell slots showing for prepared casters
+
+## v0.9.1
+- Fix dev clutter
+
+## v0.9.0
+- Initial release

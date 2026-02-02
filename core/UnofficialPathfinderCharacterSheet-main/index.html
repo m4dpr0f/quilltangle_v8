@@ -1,0 +1,1234 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+
+  <title>Jasper's Unofficial Pathfinder Character Sheet</title>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+
+  <link rel="stylesheet" href="css/index.css"/>
+  <link rel="stylesheet" href="css/font/Luxi Mono/web fonts/luximono_regular_macroman/stylesheet.css">
+  <link rel="stylesheet" href="css/font/Nimbus Sans/web fonts/nimbussansl_regular_macroman/stylesheet.css">
+
+  <script defer src="scripts/export.js"></script>
+  <script defer src="scripts/import.js"></script>
+  <script defer src="scripts/page.js"></script>
+  <script defer src="scripts/spawn.js"></script>
+  <script defer src="scripts/delete.js"></script>
+  <script defer src="scripts/modal.js"></script>
+
+
+</head>
+<div class="modal" id="modal">
+  <div class="modalContent">
+    <div class="modalContentCont">
+    <div id="modalText" class="modalText"></div>
+    <div class="modalBtnCont">
+      <input type="button" id="modalYes" class="modalBtn" value="Yes" style="background-color: red;color: white;">
+      <input type="button" id="modalNo" class="modalBtn" value="No">
+    </div>
+  </div>
+  </div>
+</div>
+<div class="mainContent">
+<input type="file" class="manInput" value="Import">
+<input type="button" class="manInput" value="Export" onclick="getData()">
+<input type="button" id="pgBtn" class="pgInput" value="&#128737;" onclick="goToEquip()">
+<br>
+<div id="pg1">
+<img class="logo" src="Images/pathfinder_cropped.jpg">
+<body>
+<form class="personalInfo">
+  <div class="nameOfPCC">
+    <input type="text" id="nameOfPC" class="personalInfoInput">
+    <hr>
+    <h5>Character Name</h5>
+  </div>
+
+  <div class="alignC">
+    <input type="text" id="align" class="personalInfoInput">
+    <hr>
+    <h5>Alignment</h5>
+  </div>
+
+  <div class="playerC">
+    <input type="text" id="player" class="personalInfoInput">
+    <hr>
+    <h5>Player Name</h5>
+  </div>
+
+  <div class="characterLevelC">
+    <input type="text" id="characterLevel" class="personalInfoInput">
+    <hr>
+    <h5>Character Level</h5>
+  </div>
+
+  <div class="deityC">
+    <input type="text" id="deity" class="personalInfoInput">
+    <hr>
+    <h5>Deity</h5>
+  </div>
+
+  <div class="homeC">
+    <input type="text" id="home" class="personalInfoInput">
+    <hr>
+    <h5>Homeland</h5>
+  </div>
+
+  <div class="raceC">
+    <input type="text" id="race" class="personalInfoInput">
+    <hr>
+    <h5>Race</h5>
+  </div>
+
+  <div class="sizeC">
+    <input type="text" id="size" class="personalInfoInput">
+    <hr>
+    <h5>Size</h5>
+  </div>
+
+  <div class="genderC" > 
+    <input type="text" class="personalInfoInput">
+    <hr>
+    <h5>Gender</h5>
+  </div>
+
+  <div class="weightC">
+    <input type="text" id="weight" class="personalInfoInput">
+    <hr>
+    <h5>Weight</h5>
+  </div>
+
+  <div class="heightC">
+    <input type="text" id="height" class="personalInfoInput">
+    <hr>
+    <h5>Height</h5>
+  </div>
+</form>
+<div class="leftColumn">
+  <div class="attributesHpInit">
+    <form class="attributes">
+      <div class="attributeTC">
+  
+        <div class="boxAttributeT">Attributes</div>
+        <h6 class="attributeHead">Abil<br>Score</h6>
+        <h6 class="attributeHead">Abil<br>Mod</h6>
+        <h6 class="attributeHead">Temp<br>Adjust</h6>
+        <h6 class="attributeHead">Temp<br>Mod</h6>
+  
+      </div>
+      <div class="attributeC">
+        <div class="boxT">STR Strength</div>
+        <input type="text" id="strScore" class="attributeInputFields">
+        <input type="text" id="strMod" class="attributeInputFields">
+        <input type="text" id="strTempAdjust" class="attributeInputFields">
+        <input type="text" id="strTempMod" class="attributeInputFields">
+      </div>
+      <div class="attributeC">
+        <div class="boxT">DEX Dexterity</div>
+        <input type="text" id="dexScore" class="attributeInputFields">
+        <input type="text" id="dexMod" class="attributeInputFields">
+        <input type="text" id="dexTempAdjust" class="attributeInputFields">
+        <input type="text" id="dexTempMod" class="attributeInputFields">
+      </div>
+      <div class="attributeC">
+        <div class="boxT">CON Constitution</div>
+        <input type="text" id="conScore" class="attributeInputFields">
+        <input type="text" id="conMod" class="attributeInputFields">
+        <input type="text" id="conTempAdjust" class="attributeInputFields">
+        <input type="text" id="conTempMod" class="attributeInputFields">
+      </div>
+      <div class="attributeC">
+        <div class="boxT">INT Intelligence</div>
+        <input type="text" id="intScore" class="attributeInputFields">
+        <input type="text" id="intMod" class="attributeInputFields">
+        <input type="text" id="intTempAdjust" class="attributeInputFields">
+        <input type="text" id="intTempMod" class="attributeInputFields">
+      </div>
+      <div class="attributeC">
+        <div class="boxT">WIS<br>Wisdom</div>
+        <input type="text" id="wisScore" class="attributeInputFields">
+        <input type="text" id="wisMod" class="attributeInputFields">
+        <input type="text" id="wisTempAdjust" class="attributeInputFields">
+        <input type="text" id="wisTempMod" class="attributeInputFields">
+      </div>
+      <div class="attributeC">
+        <div class="boxT">CHA Charisma</div>
+        <input type="text" id="chaScore" class="attributeInputFields">
+        <input type="text" id="chaMod" class="attributeInputFields">
+        <input type="text" id="chaTempAdjust" class="attributeInputFields">
+        <input type="text" id="chaTempMod" class="attributeInputFields">
+      </div>
+    </form>
+  <form class="hpInit">
+    <div class="hpInitContHP">
+      <div class="boxT">HP<br>Hit Points</div>
+  </div>
+    <div class="hpInitCont">
+      <input type="text" id="hpTotal" class="hpInitInputFields">
+      <h6>Total</h6>
+    </div>
+    <div class="hpInitCont">
+      <input type="text" id="drTotal" class="hpInitInputFields">
+      <h6>DR</h6>
+    </div>
+    <div class="hpInitContWide">
+      <h6>Wounds / Current HP</h6>
+      <textarea class="hpInitInputFieldsLarge"></textarea>
+      <h6>Nonlethal Damage</h6>
+      <textarea class="hpInitInputFieldsLarge"></textarea>
+    </div>
+    <div class="hpInitInitCont">
+      <div class="boxT">INITIATIVE</div>
+      <div class="hpInitContSmall">
+        <input type="text" id="initTotal" class="hpInitInputFieldsSmall">
+        <h6>Total</h6>
+      </div>
+      <div class="initOperands">=</div>
+      <div class="hpInitContSmall">
+        <input type="text" id="initDexMod" class="hpInitInputFieldsSmall"> 
+        <h6>Dex Mod</h6>
+      </div>
+      <div class="initOperands">+</div>
+      <div class="hpInitContSmall">
+        <input type="text" id="initMiscMod" class="hpInitInputFieldsSmall">
+        <h6>Misc Mod</h6>
+      </div>
+    </div>
+  </form>
+</div>
+  <form class="armorClass">
+    <div class="armorClassRowCont">
+      <div class="armorClassBoxT">AC Armor Class</div>
+    <div class="armorClassCont">
+        <input type="text" id="acTotal" class="armorClassInputFields">
+        <h4>Total</h4>
+    </div>
+    <div class="operands">= 10 +</div>
+    <div class="armorClassCont">
+      <input type="text" id="acArmorBon" class="armorClassInputFields">
+      <h4>Armor Bonus</h4>
+    </div>
+    <div class="operands">+</div>
+    <div class="armorClassCont">
+      <input type="text" id="acShieldBon" class="armorClassInputFields">
+      <h4>Shield Bonus</h4>
+    </div>
+    <div class="operands">+</div>
+    <div class="armorClassCont">
+      <input type="text" id="acDexMod" class="armorClassInputFields">
+      <h4>Dex Bonus</h4>
+    </div>
+    <div class="operands">+</div>
+    <div class="armorClassCont">
+      <input type="text" id="acSizeMod" class="armorClassInputFields">
+      <h4>Size Mod</h4>
+    </div>
+    <div class="operands">+</div>
+    <div class="armorClassCont">
+      <input type="text" id="acNatArm" class="armorClassInputFields">
+      <h4>Natural Armor</h4>
+    </div>
+    <div class="operands">+</div>
+    <div class="armorClassCont">
+      <input type="text" id="acDefMod" class="armorClassInputFields">
+      <h4>Deflect Mod</h4>
+    </div>
+    <div class="operands">+</div>
+    <div class="armorClassCont">
+      <input type="text" id="acMiscMod" class="armorClassInputFields">
+      <h4>Misc Mod</h4>
+    </div>
+  </div>
+    <div class="boxT">Touch AC</div>
+  <div class="armorClassCont">
+    <input type="text" id="acTouch" class="armorClassInputFields">
+  </div>
+    <div class="boxT">FFAC</div>
+  <div class="armorClassCont">
+    <input type="text" id="FFAC" class="armorClassInputFields">
+  </div>
+  <div class="armorClassContLong">
+    <input type="text" id="acMod" class="armorClassInputFieldsLong">
+    <div class="armorClassMod">Modifiers</div>
+  </div>
+
+  </form>
+  <form class="saves">
+    <h6 class="savesTLong">Saving Throws</h6>
+    <div class="savesBoxTWide">Fortitude</div>
+    <div class="savesHead">
+    Totals
+    <input type="text" id="fortTotal" class="savesInputFieldsHead">
+    </div>
+    <div class="operands">=</div>
+    <div class="savesHead">
+      Base Save
+    <input type="text" id="fortBase" class="savesInputFieldsHead">
+    </div>
+    <div class="operands">+</div>
+    <div class="savesHead">
+      Ability Mod
+    <input type="text" id="fortAblMod" class="savesInputFieldsHead">
+    </div>
+    <div class="operands">+</div>
+    <div class="savesHead">
+      Magic Mod
+    <input type="text" id="fortMagMod" class="savesInputFieldsHead">
+    </div>
+    <div class="operands">+</div>
+    <div class="savesHead">
+      Misc Mod
+    <input type="text" id="fortMiscMod" class="savesInputFieldsHead">
+    </div>
+    <div class="operands">+</div>
+    <div class="savesHead">
+      Temp Mod
+    <input type="text" id="fortTempMod" class="savesInputFieldsHead">
+      </div>
+    <div class="savesBoxTWide">Reflex</div>
+    <input type="text" id="refTotal" class="savesInputFields">
+    <div class="operands">=</div>
+    <input type="text" id="refBase" class="savesInputFields">
+    <div class="operands">+</div>
+    <input type="text" id="refAblMod" class="savesInputFields">
+    <div class="operands">+</div>
+    <input type="text" id="refMagMod" class="savesInputFields">
+    <div class="operands">+</div>
+    <input type="text" id="refMiscMod" class="savesInputFields">
+    <div class="operands">+</div>
+    <input type="text" id="refTempMod" class="savesInputFields">
+
+    <div class="savesBoxTWide">Will</div>
+    <input type="text" id="willTotal" class="savesInputFields">
+    <div class="operands">=</div>
+    <input type="text" id="willBase" class="savesInputFields">
+    <div class="operands">+</div>
+    <input type="text" id="willAblMod" class="savesInputFields">
+    <div class="operands">+</div>
+    <input type="text" id="willMagMod" class="savesInputFields">
+    <div class="operands">+</div>
+    <input type="text" id="willMiscMod" class="savesInputFields">
+    <div class="operands">+</div>
+    <input type="text" id="willTempMod" class="savesInputFields">
+  </form>
+  
+  <form class="combat">
+    <div class="combatBaseBox">Base Attack Bonus</div>
+    <input type="text" id="baseAttack" class="combatInputFieldsWide">
+    <div class="boxTWide">Spell Resist</div>
+    <input type="text" id="spellResist" class="combatInputFieldsWide">
+  </form>
+  <form class="manuevers">
+    <div class="cmb">
+      <div class="cmBox">CMB</div>
+      <div class="combatCont">
+        <input type="text" id="cmbTotal" class="combatInputFields">
+        <h4>Total</h4>
+      </div>
+      <div class="cmOperators">=</div>
+      <div class="combatCont">
+        <input type="text" id="cmbBase" class="combatInputFields">
+        <h4>BAB</h4>
+      </div>
+      <div class="cmOperators">+</div>
+      <div class="combatCont">
+        <input type="text" id="cmbStr" class="combatInputFields">
+        <h4>Strength Mod</h4>
+      </div>
+      <div class="cmOperators">+</div>
+      <div class="combatCont">
+        <input type="text" id="cmbSize" class="combatInputFields">
+        <h4>Size Mod</h4>
+      </div>
+      <div class="combatModifierCont">
+      <input type="text" id="cmbMods" class="combatInputFieldsLong">
+      <div class="armorClassMod">Modifier</div>
+    </div>
+  </div>
+  <div class="cmd">
+    <div class="cmBox">CMD</div>
+    <div class="combatCont">
+      <input type="text" id="cmdTotal" class="combatInputFields">
+      <h4>Total</h4>
+    </div>
+    <div class="cmOperators">=</div>
+    <div class="combatCont">
+      <input type="text" id="cmdBase" class="combatInputFields">
+      <h4>BAB</h4>
+    </div>
+    <div class="cmOperators">+</div>
+    <div class="combatCont">
+      <input type="text" id="cmdStr" class="combatInputFields">
+      <h4>Strength Mod</h4>
+    </div>
+    <div class="cmOperators">+</div>
+    <div class="combatCont">
+      <input type="text" id="cmdDex" class="combatInputFields">
+      <h4>Dex Mod</h4>
+   </div>
+    <div class="cmOperators">+</div>
+    <div class="combatCont">
+      <input type="text" id="cmdSize" class="combatInputFields">
+      <h4>Size Mod</h4>
+  </div>
+    <div class="cmOperators">+ 10</div>
+  </div>
+  </form>
+  <div class="weaponsBtnCont">
+    <input type="button" class="weaponsBtn" value="+" onclick="spawnWeap()" id="AddBtn">
+    <input type="button" class="weaponsDelBtn" value="-" onclick="showModal('Would you like to remove the selected weapon entires?','weap')">
+</div>
+  <div class="weaponsScroll"> 
+    <form class="weapons" id="wform0">
+    <div class="weaponsBtnCont">
+  </div>
+  <br>
+      <div class="weaponsTitle">
+        <div class="weaponsBoxTitle"><input type="checkbox" class="weaponsCheckbox">Weapon</div>
+        <input type="text" id="weaponsTitle" class="weaponsInputFields">
+      </div><div class="weaponsAtkBon">
+        <div class="weaponsBox">Attack Bonus</div>
+        <input type="text" id="weaponsAtkBonus" class="weaponsInputFields">
+      </div><div class="weaponsCrit">
+        <div class="weaponsBox">Critical</div>
+        <input type="text" id="weaponsCrit" class="weaponsInputFields">
+      </div><div class="weaponsType">
+        <div class="weaponsBox">Type</div>
+        <input type="text" id="weaponsType" class="weaponsInputFields">
+      </div><div class="weaponsRange">
+        <div class="weaponsBox">Range</div>
+        <input type="text" id="weaponsRange" class="weaponsInputFields">
+      </div><div class="weaponsAmmo">
+        <div class="weaponsBox">Ammunition</div>
+        <input type="text" id="weaponsAmmo" class="weaponsInputFields">
+      </div><div class="weaponsDamage">
+        <div class="weaponsBox">Damage</div>
+        <input type="text" id="weaponsDamage" class="weaponsInputFields">
+      </div>
+    </form>
+  </div>
+</div>
+<form class="speedSkills">
+  <div class="speedCont">
+    <div class="speedBoxT">SPEED</div>
+      <div class="baseSpeedCont">
+        <input type="text" id="baseSpeed" class="speedInputFields"><br>
+        <h6 class="speedHeading">Base Speed</h6>
+      </div> 
+    <div class="armorSpeedCont">
+      <input type="text" id="armorSpeed" class="speedInputFields"><br>
+      <h6 class="speedHeading">With Armor</h6>
+    </div>
+    <div class="flySpeedCont">
+      <input type="text" id="flySpeed" class="speedInputFields"><br>
+      <h6 class="speedHeading">Flight</h6>
+    </div>
+    <div class="swimSpeedCont">
+      <input type="text" id="swimSpeed" class="speedInputFields"><br>
+      <h6 class="speedHeading">Swim</h6>
+    </div>
+    <div class="climbSpeedCont">
+      <input type="text" id="climbSpeed" class="speedInputFields"><br>
+      <h6 class="speedHeading">Climb</h6>
+    </div>
+    <div class="burrowSpeedCont">
+      <input type="text" id="burrowSpeed" class="speedInputFields"><br>
+      <h6 class="speedHeading">Burrow</h6>
+    </div>
+  </div>
+  <div class="skills">
+    <div class="boxTLong">SKILLS</div>
+    <div class="skillsRow">
+    <h5 class="skillsTLong">Skill Names</h5>
+    <h5 class="skillsTTot">Total <br> Bonus</h5>
+    <div class="skillsT">Ability <br> Mod</div> 
+    <div class="skillsT">Ranks <br> Mod</div> 
+    <div class="skillsT">Misc <br> Mod</div>
+    </div>
+    <br>
+    <div class="skillsRow">
+    <input type="checkbox" id="acroProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Acrobatics</h5>
+    <input type="text" id="acroBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Dex</h5>
+    <input type="text" id="acroAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="acroRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="acroMiscMod" class="skillsInputFieldsMisc">
+   </div>
+    <div class="skillsRow">
+    <input type="checkbox" id="apprProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Appraise</h5>
+    <input type="text" id="apprBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Int</h5>
+    <input type="text" id="apprAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="apprRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="apprMiscMod" class="skillsInputFieldsMisc">
+    </div>
+    <div class="skillsRow">
+    <input type="checkbox" id="bluProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Bluff</h5>
+    <input type="text" id="bluBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Cha</h5>
+    <input type="text" id="bluAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="bluRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="bluMiscMod" class="skillsInputFieldsMisc">
+    </div>
+    <div class="skillsRow">
+    <input type="checkbox" id="cliProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Climb</h5>
+    <input type="text" id="cliBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Str</h5>
+    <input type="text" id="cliAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="cliRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="cliMiscMod" class="skillsInputFieldsMisc">
+    </div>
+    <div class="skillsRow" id="craftSkillsRow">
+    <input type="checkbox" id="cra1Prof" class="skillsRadio">
+    <h5 class="skillsDetailedT">Craft
+      <input type="text" class="skillsCustomFields">
+      <input type="button" class="skillsBtn" value="+" id="craftAddBtn" onclick="spawnSkill('craft')" style="background-color:grey;">
+    </h5>
+    <input type="text" id="cra1Bonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Int</h5>
+    <input type="text" id="cra1AbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="cra1RankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="cra1MiscMod" class="skillsInputFieldsMisc">
+    </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="dipProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Diplomacy</h5>
+    <input type="text" id="dipBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Cha</h5>
+    <input type="text" id="dipAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="dipRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="dipMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="disProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Disable Device</h5>
+    <input type="text" id="disBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Dex</h5>
+    <input type="text" id="disAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="disRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="disMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="disgProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Disguise</h5>
+    <input type="text" id="disgBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Cha</h5>
+    <input type="text" id="disgAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="disgRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="disgMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="escProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Escape Artist</h5>
+    <input type="text" id="escBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Dex</h5>
+    <input type="text" id="escAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="escRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="escMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="flyProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Fly</h5>
+    <input type="text" id="flyBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Dex</h5>
+    <input type="text" id="flyAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="flyRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="flyMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="handProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Handle Animal</h5>
+    <input type="text" id="handBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Cha</h5>
+    <input type="text" id="handAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="handRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="handMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="healProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Heal</h5>
+    <input type="text" id="healBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Wis</h5>
+    <input type="text" id="healAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="healRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="healMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="intimProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Intimidate</h5>
+    <input type="text" id="intimBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Cha</h5>
+    <input type="text" id="intimAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="intimRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="intimMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="knowaProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Knowledge(Arcana)</h5>
+    <input type="text" id="knowaBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Int</h5>
+    <input type="text" id="knowaAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knowaRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knowaMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="knowdProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Knowledge(Dungeoneering)</h5>
+    <input type="text" id="knowdBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Int</h5>
+    <input type="text" id="knowdAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knowdRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knowdMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="knoweProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Knowledge(Engineering)</h5>
+    <input type="text" id="knoweBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Int</h5>
+    <input type="text" id="knoweAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knoweRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knoweMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="knowgProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Knowledge(Geography)</h5>
+    <input type="text" id="knowgBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Int</h5>
+    <input type="text" id="knowgAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knowgRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knowgMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="knowhProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Knowledge(History)</h5>
+    <input type="text" id="knowhBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Int</h5>
+    <input type="text" id="knowhAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knowhRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knowhMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="knowlProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Knowledge(Local)</h5>
+    <input type="text" id="knowlBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Int</h5>
+    <input type="text" id="knowlAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knowlRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knowlMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="knownaProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Knowledge(Nature)</h5>
+    <input type="text" id="knownaBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Int</h5>
+    <input type="text" id="knownaAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knownaRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knownaMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="knownoProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Knowledge(Nobility)</h5>
+    <input type="text" id="knownoBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Int</h5>
+    <input type="text" id="knownoAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knownoRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knownoMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="knowpProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Knowledge(Planes)</h5>
+    <input type="text" id="knowpBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Int</h5>
+    <input type="text" id="knowpAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knowpRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knowpMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="knowrProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Knowledge(Religion)</h5>
+    <input type="text" id="knowrBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Int</h5>
+    <input type="text" id="knowrAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knowrRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="knowrMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="lingProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Lingusitics</h5>
+    <input type="text" id="lingBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Int</h5>
+    <input type="text" id="lingAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="lingRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="lingMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="percProf" class="skillsRadio" value="true">
+    <h5 class="skillsDetailedT">Perception</h5>
+    <input type="text" id="percBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Wis</h5>
+    <input type="text" id="percAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="percRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="percMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow" id="performSkillsRow">
+    <input type="checkbox" id="perf1Prof" class="skillsRadio">
+    <h5 class="skillsDetailedT">Perform
+      <input type="text" class="skillsCustomFields">
+      <input type="button" class="skillsBtn" value="+" id="perfAddBtn" onclick="spawnSkill('perform')" style="background-color:grey;">
+    </h5>
+    <input type="text" id="perf1Bonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Cha</h5>
+    <input type="text" id="perf1AbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="perf1RankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="perf1MiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow" id="professionSkillsRow">
+    <input type="checkbox" id="pro1Prof" class="skillsRadio">
+    <h5 class="skillsDetailedT">Profession
+      <input type="text" class="skillsCustomFields" style="width: 30%;">
+      <input type="button" class="skillsBtn" value="+" id="profAddBtn" onclick="spawnSkill('profession')" style="background-color:grey;">
+    </h5>
+    <input type="text" id="pro1Bonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Wis</h5>
+    <input type="text" id="pro1AbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="pro1RankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="pro1MiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="rideProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Ride</h5>
+    <input type="text" id="rideBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Dex</h5>
+    <input type="text" id="rideAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="rideRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="rideMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="senMProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Sense Motive</h5>
+    <input type="text" id="senMBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Wis</h5>
+    <input type="text" id="senMAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="senMRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="senMMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="sleightProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Sleight of Hand</h5>
+    <input type="text" id="sleightBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Dex</h5>
+    <input type="text" id="sleightAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="sleightRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="sleightMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="spellCProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Spellcraft</h5>
+    <input type="text" id="spellCBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Int</h5>
+    <input type="text" id="spellCAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="spellCRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="spellCMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="stealthProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Stealth</h5>
+    <input type="text" id="stealthBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Dex</h5>
+    <input type="text" id="stealthAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="stealthRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="stealthMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="survProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Survival</h5>
+    <input type="text" id="survBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Wis</h5>
+    <input type="text" id="survAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="survRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="survMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="swimProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Swim</h5>
+    <input type="text" id="swimBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Str</h5>
+    <input type="text" id="swimAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="swimRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="swimMiscMod" class="skillsInputFieldsMisc">
+  </div>
+  <div class="skillsRow">
+    <input type="checkbox" id="useMProf" class="skillsRadio">
+    <h5 class="skillsDetailedT">Use Magical Device</h5>
+    <input type="text" id="useMBonus" class="skillsInputFields">
+    <h5 class="skillsEqualsT">= Cha</h5>
+    <input type="text" id="useMAbilMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="useMRankMod" class="skillsInputFields">
+    <h5> + </h5>
+    <input type="text" id="useMMiscMod" class="skillsInputFieldsMisc">
+    </div>
+  </div>
+</form>
+</div>
+<div id="pg2">
+  <div class="mainPg2">
+  <div class="acItems">
+  <input type="button" class="acItemsBtn" onclick="spawnACItem()" value="+" id="acItemsAddBtn"> <input type="button" class="acItemsBtnDelete" onclick="showModal('Would you like to remove the selected AC Items?','ac')" value="-"><br>
+  <div class="acItemsScroll">
+    <form class="acItemsForm">
+      <div class="acItemsTitleCont">
+        <div class="acItemsTotalTitle" id="acItemsTotalTitle">AC Items Totals</div>
+      </div>
+      <div class="acItemsBonusCont">
+        <input type="text" class="acItemsInput" id="acItemsTotalBonus">
+      </div>
+      <div class="acItemsTypeCont">
+        <input type="text" class="acItemsInput" id="acItemsTotalType">
+      </div>
+      <div class="acItemsCheckPenCont">
+        <input type="text" class="acItemsInput" id="acItemsTotalCheckPen">
+      </div>
+      <div class="acItemsSpellFailCont">
+        <input type="text" class="acItemsInput" id="acItemsTotalSpellFail">
+      </div>
+      <div class="acItemsWeightCont">
+        <input type="text" class="acItemsInput" id="acItemsTotalWeight">
+      </div>
+      <div class="acItemsPropCont">
+        <input type="text" class="acItemsInput" id="acItemsTotalProp">
+      </div>
+    </form>
+    <form class="acItemsForm" id="aform0">
+      <div class="acItemsTitleCont">
+        <div class="acItemsTitle"><input type="checkbox" class="acItemsCheck">AC Item</div>
+        <input type="text" class="acItemsInput" id="acItemsTitle">
+      </div>
+      <div class="acItemsBonusCont">
+        <div class="acItemsBonus">Bonus</div>
+        <input type="text" class="acItemsInput" id="acItemsBonus">
+      </div>
+      <div class="acItemsTypeCont">
+        <div class="acItemsType">Type</div>
+        <input type="text" class="acItemsInput" id="acItemsType">
+      </div>
+      <div class="acItemsCheckPenCont">
+        <div class="acItemsCheckPen">Check Pen</div>
+        <input type="text" class="acItemsInput" id="acItemsCheckPen">
+      </div>
+      <div class="acItemsSpellFailCont">
+        <div class="acItemsSpellFail">Spell Failure</div>
+        <input type="text" class="acItemsInput" id="acItemsSpellFail">
+      </div>
+      <div class="acItemsWeightCont">
+        <div class="acItemsWeight">Weight</div>
+        <input type="text" class="acItemsInput" id="acItemsWeight">
+      </div>
+      <div class="acItemsPropCont">
+        <div class="acItemsProp">Property</div>
+        <input type="text" class="acItemsInput" id="acItemsProp">
+      </div>
+    </form>
+  </div>
+  </div>
+  <div class="leftColumnPg2">
+    <div class="gear">
+      <div class="gearTitle">Gear</div>
+      <input type="button" class="gearBtn" value="+" onclick="spawnGear()" id="gearAddBtn"><input type="button" class="gearBtnDelete" value="-" onclick="showModal('Would you like to remove the selected gear entries?','gear')">
+      <form class="gearContent" id="g0">
+        <div class="gearTitles">
+          <div class="gearSubHeadItem">Item</div>
+          <div class="gearSubHeadWeight">WT</div>
+        </div>
+        <div class="gearEntry" id="gform0">
+          <input type="checkbox" class="gearCheckbox">
+          <input type="text" class="gearInputFields">
+          <input type="text" class="gearInputFieldsWeight">
+        </div>
+      </form>
+      <div class="gearTotal">
+        <div class="gearTotalTitle">Total Weight</div>
+        <input type="text" class="gearInputFieldsWeightTotal">
+      </div>
+    </div>
+    <div class="load">
+      <div class="loadCont">
+      <div class="loadCol">
+        <div class="loadWrapper">
+        <div class="loadTitle">Light<br>Load</div>
+        <input type="text" class="loadInput">
+      </div>
+      <div class="loadWrapper">
+        <div class="loadTitle">Med<br>Load</div>
+        <input type="text" class="loadInput">
+      </div>
+      <div class="loadWrapper">
+        <div class="loadTitle">Heavy<br>Load</div>
+        <input type="text" class="loadInput">
+      </div>
+    </div>
+    <div class="loadCol">
+      <div class="loadWrapper">
+        <div class="loadTitle">Lift<br>Over</div>
+        <input type="text" class="loadInput">
+      </div>
+      <div class="loadWrapper">
+        <div class="loadTitle">Lift<br>Off</div>
+        <input type="text" class="loadInput">
+      </div>
+      <div class="loadWrapper">
+        <div class="loadTitle">Drag<br>Push</div>
+        <input type="text" class="loadInput">
+      </div>
+    </div>
+    </div>
+    </div>
+    <div class="money">
+      <div class="moneyTitle">Money</div>
+      <div class="moneyCont">
+        <div class="moneyWrapper">
+        <div class="moneyDen">PP</div><input type="text" class="moneyInput">
+      </div>
+      <div class="moneyWrapper">
+        <div class="moneyDen">GP</div><input type="text" class="moneyInput">
+      </div>
+      <div class="moneyWrapper">
+        <div class="moneyDen">SP</div><input type="text" class="moneyInput">
+      </div>
+      <div class="moneyWrapper">
+        <div class="moneyDen">CP</div><input type="text" class="moneyInput">
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="featsAbilCont">
+    <div class="feats">
+      <div class="featsHeader">
+      <div class="featsTitle">Feats</div>
+      <input type="button" class="featsBtn" value="+" onclick="spawnFeat()" id="featsAddBtn"><input type="button" class="featsBtnDelete" value="-" onclick="showModal('Would you like to remove the selected feats?','feat')">
+      </div>
+      <form class="featsCont" id="fform0">
+        <input type="checkbox" class="featsCheckbox">
+        <textarea class="featsInputFields"></textarea>
+      </form>
+    </div>
+    <div class="specialAbil">
+        <div class="specialAbilHeader">
+          <div class="specialAbilTitle">Special Abilities</div>
+          <input type="button" class="specialAbilBtn" value="+" onclick="spawnAbil()" id="specialAbilAddBtn"><input type="button" class="specialAbilBtnDelete" value="-" onclick="showModal('Would you like to remove the selected abilities?','abil')">
+        </div>
+        <form class="specialAbilCont" id="sform0">
+          <input type="checkbox" class="specialAbilCheckbox">
+          <textarea class="specialAbilInputFields"></textarea>
+        </form>
+    </div>
+  </div>
+  </div>
+  <div class="rightColumn">
+    <div class="spellsTitle">SPELLS</div>
+    <div class="spells">
+      <div class="spellsRowContainer">
+        <div class="spellsColumnTitle">Spells<br>Known</div>
+        <div class="spellsColumnTitle">Spell<br>Save</div>
+        <div class="spellsColumnTitle">Level</div>
+        <div class="spellsColumnTitle">Per<br>Day</div>
+        <div class="spellsColumnTitle">Bonus<br>Spells</div>
+      </div>
+      <div class="spellsRowContainer">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">0</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsRowContainer">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">1st</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsRowContainer">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">2nd</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsRowContainer">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">3rd</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsRowContainer">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">4th</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsRowContainer">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">5th</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsRowContainer">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">6th</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsRowContainer">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">7th</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsRowContainer">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">8th</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+      <div class="spellsRowContainer">
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+        <div class="spellLevelTitle">9th</div>
+        <input type="text" class="spellsInput">
+        <input type="text" class="spellsInput">
+      </div>
+    </div>
+    <div class="domain">
+      <div class="domainsTitle">DOMAINS/SPECIALTY SCHOOL</div>
+      <input class="domainsInputDom" type="text">
+      <div class="thSpellCont">
+        <div class="domainLevTitle">0</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <textarea class="domainSpellText"></textarea>
+      </div>
+      <div class="thSpellCont">
+        <div class="domainLevTitle">1st</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <textarea class="domainSpellText"></textarea>
+      </div>
+      <div class="thSpellCont">
+        <div class="domainLevTitle">2nd</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <textarea class="domainSpellText"></textarea>
+      </div>
+      <div class="thSpellCont">
+        <div class="domainLevTitle">3rd</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <textarea class="domainSpellText"></textarea>
+      </div>
+      <div class="thSpellCont">
+        <div class="domainLevTitle">4th</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <textarea class="domainSpellText"></textarea>
+      </div>
+      <div class="thSpellCont">
+        <div class="domainLevTitle">5th</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <textarea class="domainSpellText"></textarea>
+      </div>
+      <div class="thSpellCont">
+        <div class="domainLevTitle">6th</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <textarea class="domainSpellText"></textarea>
+      </div>
+      <div class="thSpellCont">
+        <div class="domainLevTitle">7th</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <textarea class="domainSpellText"></textarea>
+      </div>
+      <div class="thSpellCont">
+        <div class="domainLevTitle">8th</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <textarea class="domainSpellText"></textarea>
+
+      </div>
+      <div class="thSpellCont">
+        <div class="domainLevTitle">9th</div>
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <input class="domainChecks" type="checkbox">
+        <textarea class="domainSpellText"></textarea>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="footCont">
+  <div class="footText">  Website created by <a href="https://jasperhawks.com/">Jasper H</a>. The Pathfinder Roleplaying Game is owned by <a href="https://paizo.com">Paizo Inc</a>. More legal information can be found <a href="legal.html">here</a>.</div>
+</div>
+<script>
+ 
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MetaphysicsDashboard from '../islands/MetaphysicsDashboard';
+---
+
+<Layout title="Dashboard">
+  <h1 class="text-3xl font-bold mb-6">Metaphysics Dashboard</h1>
+  <p class="text-gray-400 mb-8">
+    Track the life force of tokens through swap activity. The metaphysics index determines Quillverse worldbuilding outcomes.
+  </p>
+  
+  <MetaphysicsDashboard client:load />
+</Layout>
